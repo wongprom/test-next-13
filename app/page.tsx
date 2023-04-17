@@ -1,11 +1,10 @@
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import LinkButton from '../components/LinkButton';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Start
-    </main>
+    <div className="flex flex-col items-center justify-center">
+      <LinkButton url="/about" color="pink" text="Go to About" />
+      <LinkButton url="/contact" color="blue" text="Go to Contact" />
+    </div>
   );
 }

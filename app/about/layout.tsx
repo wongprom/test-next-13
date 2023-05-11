@@ -13,7 +13,7 @@ export default function AboutLayout({
 }) {
   return (
     <div>
-      <main className="flex min-h-screen justify-center">{children}</main>
+      <main className="">{children}</main>
     </div>
   );
 }

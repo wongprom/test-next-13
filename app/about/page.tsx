@@ -10,7 +10,7 @@ const about = () => {
         <h2 className="text-center underline underline-offset-4 uppercase">
           <Link href={'/about'}>About</Link>
         </h2>
-        <ul className="flex  flex-col items-center cursor-pointer hover:text-gray-600">
+        <ul className="flex flex-col items-center cursor-pointer hover:text-gray-600">
           <li>
             <Link href={'/about/jimmy'}>Jimmy</Link>
           </li>

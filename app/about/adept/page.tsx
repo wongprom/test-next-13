@@ -33,7 +33,7 @@ const Page = () => {
     },
   ]);
   return (
-    <div className="bg-[#f2f2f2] h-screen flex justify-center items-center">
+    <div className="bg-[#f2f2f2] h-screen flex justify-center p-5 ">
       <div className="flex flex-col gap-5 list">
         {list.map((item, index) => (
           <Accordion key={index} data={item} />

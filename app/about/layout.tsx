@@ -30,9 +30,7 @@ export default function AboutLayout({
             </li>
           </ul>
         </div>
-        <div className="col-span-5 md:col-span-3 md:rounded-md bg-blue-800 text-gray-200">
-          {children}
-        </div>
+        <div className="col-span-5 md:col-span-3 md:rounded-md">{children}</div>
       </div>
     </div>
   );

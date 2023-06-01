@@ -26,7 +26,7 @@ export default function AboutLayout({
               <Link href={''} />
             </li>
             <li>
-              <Link href={''} />
+              <Link href={'/about/testimonial'}>Testimonial</Link>
             </li>
           </ul>
         </div>

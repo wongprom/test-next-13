@@ -7,19 +7,29 @@ import Accordion from '../components/Accordion';
  */
 
 type ListType = {
-  question: string;
-  answer: string;
+  title: string;
+  info: string[];
 };
 
 const Page = () => {
   const [list, setList] = useState<ListType[]>([
     {
-      question: 'Whats your name?',
-      answer: 'My name is Jimmy',
+      title: 'Målmedvetenhet',
+      info: [
+        'Fokuserad på att slutföra arbetet och att de strävar efter att lyckas - så länge målen är tydligt identifierade och inom räckhåll',
+        'Villiga att acceptera och leverera bra, men inte perfekta, resultat för att få saker slutförda',
+        'I allmänhet villiga att prioritera om vid motgångar i arbetet',
+        'Att de oftast slutför arbetet i tid',
+      ],
     },
     {
-      question: 'Whats your age?',
-      answer: 'I am 41',
+      title: 'Struktur',
+      info: [
+        'Att de vanligtvis kan fokusera både på detaljer och helhet',
+        'Att de kan att ta sig an uppgifter på ett metodiskt och planerat sätt när det behövs',
+        'Att de föredrar att vara organiserade, men brukar vara mindre organiserade under stressiga perioder',
+        'Att de kan ta fram strukturerade planer när det finns behov för det',
+      ],
     },
   ]);
   return (

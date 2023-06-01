@@ -23,15 +23,14 @@ export default function AboutLayout({
               <Link href={'/about/jimmy'}>Jimmy</Link>
             </li>
             <li>
-              <Link href={''} />
+              <Link href={'/about/adept'}>Adept</Link>
             </li>
             <li>
               <Link href={'/about/testimonial'}>Testimonial</Link>
             </li>
           </ul>
         </div>
-
-        <div className="col-span-5 md:col-span-3 md:rounded-md bg-blue-800">
+        <div className="col-span-5 md:col-span-3 md:rounded-md bg-blue-800 text-gray-200">
           {children}
         </div>
       </div>

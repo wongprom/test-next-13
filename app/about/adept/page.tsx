@@ -1,6 +1,8 @@
 'use client';
+import { characterTestADEPT15 } from '@/data/data';
 import React, { useState } from 'react';
 import Accordion from '../components/Accordion';
+
 /**
  * ! create <Accordion /> that contains <AccordionItems />
  *
@@ -12,29 +14,20 @@ type ListType = {
 };
 
 const Page = () => {
-  const [list, setList] = useState<ListType[]>([
-    {
-      title: 'Målmedvetenhet',
-      info: [
-        'Fokuserad på att slutföra arbetet och att de strävar efter att lyckas - så länge målen är tydligt identifierade och inom räckhåll',
-        'Villiga att acceptera och leverera bra, men inte perfekta, resultat för att få saker slutförda',
-        'I allmänhet villiga att prioritera om vid motgångar i arbetet',
-        'Att de oftast slutför arbetet i tid',
-      ],
-    },
-    {
-      title: 'Struktur',
-      info: [
-        'Att de vanligtvis kan fokusera både på detaljer och helhet',
-        'Att de kan att ta sig an uppgifter på ett metodiskt och planerat sätt när det behövs',
-        'Att de föredrar att vara organiserade, men brukar vara mindre organiserade under stressiga perioder',
-        'Att de kan ta fram strukturerade planer när det finns behov för det',
-      ],
-    },
-  ]);
+  const [list, setList] = useState<ListType[]>(characterTestADEPT15);
   return (
     <div className="bg-[#f2f2f2] h-screen flex justify-center p-5 ">
-      <div className="flex flex-col gap-5 list">
+      <div className="flex flex-col gap-5 list max-h-screen overflow-y-auto no-scrollbar scroll-smooth">
+        <p className="text-center">
+          The text describes the results of a test that measures various
+          personality traits. The test provides insight into different aspects
+          of my personality and reveals my behavioral patterns and work style.
+        </p>
+        <p className="text-center">
+          By understanding and reflecting on these results, I can become aware
+          of my strengths and weaknesses and utilize them to improve my
+          performance and adapt effectively to the work environment.
+        </p>
         {list.map((item, index) => (
           <Accordion key={index} data={item} />
         ))}

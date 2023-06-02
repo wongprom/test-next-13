@@ -1,5 +1,4 @@
 import LinkButton from '../components/LinkButton';
-import { alegreya } from './fonts/fonts';
 
 export default function Home() {
   return (

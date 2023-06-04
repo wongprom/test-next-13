@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+* Palett
+* https://palette.site/palette?id=647a806b6185cb706c1024c1
+* https://viamsterdam.com/our-work/
+
+FontJoy
+bg #222222
+ h1 Multi, color #cccccc
+ h2 Shanti, #bbbbbb
+ text Lustria, #9b9b9b
+
+ bg #eeeeee
+ h1 Multi, color #111111
+ h2 Shanti, #222222
+ text Lustria, #515151
+ button color #666666
+ button text color #ffffff
+
+ font and colors for links and rest 
+ Helvetica neuve #dddddd #aaaaaa 
+ fint-weigt string
+*/
+
 @layer utilities {
   @variants responsive {
     /* Hide scrollbar for Chrome, Safari and Opera */

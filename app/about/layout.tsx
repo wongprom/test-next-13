@@ -14,19 +14,34 @@ export default function AboutLayout({
   return (
     <div className="flex-1 flex flex-col p-10">
       <div className="flex-1 grid grid-cols-5  gap-4 ">
-        <div className="col-span-5 md:col-span-1 md:rounded-md cursor-pointer p-5 bg-[#aaaaaa]">
+        <div className="col-span-5 md:col-span-1 md:rounded-md  p-5 bg-[#aaaaaa]">
           <h2 className=" underline underline-offset-4 uppercase">
             <Link href={'/about'}>About</Link>
           </h2>
-          <ul className="flex flex-col  cursor-pointer hover:text-gray-600">
+          <ul className="flex flex-col ">
             <li>
-              <Link href={'/about/jimmy'}>Jimmy</Link>
+              <Link
+                href={'/about/jimmy'}
+                className="cursor-pointer hover:text-gray-600"
+              >
+                Jimmy
+              </Link>
             </li>
             <li>
-              <Link href={'/about/adept'}>Adept</Link>
+              <Link
+                href={'/about/adept'}
+                className="cursor-pointer hover:text-gray-600"
+              >
+                Adept
+              </Link>
             </li>
             <li>
-              <Link href={'/about/testimonial'}>Testimonial</Link>
+              <Link
+                href={'/about/testimonial'}
+                className="cursor-pointer hover:text-gray-600"
+              >
+                Testimonial
+              </Link>
             </li>
           </ul>
         </div>

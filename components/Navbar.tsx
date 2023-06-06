@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { mulish } from '../app/fonts/fonts';
 const Navbar = () => {
   return (
     <header className="shrink-0 bg-[#222222] body-font text-color-[#ffffff]">
@@ -19,7 +19,9 @@ const Navbar = () => {
           </svg>
           <span className="ml-3 text-xl text-[#aaaaaa]">Tailblocks</span>
         </a>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center text-white">
+        <nav
+          className={`${mulish.className} md:ml-auto flex flex-wrap items-center text-base justify-center text-white`}
+        >
           <a className="mr-5 hover:text-[#eeeeee] cursor-pointer">First Link</a>
           <a className="mr-5 hover:text-[#eeeeee] cursor-pointer">
             Second Link

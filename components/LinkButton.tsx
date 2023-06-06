@@ -11,7 +11,7 @@ const LinkButton = (props: Props) => {
     <div className="m-5">
       <Link
         href={props.url}
-        className="border text-center text-white bg-gray-700 py-2 px-8 focus:outline-none hover:bg-gray-800 rounded text-lg m-4"
+        className="border text-center  text-[#ffffff] bg-[#666666] py-2 px-8 focus:outline-none hover:bg-[#ffffff] hover:hover:text-[#666666] rounded text-lg m-4"
       >
         {props.text}
       </Link>

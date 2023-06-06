@@ -1,12 +1,16 @@
 import LinkButton from '../components/LinkButton';
+import { alegreya } from './fonts/fonts';
 
 export default function Home() {
   return (
-    // <div className="flex flex-col justify-center items-center bg-gray-300">
-    <div className="flex-1  items-center  flex flex-col justify-center  bg-pink-300">
-      <h1 className="text-2xl text-white">Home Page</h1>
-      <LinkButton url="/about" text="Go to About" />
-      <LinkButton url="/contact" text="Go to Contact" />
+    <div className="flex-1 bg-[#222222] p-40">
+      <h1 className={`${alegreya.className} text-center text-7xl text-white`}>
+        Home Page
+      </h1>
+      <div className="flex flex-col justify-center items-center">
+        <LinkButton url="/about" text="Go to About" />
+        <LinkButton url="/contact" text="Go to Contact" />
+      </div>
     </div>
   );
 }

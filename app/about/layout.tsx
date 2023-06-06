@@ -13,12 +13,12 @@ export default function AboutLayout({
 }) {
   return (
     <div className="flex-1 flex flex-col p-10">
-      <div className="flex-1 grid grid-cols-5  gap-4 ">
-        <div className="col-span-5 md:col-span-1 md:rounded-md  p-5 bg-[#aaaaaa]">
+      <div className="flex-1 grid grid-cols-5 gap-4 ">
+        <div className="flex flex-col gap-4 text-xl col-span-full md:col-span-1 md:rounded-md p-5 bg-[#aaaaaa]">
           <h2 className=" underline underline-offset-4 uppercase">
             <Link href={'/about'}>About</Link>
           </h2>
-          <ul className="flex flex-col ">
+          <ul className="flex flex-col gap-5  text-[#ffffff]">
             <li>
               <Link
                 href={'/about/jimmy'}
@@ -45,7 +45,7 @@ export default function AboutLayout({
             </li>
           </ul>
         </div>
-        <div className="col-span-5 md:col-span-4 md:rounded-md  border-4 border-[#aaaaaa] text-[#9b9b9b] p-5">
+        <div className="col-span-5 md:col-span-4 md:rounded-md  border-4 border-[#aaaaaa] p-5">
           {children}
         </div>
       </div>

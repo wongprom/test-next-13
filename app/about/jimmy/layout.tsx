@@ -10,5 +10,5 @@ export default function AboutJimmyLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="flex-1 flex flex-col">{children}</div>;
+  return <div className={`flex-1 flex flex-col`}>{children}</div>;
 }

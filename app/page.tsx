@@ -3,7 +3,7 @@ import { alegreya } from './fonts/fonts';
 
 export default function Home() {
   return (
-    <div className="flex-1 bg-[#222222] p-40">
+    <div className="flex-1 bg-[#222222] md:p-40">
       <h1 className={`${alegreya.className} text-center text-7xl text-white`}>
         Home Page
       </h1>

@@ -29,10 +29,15 @@ const Navbar = () => {
         <nav
           className={`${mulish.className} md:ml-auto flex flex-wrap items-center text-base justify-center text-white`}
         >
-          <a className="mr-5 hover:text-[#eeeeee] cursor-pointer">First Link</a>
-          <a className="mr-5 hover:text-[#eeeeee] cursor-pointer">
-            Second Link
-          </a>
+          <Link href={'/'} className="mr-5 hover:text-[#eeeeee] cursor-pointer">
+            Home
+          </Link>
+          <Link
+            href={'/about'}
+            className="mr-5 hover:text-[#eeeeee] cursor-pointer"
+          >
+            About
+          </Link>
           <a className="mr-5 hover:text-[#eeeeee] cursor-pointer">Third Link</a>
           <a className="mr-5 hover:text-[#eeeeee] cursor-pointer">
             Fourth Link

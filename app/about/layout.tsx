@@ -45,7 +45,7 @@ export default function AboutLayout({
             </li>
           </ul>
         </div>
-        <div className="col-span-5 md:col-span-4 md:rounded-md  border-4 border-[#aaaaaa] p-5">
+        <div className="col-span-5 md:col-span-4 md:rounded-md  border-4 border-[#aaaaaa] p-5 overflow">
           {children}
         </div>
       </div>

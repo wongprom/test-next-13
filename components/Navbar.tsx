@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { mulish } from '../app/fonts/fonts';
 const Navbar = () => {
@@ -17,7 +18,13 @@ const Navbar = () => {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span className="ml-3 text-xl text-[#aaaaaa]">Tailblocks</span>
+          <Link
+            href={'/'}
+            className="cursor-pointer ml-3 text-xl text-[#aaaaaa]"
+          >
+            Tailblocks
+          </Link>
+          {/* <span className="ml-3 text-xl text-[#aaaaaa]">Tailblocks</span> */}
         </a>
         <nav
           className={`${mulish.className} md:ml-auto flex flex-wrap items-center text-base justify-center text-white`}

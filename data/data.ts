@@ -126,4 +126,21 @@ const characterTestADEPT15 = [
   },
 ];
 
-export { characterTestADEPT15 };
+const testimonials = [
+  {
+    name: 'Sara Eriksson',
+    image:
+      'https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    position: 'COO, Gruppera',
+    text: 'Jimmy är enkel att arbeta med, han är nyfiken och drar sig intefrån att fråga om något är oklart. Han är social och bidrar till god stämning på arbetsplatsen och flyttar med enkelhet fokus till rätt sak för tillfället.',
+  },
+  {
+    name: 'Robert Gustafsson',
+    position: 'Kontorschef, Grade',
+    image:
+      'https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    text: 'Jimmy har visat sig nyfiken och analytisk. Han har också visat ett stort intresse kring att förstå hela bilden för att kunna leverera en så bra produkt som möjligt.',
+  },
+];
+
+export { characterTestADEPT15, testimonials };

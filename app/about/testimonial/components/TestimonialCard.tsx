@@ -23,7 +23,7 @@ const TestimonialCard = () => {
             <p className="text-[#aaaaaa] ">Marketing Manager at Stech</p>
           </div>
 
-          <p className="mt-4 text-lg leading-relaxed text-[#dddddd] md:text-xl">
+          <p className="mt-4 text-lg leading-relaxed text-[#dddddd] xl:text-xl">
             {' '}
             “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
             quibusdam ducimus libero ad tempora doloribus expedita laborum saepe

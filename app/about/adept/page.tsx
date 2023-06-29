@@ -28,9 +28,11 @@ const Page = () => {
           of my strengths and weaknesses and utilize them to improve my
           performance and adapt effectively to the work environment.
         </p>
-        {list.map((item, index) => (
-          <Accordion key={index} data={item} />
-        ))}
+        <div className="flex flex-col gap-4 items-center">
+          {list.map((item, index) => (
+            <Accordion key={index} data={item} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,24 @@
 import Link from 'next/link';
-import React from 'react';
+// import React from 'react';
+import { Bars3Icon } from '@heroicons/react/24/solid';
+import { UserCircleIcon } from '@heroicons/react/24/solid';
 import { mulish } from '../app/fonts/fonts';
 const Navbar = () => {
   return (
-    <header className="shrink-0 bg-[#222222] body-font text-color-[#ffffff]">
-      <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <header className="shrink-0 bg-[#222222] body-font text-[#ffffff]">
+      <div className="flex justify-between">
+        <div className="flex items-center">
+          <UserCircleIcon className="h-6 w-6" />
+          <div className="pl-3 text-xs flex flex-col justify-center">
+            <p className="font-bold">Jimmy Bäckström</p>
+            <p>Front/full Stack</p>
+          </div>
+        </div>
+        <div>
+          <Bars3Icon className="h-12 w-12" />
+        </div>
+      </div>
+      <div className="mx-auto hidden sm:flex flex-wrap p-5 flex-col xl:flex-row items-center">
         <Link
           href={'/'}
           className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"

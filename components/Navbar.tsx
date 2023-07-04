@@ -13,6 +13,7 @@ import {
   DocumentIcon,
   FolderIcon,
   MusicalNoteIcon,
+  UserIcon,
 } from '@heroicons/react/24/outline';
 import { mulish } from '../app/fonts/fonts';
 
@@ -102,7 +103,20 @@ const Navbar = () => {
             className="h-12 w-12 absolute top-2 right-2 cursor-pointer  text-[#E5E6E9]"
           />
 
-          <div className="flex h-screen md:w-1/2 flex-col gap-14 py-11 px-8 bg-[#121316]">
+          <div className="flex h-screen sm:w-2/3 md:w-1/2 flex-col gap-14 py-11 px-8 bg-[#121316]">
+            <ul>
+              <p className="">WHO AM I</p>
+              <li className="flex items-center pt-4">
+                <UserIcon className="h-5 w-5" />
+                <Link
+                  href={'/about'}
+                  className=" hover:text-[#eeeeee] cursor-pointer pl-2 text-[#E5E6E9]"
+                  onClick={handlerClick}
+                >
+                  About
+                </Link>
+              </li>
+            </ul>
             <ul>
               <p className="">WHAT I CREATE</p>
               <li className="flex items-center pt-4">

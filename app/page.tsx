@@ -29,7 +29,7 @@ export default function Home() {
         <div className="text-white flex justify-between border-b border-[#2e3237] mb-12 mt-20 pb-4">
           <p className="font-bold text-md text-[#babdc5]">Latest projects</p>
           <Link
-            href={'/'}
+            href={'/projects'}
             className="flex text-sm text-[#828996] items-center cursor-pointer"
           >
             All Projects <ArrowLongRightIcon className="h-4 w-4 ml-1" />

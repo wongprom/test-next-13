@@ -1,9 +1,11 @@
+import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 import { alegreya } from './fonts/fonts';
 
 export default function Home() {
   return (
-    <section className="p-5 h-screen">
-      <div className=" bg-[#1c1d21] p-8 md:px-16 rounded-xl">
+    <section className=" bg-[#1c1d21] p-8 md:px-16 rounded-xl">
+      <div>
         <h1
           className={`${alegreya.className} text-2xl font-bold leading-normal text-[#e5e6e9]`}
         >
@@ -21,6 +23,18 @@ export default function Home() {
           sincerely hope that you derive as much joy from exploring it as I did
           from bringing it to life.
         </p>
+      </div>
+      {/* Latest projekts */}
+      <div>
+        <div className="text-white flex justify-between border-b border-[#2e3237] mb-12 mt-20 pb-4">
+          <p className="font-bold text-md text-[#babdc5]">Latest projects</p>
+          <Link
+            href={'/'}
+            className="flex text-sm text-[#828996] items-center cursor-pointer"
+          >
+            All Projects <ArrowLongRightIcon className="h-4 w-4 ml-1" />
+          </Link>
+        </div>
       </div>
     </section>
   );

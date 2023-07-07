@@ -1,9 +1,10 @@
+import ProjectCard from '@/components/ProjectCard';
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
-import Image from 'next/image';
 import Link from 'next/link';
 import { alegreya } from './fonts/fonts';
 
 export default function Home() {
+  const n = 3;
   return (
     <section className=" bg-[#1c1d21] p-8 md:px-16 rounded-xl">
       <div>
@@ -38,28 +39,16 @@ export default function Home() {
         </div>
         {/* Project cards */}
         <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:grid-cols-3">
-          <Link
-            href={'/'}
-            className="bg-[#04013A] relative rounded-xl p-6 transition-all hover:scale-105 hover:rotate-2"
-          >
-            <div className="absolute top-3 right-3 bg-white rounded-xl px-3 py-1 text-sm bg-opacity-10 text-white ">
-              2000
-            </div>
-            <div className="p-12 relative flex justify-center items-center">
-              <Image
-                src="https://images.unsplash.com/photo-1637363990764-de84fd247b7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="netflix"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div>
-              <span className="inline-flex items-center">
-                <h2 className="inline font-bold text-white">Project 1</h2>
-              </span>
-              <p className="text-white opacity-80">Type of project</p>
-            </div>
-          </Link>
+          {/* <ProjectCard /> */}
+          {[...Array(n)].map((e, i) => (
+            <ProjectCard
+              key={i}
+              projectURL="/about"
+              projectShortInfo={`Project short info text ${i + 1}`}
+              projectName={`Project name ${i + 1}`}
+              imageURL="https://images.unsplash.com/photo-1637363990764-de84fd247b7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            />
+          ))}
         </div>
       </div>
     </section>

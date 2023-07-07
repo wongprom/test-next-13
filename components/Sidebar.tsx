@@ -39,7 +39,12 @@ const Sidebar = () => {
           </Link>
         </div>
         <div className="flex flex-col items-center space-y-2">
-          <Link href={'/'} className="cursor-pointer">
+          <Link
+            href={'/projects'}
+            className={`${
+              currentRoute === '/projects' && activeLinkStyle
+            } cursor-pointer`}
+          >
             <FolderIcon className="h-6 w-6" />
           </Link>
           <Link href={'/'} className="cursor-pointer">

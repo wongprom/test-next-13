@@ -14,7 +14,7 @@ export default function Home() {
           Hey, I am Jimmy - a frontend developer with a passion for backend
           development as well. Living in the beautiful city of Stockholm, I
           thrive on being involved in every aspect of a project, from design to
-          deploiment.
+          deployment.
         </h1>
         <p className="text-[#babdc5] mt-6">
           Welcome to my personal website, a cozy corner of the internet that I

@@ -42,6 +42,18 @@ This is tha place for me to try out new things like
 
 [The EASIEST Way to Use OpenAI ChatGPT in Next.js](https://www.youtube.com/watch?v=2xwv4T552lM)
 
+- [ ] Try to implement mockAPI in project for fun.
+
+</details>
+
+</details>
+<p>
+
+<details>
+  <summary>mockAPI</summary>
+
+[mockapi.io](https://mockapi.io/) - Quickly setup endpoints, generate custom data, and preform operations on it using RESTful interface
+
 - [ ] with help of gpt, create meme developer text to existing image.
 
 </details>

@@ -7,6 +7,7 @@ type Props = {
   projectName: string;
   projectShortInfo: string;
   projectURL: string;
+  bgHexColor?: string | undefined;
 };
 
 const ProjectCard = ({
@@ -14,11 +15,14 @@ const ProjectCard = ({
   projectName,
   projectShortInfo,
   projectURL,
+  bgHexColor = '#04013A',
 }: Props) => {
   return (
     <Link
       href={projectURL}
-      className="bg-[#04013A] relative rounded-xl p-6 transition-all hover:scale-105 hover:rotate-2"
+      style={{ backgroundColor: bgHexColor }}
+      className={`
+       relative rounded-xl p-6 transition-all hover:scale-105 hover:rotate-2`}
     >
       <div className="absolute top-3 right-3 bg-white rounded-xl px-3 py-1 text-sm bg-opacity-10 text-white ">
         2000

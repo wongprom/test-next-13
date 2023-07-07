@@ -11,14 +11,14 @@ export default function Home() {
         <h1
           className={`${alegreya.className} text-2xl font-bold leading-normal text-[#e5e6e9]`}
         >
-          Hey, I'm Jimmy - a frontend developer with a passion for backend
+          Hey, I am Jimmy - a frontend developer with a passion for backend
           development as well. Living in the beautiful city of Stockholm, I
           thrive on being involved in every aspect of a project, from design to
           deploiment.
         </h1>
         <p className="text-[#babdc5] mt-6">
-          Welcome to my personal website, a cozy corner of the internet that
-          I've crafted exclusively for sharing my interests and passions with
+          Welcome to my personal website, a cozy corner of the internet that I
+          have crafted exclusively for sharing my interests and passions with
           fellow enthusiasts. Here, I can freely express myself without the
           constraints of social media algorithms or adhering to any predefined
           rules. Feel free to wander through my digital living room, and I
@@ -43,6 +43,7 @@ export default function Home() {
           {[...Array(n)].map((e, i) => (
             <ProjectCard
               key={i}
+              bgHexColor={'#cd14b4'}
               projectURL="/about"
               projectShortInfo={`Project short info text ${i + 1}`}
               projectName={`Project name ${i + 1}`}

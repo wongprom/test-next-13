@@ -1,4 +1,5 @@
 import ProjectCard from '@/components/ProjectCard';
+import SectionHeading from '@/components/SectionHeading';
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { alegreya } from './fonts/fonts';
@@ -6,7 +7,7 @@ import { alegreya } from './fonts/fonts';
 export default function Home() {
   const n = 3;
   return (
-    <section className=" bg-[#1c1d21] p-8 md:px-16 rounded-xl">
+    <main className=" bg-[#1c1d21] p-8 md:px-16 rounded-xl">
       <div>
         <h1
           className={`${alegreya.className} text-2xl font-bold leading-normal text-[#e5e6e9]`}
@@ -26,24 +27,27 @@ export default function Home() {
           from bringing it to life.
         </p>
       </div>
-      {/* Latest projekts */}
-      <div>
-        <div className="text-white flex justify-between border-b border-[#2e3237] mb-12 mt-20 pb-4">
-          <p className="font-bold text-md text-[#babdc5]">Latest projects</p>
-          <Link
-            href={'/projects'}
-            className="flex text-sm text-[#828996] items-center cursor-pointer"
-          >
-            All Projects <ArrowLongRightIcon className="h-4 w-4 ml-1" />
-          </Link>
-        </div>
-        {/* Project cards */}
+      <section>
+        <SectionHeading
+          url={'/about'}
+          linkText={'Full journey'}
+          headingText={'Pieces from journey'}
+        />
         <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:grid-cols-3">
-          {/* <ProjectCard /> */}
+          {/* Journey Card goes here  */}
+        </div>
+      </section>
+      <section>
+        <SectionHeading
+          url={'/projects'}
+          linkText={'All Projects'}
+          headingText={'Latest projects'}
+        />
+        <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:grid-cols-3">
           {[...Array(n)].map((e, i) => (
             <ProjectCard
               key={i}
-              bgHexColor={'#cd14b4'}
+              // bgHexColor={'#cd14b4'}
               projectURL="/about"
               projectShortInfo={`Project short info text ${i + 1}`}
               projectName={`Project name ${i + 1}`}
@@ -51,7 +55,17 @@ export default function Home() {
             />
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+      <section>
+        <SectionHeading
+          url={'/projects'}
+          linkText={'Latest photos taken'}
+          headingText={'All photos'}
+        />
+        <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:grid-cols-3">
+          {/* Photos goes here  */}
+        </div>
+      </section>
+    </main>
   );
 }

@@ -18,7 +18,7 @@ This is tha place for me to try out new things like
 <p>
 
 <details>
-  <summary>Add CMS (Supabase database)</summary>
+  <summary>Add CMS (Supabase  | Contenful...)</summary>
   
   [https://supabase.com/docs/guides/getting-started/quickstarts/nextjs](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs)
 
@@ -47,7 +47,6 @@ This is tha place for me to try out new things like
 </details>
 
 </details>
-<p>
 
 <details>
   <summary>mockAPI</summary>
@@ -57,8 +56,23 @@ This is tha place for me to try out new things like
 - [ ] with help of gpt, create meme developer text to existing image.
 
 </details>
-
 <p>
+<details>
+  <summary>SEO</summary>
+
+Look for info how to implement
+
+</details>
+<p>
+<details>
+  <summary>Page speed</summary>
+
+Look for info on how check pagespeed and make application faster
+
+ </details>
+ 
+ ---
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites

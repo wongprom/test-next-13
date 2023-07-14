@@ -17,8 +17,8 @@ const Sidebar = () => {
   const activeLinkStyle = ' text-black bg-amber-300';
 
   return (
-    <aside className="h-screen overflow-auto overflow-x-hidden p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col ">
-      <nav className="flex flex-col space-y-20">
+    <aside className="h-screen overflow-auto overflow-x-hidden p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
+      <nav className="flex flex-col space-y-20 xl:p-5">
         <Link
           href={'/'}
           className={`${
@@ -41,14 +41,20 @@ const Sidebar = () => {
 
         <div className="flex flex-col items-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i create</p>
-          <Link
-            href={'/projects'}
-            className={`${
-              currentRoute === '/projects' && activeLinkStyle
-            } cursor-pointer`}
-          >
-            <FolderIcon className="h-6 w-6" />
-          </Link>
+          <div className="flex w-full items-center">
+            <Link
+              href={'/projects'}
+              className={`${
+                currentRoute === '/projects' && activeLinkStyle
+              } cursor-pointer`}
+            >
+              <FolderIcon className="h-6 w-6" />
+            </Link>
+            <p className="hidden xl:block ml-2">Project</p>
+            <div className="hidden p-1 xl:flex items-center justify-center ml-auto text-[#828996] bg-[#23252a] text-[10px] h-4 w-4 rounded">
+              <span>3</span>
+            </div>
+          </div>
           <Link href={'/'} className="cursor-pointer">
             <CameraIcon className="h-6 w-6" />
           </Link>

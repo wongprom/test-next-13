@@ -20,4 +20,11 @@ A clear and concise description of any alternative solutions or features you've 
 Add any other context or screenshots about the feature request here.
 
 **Screenshots**
-Add screenshot
+_Before_
+
+_After_
+
+
+**Success criteria **
+- [ ] criteria 1
+- [ ] criteria 2

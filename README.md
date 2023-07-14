@@ -47,13 +47,13 @@ This is tha place for me to try out new things like
 </details>
 
 </details>
-
+<p>
 <details>
   <summary>mockAPI</summary>
 
 [mockapi.io](https://mockapi.io/) - Quickly setup endpoints, generate custom data, and preform operations on it using RESTful interface
 
-- [ ] with help of gpt, create meme developer text to existing image.
+- [ ] with help of chatGPT, create meme developer text to existing image.
 
 </details>
 <p>
@@ -70,7 +70,16 @@ Look for info how to implement
 Look for info on how check pagespeed and make application faster
 
  </details>
- 
+ <p>
+<details>
+  <summary>Usability</summary>
+
+- [ ] Testing
+- [ ] Accessibility
+- [ ] The 2-second rule, loading content.
+- [ ] Short-term memory can only retain around **five** out of nine things that a person sees at one time.
+
+ </details>
  ---
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.

@@ -38,7 +38,9 @@ const Sidebar = () => {
             <FaceSmileIcon className="h-6 w-6" />
           </Link>
         </div>
-        <div className="flex flex-col items-center space-y-2">
+
+        <div className="flex flex-col items-center xl:items-start space-y-2">
+          <p className="hidden xl:block capitalize">what i create</p>
           <Link
             href={'/projects'}
             className={`${
@@ -51,7 +53,8 @@ const Sidebar = () => {
             <CameraIcon className="h-6 w-6" />
           </Link>
         </div>
-        <div className="flex flex-col items-center space-y-2">
+        <div className="flex flex-col items-center xl:items-start space-y-2">
+          <p className="hidden xl:block capitalize">what i consume</p>
           <Link href={'/'} className="cursor-pointer">
             <BookOpenIcon className="h-6 w-6" />
           </Link>
@@ -59,7 +62,8 @@ const Sidebar = () => {
             <MusicalNoteIcon className="h-6 w-6" />
           </Link>
         </div>
-        <div className="flex flex-col items-center space-y-2">
+        <div className="flex flex-col items-center xl:items-start space-y-2">
+          <p className="hidden xl:block capitalize">where to find me</p>
           <Link href={'/'} className="cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"

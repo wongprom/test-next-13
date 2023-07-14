@@ -2,7 +2,7 @@ import React from 'react';
 
 const about = () => {
   return (
-    <p className="">
+    <p className="text-[#babdc5]">
       Some text about what to expect on this about page with nested routes Right
     </p>
   );

@@ -25,7 +25,7 @@ const Sidebar = () => {
             currentRoute === '/' && activeLinkStyle
           } cursor-pointer`}
         >
-          <div className="text-center">LOGO</div>
+          <div className="text-center">logo</div>
         </Link>
 
         <div className="flex flex-col items-center space-y-2">

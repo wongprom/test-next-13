@@ -21,25 +21,33 @@ const Sidebar = () => {
   return (
     <aside className="h-auto static p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
       <nav className="flex h-auto mb-2 flex-col space-y-20 xl:p-0">
-        <Link
-          href={'/'}
-          className={`${
-            currentRoute === '/' && activeLinkStyle
-          } cursor-pointer`}
-        >
-          <div
-            className="text-center"
-            data-tooltip-id="home-tooltip"
-            data-tooltip-content="Home"
+        <div className="border-b border-orange-500/10 flex items-center justify-center mt-2">
+          <Link
+            href={'/'}
+            className={`${
+              currentRoute === '/' && activeLinkStyle
+            } cursor-pointer`}
           >
-            loggo
+            <div
+              className=""
+              data-tooltip-id="home-tooltip"
+              data-tooltip-content="Home"
+            >
+              <p className="tracking-widest text-orange-600 text-4xl font-thin">
+                จิมมี่
+              </p>
+            </div>
+            <Tooltip
+              id="home-tooltip"
+              place="right"
+              className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
+            />
+          </Link>
+          <div className="hidden xl:flex flex-col items-baseline text-xs ml-2 whitespace-nowrap">
+            <p className="font-bold text-[#e5e6e9]">Jimmy Bäckström</p>
+            <p className="text-[#9ea3ad]">Frontend Developer</p>
           </div>
-          <Tooltip
-            id="home-tooltip"
-            place="right"
-            className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
-          />
-        </Link>
+        </div>
         <div className="flex flex-col items-center justify-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">About</p>
           <div

@@ -204,9 +204,6 @@ const Sidebar = () => {
               <ArrowUpRightIcon strokeWidth="2" />
             </div>
           </div>
-          {/* <Link href={'/'} className="cursor-pointer">
-            <DocumentIcon className="h-4 w-4" />
-          </Link> */}
         </div>
       </nav>
       <div className="mt-auto">

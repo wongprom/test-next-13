@@ -18,8 +18,8 @@ const Sidebar = () => {
   const activeLinkStyle = ' text-black bg-amber-300';
 
   return (
-    <aside className="h-screen overflow-auto overflow-x-hidden p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
-      <nav className="flex  flex-col space-y-20 xl:p-5">
+    <aside className="h-screen fixed overflow-auto overflow-x-hidden p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
+      <nav className="flex mb-2 flex-col space-y-20 xl:p-5">
         <Link
           href={'/'}
           className={`${

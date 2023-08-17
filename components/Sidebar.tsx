@@ -43,7 +43,7 @@ const Sidebar = () => {
         <div className="flex flex-col items-center justify-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i create</p>
 
-          <div className="flex w-full items-center">
+          <div className="flex w-full items-center justify-center">
             <Link
               href={'/projects'}
               className={`${

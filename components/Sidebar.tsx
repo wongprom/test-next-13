@@ -20,7 +20,7 @@ const Sidebar = () => {
 
   return (
     <aside className="h-screen static  p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
-      <nav className="flex mb-2 flex-col space-y-20 xl:p-5">
+      <nav className="flex mb-2 flex-col space-y-20 xl:p-0">
         <Link
           href={'/'}
           className={`${
@@ -64,7 +64,7 @@ const Sidebar = () => {
         <div className="flex flex-col items-center justify-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i create</p>
 
-          <div className="flex w-full items-center justify-center">
+          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
             <Link
               href={'/projects'}
               className={`${
@@ -88,7 +88,7 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <div className="flex w-full items-center justify-center">
+          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
             <Link href={'/'} className="cursor-pointer">
               <CameraIcon
                 className="h-6 w-6"
@@ -109,7 +109,7 @@ const Sidebar = () => {
         </div>
         <div className="flex flex-col items-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i consume</p>
-          <div className="flex w-full items-center justify-center">
+          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
             <Link href={'/'} className="cursor-pointer">
               <BookOpenIcon
                 className="h-6 w-6"
@@ -128,7 +128,7 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <div className="flex w-full items-center justify-center">
+          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
             <Link href={'/'} className="cursor-pointer">
               <MusicalNoteIcon
                 className="h-6 w-6"
@@ -149,7 +149,7 @@ const Sidebar = () => {
         </div>
         <div className="flex flex-col items-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">where to find me</p>
-          <div className="flex w-full items-center justify-center">
+          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
             <Link href={'/'} className="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

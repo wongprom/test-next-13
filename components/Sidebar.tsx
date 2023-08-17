@@ -92,8 +92,17 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
-            <Link href={'/photography'} className="cursor-pointer">
+          <div
+            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
+              currentRoute === '/photography' && 'xl:bg-[#1c1d21]'
+            }`}
+          >
+            <Link
+              href={'/photography'}
+              className={`cursor-pointer ${
+                currentRoute === '/photography' && activeLinkStyle
+              } `}
+            >
               <CameraIcon
                 className="h-6 w-6"
                 data-tooltip-id="camera-icon-tooltip"
@@ -113,8 +122,17 @@ const Sidebar = () => {
         </div>
         <div className="flex flex-col items-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i consume</p>
-          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
-            <Link href={'/books'} className="cursor-pointer">
+          <div
+            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
+              currentRoute === '/books' && 'xl:bg-[#1c1d21]'
+            }`}
+          >
+            <Link
+              href={'/books'}
+              className={`cursor-pointer ${
+                currentRoute === '/books' && activeLinkStyle
+              } `}
+            >
               <BookOpenIcon
                 className="h-6 w-6"
                 data-tooltip-id="book-open-icon-tooltip"
@@ -132,8 +150,17 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
-            <Link href={'/music'} className="cursor-pointer">
+          <div
+            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
+              currentRoute === '/music' && 'xl:bg-[#1c1d21]'
+            }`}
+          >
+            <Link
+              href={'/music'}
+              className={`cursor-pointer ${
+                currentRoute === '/music' && activeLinkStyle
+              } `}
+            >
               <MusicalNoteIcon
                 className="h-6 w-6"
                 data-tooltip-id="musical-note-icon-tooltip"

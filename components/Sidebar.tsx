@@ -19,8 +19,8 @@ const Sidebar = () => {
   const activeLinkStyle = 'text-orange-600';
 
   return (
-    <aside className="h-screen static  p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
-      <nav className="flex mb-2 flex-col space-y-20 xl:p-0">
+    <aside className="h-auto static p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
+      <nav className="flex h-auto mb-2 flex-col space-y-20 xl:p-0">
         <Link
           href={'/'}
           className={`${
@@ -40,30 +40,35 @@ const Sidebar = () => {
             className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
           />
         </Link>
-
-        <div className="flex flex-col items-center space-y-2">
-          <Link
-            href={'/about'}
-            className={`${
-              currentRoute === '/about' && activeLinkStyle
-            } cursor-pointer`}
+        <div className="flex flex-col items-center justify-center xl:items-start space-y-2">
+          <p className="hidden xl:block capitalize">About</p>
+          <div
+            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
+              currentRoute === '/about' && 'xl:bg-[#1c1d21]'
+            }`}
           >
-            <FaceSmileIcon
-              className="h-6 w-6"
-              data-tooltip-id="face-smile-icon-tooltip"
-              data-tooltip-content="About"
-            />
-            <Tooltip
-              id="face-smile-icon-tooltip"
-              place="right"
-              className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
-            />
-          </Link>
+            <Link
+              href={'/about'}
+              className={`cursor-pointer ${
+                currentRoute === '/about' && activeLinkStyle
+              } `}
+            >
+              <FaceSmileIcon
+                className="h-6 w-6"
+                data-tooltip-id="face-smile-icon-tooltip"
+                data-tooltip-content="About"
+              />
+              <Tooltip
+                id="face-smile-icon-tooltip"
+                place="right"
+                className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
+              />
+            </Link>
+            <p className="hidden xl:block ml-2 mr-auto">Me</p>
+          </div>
         </div>
-
         <div className="flex flex-col items-center justify-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i create</p>
-
           <div
             className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
               currentRoute === '/projects' && 'xl:bg-[#1c1d21]'
@@ -91,7 +96,6 @@ const Sidebar = () => {
               <span>3</span>
             </div>
           </div>
-
           <div
             className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
               currentRoute === '/photography' && 'xl:bg-[#1c1d21]'
@@ -149,7 +153,6 @@ const Sidebar = () => {
               <span>5</span>
             </div>
           </div>
-
           <div
             className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
               currentRoute === '/music' && 'xl:bg-[#1c1d21]'

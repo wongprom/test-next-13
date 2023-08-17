@@ -16,7 +16,7 @@ import React from 'react';
 
 const Sidebar = () => {
   const currentRoute = usePathname();
-  const activeLinkStyle = 'text-orange-600 ';
+  const activeLinkStyle = 'text-orange-600';
 
   return (
     <aside className="h-screen static  p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
@@ -41,7 +41,7 @@ const Sidebar = () => {
           />
         </Link>
 
-        <div className="flex flex-col items-center  space-y-2">
+        <div className="flex flex-col items-center space-y-2">
           <Link
             href={'/about'}
             className={`${

@@ -93,7 +93,7 @@ const Sidebar = () => {
           </div>
 
           <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
-            <Link href={'/'} className="cursor-pointer">
+            <Link href={'/photography'} className="cursor-pointer">
               <CameraIcon
                 className="h-6 w-6"
                 data-tooltip-id="camera-icon-tooltip"
@@ -114,7 +114,7 @@ const Sidebar = () => {
         <div className="flex flex-col items-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i consume</p>
           <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
-            <Link href={'/'} className="cursor-pointer">
+            <Link href={'/books'} className="cursor-pointer">
               <BookOpenIcon
                 className="h-6 w-6"
                 data-tooltip-id="book-open-icon-tooltip"
@@ -133,7 +133,7 @@ const Sidebar = () => {
           </div>
 
           <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
-            <Link href={'/'} className="cursor-pointer">
+            <Link href={'/music'} className="cursor-pointer">
               <MusicalNoteIcon
                 className="h-6 w-6"
                 data-tooltip-id="musical-note-icon-tooltip"

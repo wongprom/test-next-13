@@ -16,7 +16,7 @@ import React from 'react';
 
 const Sidebar = () => {
   const currentRoute = usePathname();
-  const activeLinkStyle = ' text-black bg-amber-300';
+  const activeLinkStyle = 'text-orange-600 ';
 
   return (
     <aside className="h-screen static  p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
@@ -64,12 +64,16 @@ const Sidebar = () => {
         <div className="flex flex-col items-center justify-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i create</p>
 
-          <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
+          <div
+            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
+              currentRoute === '/projects' && 'xl:bg-[#1c1d21]'
+            }`}
+          >
             <Link
               href={'/projects'}
-              className={`${
+              className={`cursor-pointer ${
                 currentRoute === '/projects' && activeLinkStyle
-              } cursor-pointer`}
+              } `}
             >
               <FolderIcon
                 className="h-6 w-6"

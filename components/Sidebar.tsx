@@ -181,7 +181,11 @@ const Sidebar = () => {
         <div className="flex flex-col items-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">where to find me</p>
           <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
-            <Link href={'/'} className="cursor-pointer">
+            <Link
+              href={'https://github.com/wongprom'}
+              target="_blank"
+              className="cursor-pointer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="15"

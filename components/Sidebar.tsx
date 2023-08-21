@@ -14,6 +14,8 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import React from 'react';
 import LinkSidebar from './LinkSidebar';
+import LinksSidebarWrapper from './LinksSidebarWrapper';
+import LinksSidebarTitle from './LinksSidebarTitle';
 
 const Sidebar = () => {
   const currentRoute = usePathname();
@@ -50,12 +52,12 @@ const Sidebar = () => {
           </div>
         </div>
         <div className="flex flex-col items-center xl:items-start space-y-2">
-          <p className={`hidden xl:block capitalize`}>About</p>
+          <p className={`hidden xl:block capitalize`}>about</p>
           <LinkSidebar linkText="Me" url="/about" Icon={FaceSmileIcon} />
         </div>
 
-        <div className="flex flex-col items-center  xl:items-start space-y-2">
-          <p className="hidden xl:block capitalize">what i create</p>
+        <LinksSidebarWrapper>
+          <LinksSidebarTitle title="what i create" />
           <LinkSidebar
             linkText="Projects"
             url="/projects"
@@ -69,9 +71,9 @@ const Sidebar = () => {
             Icon={CameraIcon}
             numOfProjects="8"
           />
-        </div>
-        <div className="flex flex-col items-center xl:items-start space-y-2">
-          <p className="hidden xl:block capitalize">what i consume</p>
+        </LinksSidebarWrapper>
+        <LinksSidebarWrapper>
+          <LinksSidebarTitle title="what i consume" />
           <LinkSidebar
             linkText="Books"
             url="/books"
@@ -84,9 +86,9 @@ const Sidebar = () => {
             Icon={MusicalNoteIcon}
             numOfProjects="5"
           />
-        </div>
-        <div className="flex flex-col items-center xl:items-start space-y-2">
-          <p className="hidden xl:block capitalize">where to find me</p>
+        </LinksSidebarWrapper>
+        <LinksSidebarWrapper>
+          <LinksSidebarTitle title="where to find me" />
           <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
             <Link
               href={'https://github.com/wongprom'}
@@ -115,7 +117,7 @@ const Sidebar = () => {
               <ArrowUpRightIcon strokeWidth="2" />
             </div>
           </div>
-        </div>
+        </LinksSidebarWrapper>
       </nav>
       <div className="mt-auto">
         <button className="p-4 bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">

@@ -62,7 +62,7 @@ const Sidebar = () => {
               } `}
             >
               <FaceSmileIcon
-                className="h-6 w-6"
+                className="h-6 w-6 focus:outline-none"
                 data-tooltip-id="face-smile-icon-tooltip"
                 data-tooltip-content="About"
               />
@@ -89,7 +89,7 @@ const Sidebar = () => {
               } `}
             >
               <FolderIcon
-                className="h-6 w-6"
+                className="h-6 w-6 focus:outline-none"
                 data-tooltip-id="folder-icon-tooltip"
                 data-tooltip-content="Projects"
               />
@@ -116,7 +116,7 @@ const Sidebar = () => {
               } `}
             >
               <CameraIcon
-                className="h-6 w-6"
+                className="h-6 w-6 focus:outline-none"
                 data-tooltip-id="camera-icon-tooltip"
                 data-tooltip-content="Photography"
               />
@@ -146,7 +146,7 @@ const Sidebar = () => {
               } `}
             >
               <BookOpenIcon
-                className="h-6 w-6"
+                className="h-6 w-6 focus:outline-none"
                 data-tooltip-id="book-open-icon-tooltip"
                 data-tooltip-content="Books"
               />
@@ -173,7 +173,7 @@ const Sidebar = () => {
               } `}
             >
               <MusicalNoteIcon
-                className="h-6 w-6"
+                className="h-6 w-6 focus:outline-none"
                 data-tooltip-id="musical-note-icon-tooltip"
                 data-tooltip-content="Music"
               />

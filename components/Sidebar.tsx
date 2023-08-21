@@ -16,6 +16,7 @@ import React from 'react';
 import LinkSidebar from './LinkSidebar';
 import LinksSidebarWrapper from './LinksSidebarWrapper';
 import LinksSidebarTitle from './LinksSidebarTitle';
+import SidebarLogo from './SidebarLogo';
 
 const Sidebar = () => {
   const currentRoute = usePathname();
@@ -24,37 +25,12 @@ const Sidebar = () => {
   return (
     <aside className="h-auto static p-4 bg-[#121316] text-[#9ea3ad] hidden md:flex md:flex-col xl:w-[240px]">
       <nav className="flex h-auto mb-2 flex-col space-y-20 xl:p-0">
-        <div className="border-b border-orange-500/10 flex items-center justify-center mt-2">
-          <Link
-            href={'/'}
-            className={`${
-              currentRoute === '/' && activeLinkStyle
-            } cursor-pointer`}
-          >
-            <div
-              className=""
-              data-tooltip-id="home-tooltip"
-              data-tooltip-content="Home"
-            >
-              <p className="tracking-widest text-orange-600 text-4xl font-thin">
-                จิมมี่
-              </p>
-            </div>
-            <Tooltip
-              id="home-tooltip"
-              place="right"
-              className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
-            />
-          </Link>
-          <div className="hidden xl:flex flex-col items-baseline text-xs ml-2 whitespace-nowrap">
-            <p className="font-bold text-[#e5e6e9]">Jimmy Bäckström</p>
-            <p className="text-[#9ea3ad]">Frontend Developer</p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center xl:items-start space-y-2">
-          <p className={`hidden xl:block capitalize`}>about</p>
+        <SidebarLogo link={'/'} toolTipText="home" />
+
+        <LinksSidebarWrapper>
+          <LinksSidebarTitle title="about" />
           <LinkSidebar linkText="Me" url="/about" Icon={FaceSmileIcon} />
-        </div>
+        </LinksSidebarWrapper>
 
         <LinksSidebarWrapper>
           <LinksSidebarTitle title="what i create" />
@@ -64,7 +40,6 @@ const Sidebar = () => {
             Icon={FolderIcon}
             numOfProjects="2"
           />
-
           <LinkSidebar
             linkText="Photography"
             url="/photography"
@@ -72,6 +47,7 @@ const Sidebar = () => {
             numOfProjects="8"
           />
         </LinksSidebarWrapper>
+
         <LinksSidebarWrapper>
           <LinksSidebarTitle title="what i consume" />
           <LinkSidebar
@@ -87,6 +63,7 @@ const Sidebar = () => {
             numOfProjects="5"
           />
         </LinksSidebarWrapper>
+
         <LinksSidebarWrapper>
           <LinksSidebarTitle title="where to find me" />
           <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">

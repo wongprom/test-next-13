@@ -13,6 +13,7 @@ import { Tooltip } from 'react-tooltip';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import React from 'react';
+import LinkSidebar from './LinkSidebar';
 
 const Sidebar = () => {
   const currentRoute = usePathname();
@@ -48,146 +49,41 @@ const Sidebar = () => {
             <p className="text-[#9ea3ad]">Frontend Developer</p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center xl:items-start space-y-2">
-          <p className="hidden xl:block capitalize">About</p>
-          <div
-            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
-              currentRoute === '/about' && 'xl:bg-[#1c1d21]'
-            }`}
-          >
-            <Link
-              href={'/about'}
-              className={`cursor-pointer ${
-                currentRoute === '/about' && activeLinkStyle
-              } `}
-            >
-              <FaceSmileIcon
-                className="h-6 w-6 focus:outline-none"
-                data-tooltip-id="face-smile-icon-tooltip"
-                data-tooltip-content="About"
-              />
-              <Tooltip
-                id="face-smile-icon-tooltip"
-                place="right"
-                className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
-              />
-            </Link>
-            <p className="hidden xl:block ml-2 mr-auto">Me</p>
-          </div>
+        <div className="flex flex-col items-center xl:items-start space-y-2">
+          <p className={`hidden xl:block capitalize`}>About</p>
+          <LinkSidebar linkText="Me" url="/about" Icon={FaceSmileIcon} />
         </div>
-        <div className="flex flex-col items-center justify-center xl:items-start space-y-2">
+
+        <div className="flex flex-col items-center  xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i create</p>
-          <div
-            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
-              currentRoute === '/projects' && 'xl:bg-[#1c1d21]'
-            }`}
-          >
-            <Link
-              href={'/projects'}
-              className={`cursor-pointer ${
-                currentRoute === '/projects' && activeLinkStyle
-              } `}
-            >
-              <FolderIcon
-                className="h-6 w-6 focus:outline-none"
-                data-tooltip-id="folder-icon-tooltip"
-                data-tooltip-content="Projects"
-              />
-              <Tooltip
-                id="folder-icon-tooltip"
-                place="right"
-                className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
-              />
-            </Link>
-            <p className="hidden xl:block ml-2">Project</p>
-            <div className="hidden p-1 xl:flex items-center justify-center ml-auto text-[#828996] bg-[#23252a] text-[10px] h-4 w-4 rounded">
-              <span>3</span>
-            </div>
-          </div>
-          <div
-            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
-              currentRoute === '/photography' && 'xl:bg-[#1c1d21]'
-            }`}
-          >
-            <Link
-              href={'/photography'}
-              className={`cursor-pointer ${
-                currentRoute === '/photography' && activeLinkStyle
-              } `}
-            >
-              <CameraIcon
-                className="h-6 w-6 focus:outline-none"
-                data-tooltip-id="camera-icon-tooltip"
-                data-tooltip-content="Photography"
-              />
-              <Tooltip
-                id="camera-icon-tooltip"
-                place="right"
-                className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
-              />
-            </Link>
-            <p className="hidden xl:block ml-2">Photography</p>
-            <div className="hidden p-1 xl:flex items-center justify-center ml-auto text-[#828996] bg-[#23252a] text-[10px] h-4 w-4 rounded">
-              <span>4</span>
-            </div>
-          </div>
+          <LinkSidebar
+            linkText="Projects"
+            url="/projects"
+            Icon={FolderIcon}
+            numOfProjects="2"
+          />
+
+          <LinkSidebar
+            linkText="Photography"
+            url="/photography"
+            Icon={CameraIcon}
+            numOfProjects="8"
+          />
         </div>
         <div className="flex flex-col items-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">what i consume</p>
-          <div
-            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
-              currentRoute === '/books' && 'xl:bg-[#1c1d21]'
-            }`}
-          >
-            <Link
-              href={'/books'}
-              className={`cursor-pointer ${
-                currentRoute === '/books' && activeLinkStyle
-              } `}
-            >
-              <BookOpenIcon
-                className="h-6 w-6 focus:outline-none"
-                data-tooltip-id="book-open-icon-tooltip"
-                data-tooltip-content="Books"
-              />
-              <Tooltip
-                id="book-open-icon-tooltip"
-                place="right"
-                className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
-              />
-            </Link>
-            <p className="hidden xl:block ml-2">Books</p>
-            <div className="hidden p-1 xl:flex items-center justify-center ml-auto text-[#828996] bg-[#23252a] text-[10px] h-4 w-4 rounded">
-              <span>5</span>
-            </div>
-          </div>
-          <div
-            className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
-              currentRoute === '/music' && 'xl:bg-[#1c1d21]'
-            }`}
-          >
-            <Link
-              href={'/music'}
-              className={`cursor-pointer ${
-                currentRoute === '/music' && activeLinkStyle
-              } `}
-            >
-              <MusicalNoteIcon
-                className="h-6 w-6 focus:outline-none"
-                data-tooltip-id="musical-note-icon-tooltip"
-                data-tooltip-content="Music"
-              />
-              <Tooltip
-                id="musical-note-icon-tooltip"
-                place="right"
-                className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
-              />
-            </Link>
-            <p className="hidden xl:block ml-2">Music</p>
-            <div className="hidden p-1 xl:flex items-center justify-center ml-auto text-[#828996] bg-[#23252a] text-[10px] h-4 w-4 rounded">
-              <span>5</span>
-            </div>
-          </div>
+          <LinkSidebar
+            linkText="Books"
+            url="/books"
+            Icon={BookOpenIcon}
+            numOfProjects="2"
+          />
+          <LinkSidebar
+            linkText="Music"
+            url="/music"
+            Icon={MusicalNoteIcon}
+            numOfProjects="5"
+          />
         </div>
         <div className="flex flex-col items-center xl:items-start space-y-2">
           <p className="hidden xl:block capitalize">where to find me</p>

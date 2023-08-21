@@ -5,7 +5,6 @@ import {
   DocumentIcon,
   FaceSmileIcon,
   FolderIcon,
-  MoonIcon,
   MusicalNoteIcon,
   ArrowUpRightIcon,
 } from '@heroicons/react/24/outline';
@@ -17,6 +16,7 @@ import LinkSidebar from './LinkSidebar';
 import LinksSidebarWrapper from './LinksSidebarWrapper';
 import LinksSidebarTitle from './LinksSidebarTitle';
 import SidebarLogo from './SidebarLogo';
+import SidebarModeButton from './SidebarModeButton';
 
 const Sidebar = () => {
   const currentRoute = usePathname();
@@ -97,10 +97,7 @@ const Sidebar = () => {
         </LinksSidebarWrapper>
       </nav>
       <div className="mt-auto">
-        <button className="p-4 bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
-          {' '}
-          <MoonIcon className="h-4 w-4" />
-        </button>
+        <SidebarModeButton />
       </div>
     </aside>
   );

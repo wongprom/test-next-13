@@ -31,7 +31,7 @@ const TestimonialCard = ({
           </div>
 
           <p className="mt-4 text-lg italic leading-relaxed text-[#dddddd] xl:text-xl">
-            "{text}"
+            &quot; {text} &quot;
           </p>
         </div>
       </div>

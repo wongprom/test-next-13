@@ -14,16 +14,20 @@ type Props = {
 
 const LinkSidebar = ({ linkText, url, Icon, numOfProjects }: Props) => {
   const currentRoute = usePathname();
+  const isCurrentRouteStartsWithURL = currentRoute.startsWith(url);
+
   const activeLinkStyle = 'text-orange-600';
   return (
     <div
       className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
-        currentRoute === url && 'xl:bg-[#1c1d21]'
+        isCurrentRouteStartsWithURL && 'xl:bg-[#1c1d21]'
       }`}
     >
       <Link
         href={url}
-        className={`cursor-pointer ${currentRoute === url && activeLinkStyle} `}
+        className={`cursor-pointer ${
+          isCurrentRouteStartsWithURL && activeLinkStyle
+        } `}
       >
         <Icon
           className="h-6 w-6 focus:outline-none"

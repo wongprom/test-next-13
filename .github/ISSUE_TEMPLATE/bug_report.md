@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+#### Description
+A clear and concise description of what the issue is about.
 
 **To Reproduce**
 Steps to reproduce the behavior:
@@ -30,3 +30,5 @@ Add any other context about the problem here.
 - [ ] Criteria 1
 - [ ] Criteria 2
 - [ ] Criteria 3
+
+---

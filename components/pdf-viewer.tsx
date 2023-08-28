@@ -13,15 +13,22 @@ const PdfViewer = () => {
     setNumPages(numPages);
   }
   return (
-    <div>
-      <Document file="cv.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+    <Document
+      file="cv.pdf"
+      onLoadSuccess={onDocumentLoadSuccess}
+      className="flex justify-center"
+    >
+      <div>
         <Page
+          className="hidden sm:flex"
           renderTextLayer={false}
           renderAnnotationLayer={false}
           pageNumber={pageNumber}
+          width={500}
+          height={400}
         />
-      </Document>
-    </div>
+      </div>
+    </Document>
   );
 };
 

@@ -1,5 +1,7 @@
+import PdfViewer from '@/components/pdf-viewer';
+
 const CvPage = () => {
-  return <div>CvPage</div>;
+  return <PdfViewer />;
 };
 
 export default CvPage;

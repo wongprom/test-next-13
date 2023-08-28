@@ -147,11 +147,11 @@ const Navbar = () => {
                 <DocumentIcon className="h-5 w-5" />
 
                 <Link
-                  href={'/about'}
+                  href={'/cv'}
                   className=" hover:text-[#eeeeee] cursor-pointer pl-2 text-[#E5E6E9]"
                   onClick={handlerClick}
                 >
-                  ReadCV
+                  Resume/CV
                 </Link>
               </li>
             </ul>

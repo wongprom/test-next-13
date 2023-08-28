@@ -7,6 +7,7 @@ import {
   FolderIcon,
   MusicalNoteIcon,
   ArrowUpRightIcon,
+  NewspaperIcon,
 } from '@heroicons/react/24/outline';
 import { Tooltip } from 'react-tooltip';
 import { usePathname } from 'next/navigation';
@@ -66,11 +67,12 @@ const Sidebar = () => {
         </LinksSidebarWrapper>
 
         <LinksSidebarWrapper>
-          <LinksSidebarTitle title="where to find me" />
+          <LinksSidebarTitle title="Where to find me" />
           <LinkSidebarExternal
             link="https://github.com/wongprom"
-            tooltipText="Github"
+            tooltipText="CV"
           />
+          <LinkSidebar linkText="Read CV" url="/cv" Icon={NewspaperIcon} />
         </LinksSidebarWrapper>
       </nav>
       <div className="mt-auto">

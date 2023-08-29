@@ -2,6 +2,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import printJS from 'print-js';
+import { PrinterIcon } from '@heroicons/react/24/outline';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -12,12 +14,23 @@ const PdfViewer = () => {
   function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
     setNumPages(numPages);
   }
+
   return (
     <Document
       file="cv.pdf"
       onLoadSuccess={onDocumentLoadSuccess}
-      className="flex justify-center"
+      className="flex flex-col justify-center items-center"
     >
+      <div className="mb-8">
+        <button
+          className="flex justify-center items-center p-4 text-[#23252a] cursor-pointer rounded-lg bg-[#e5e6e9] hover:text-[#e5e6e9] hover:bg-[#121316]"
+          type="button"
+          onClick={() => printJS('cv.pdf')}
+        >
+          <PrinterIcon className="mr-2 h-5 w-5" />
+          Print CV
+        </button>
+      </div>
       <div>
         <Page
           className="hidden sm:flex"

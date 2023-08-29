@@ -15,7 +15,6 @@ const PdfViewer = () => {
   }
 
   const handlerPrint = async () => {
-    // printJS('cv.pdf');
     const printJS = (await import('print-js')).default;
     printJS('cv.pdf');
   };

@@ -43,6 +43,14 @@ export default function AboutLayout({
                 Testimonial
               </Link>
             </li>
+            <li>
+              <Link
+                href={'/about/certificates'}
+                className="cursor-pointer hover:text-gray-600"
+              >
+                Certificates
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="col-span-5 md:col-span-4 md:rounded-md  border-4 border-[#aaaaaa] p-5 overflow">

@@ -1,4 +1,3 @@
-'use client';
 import PdfViewer from '../../components/PdfViewer';
 
 const CvPage = () => {

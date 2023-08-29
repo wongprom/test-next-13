@@ -15,6 +15,12 @@ const PdfViewer = () => {
     setNumPages(numPages);
   }
 
+  const handlerPrint = async () => {
+    // printJS('cv.pdf');
+    const PrintJS = (await import('print-js')).default;
+    PrintJS('cv.pdf');
+  };
+
   return (
     <Document
       file="cv.pdf"
@@ -25,7 +31,7 @@ const PdfViewer = () => {
         <button
           className="flex justify-center items-center p-4 text-[#23252a] cursor-pointer rounded-lg bg-[#e5e6e9] hover:text-[#e5e6e9] hover:bg-[#121316]"
           type="button"
-          onClick={() => printJS('cv.pdf')}
+          onClick={() => handlerPrint()}
         >
           <PrinterIcon className="mr-2 h-5 w-5" />
           Print CV

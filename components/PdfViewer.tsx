@@ -2,7 +2,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import printJS from 'print-js';
 import { PrinterIcon } from '@heroicons/react/24/outline';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
@@ -17,8 +16,8 @@ const PdfViewer = () => {
 
   const handlerPrint = async () => {
     // printJS('cv.pdf');
-    const PrintJS = (await import('print-js')).default;
-    PrintJS('cv.pdf');
+    const printJS = (await import('print-js')).default;
+    printJS('cv.pdf');
   };
 
   return (

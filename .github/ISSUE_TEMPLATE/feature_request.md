@@ -25,6 +25,6 @@ _Before_
 _After_
 
 
-**Success criteria **
+**Success criteria**
 - [ ] criteria 1
 - [ ] criteria 2

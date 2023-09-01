@@ -1,88 +1,19 @@
-# test-1
+# Repository _"test-next-13"_, is my space to evolve with you
 
-This is tha place for me to try out new things like
+You find my list of things that I will use and what I have already did for this webbpage  
+- https://github.com/wongprom/test-next-13/issues
 
-- nested routes
-- design ideas
-- new functionalities
-- and more...
+# Discover the Secrets of _test-next-13_
 
-## Things to test
+Welcome to the world of Test Next.js 13, where innovation is in progress! 🚀
 
-<details>
-  <summary>Nested routes</summary>
+Ever wondered what goes on behind the scenes of this exciting project? Dive deep into the mysteries by exploring our meticulous roadmap and accomplishments. 
 
-- [x] NestedRoutes
+🔍 Intrigued? Uncover the details here: [Project Roadmap and Achievements](https://github.com/wongprom/test-next-13/issues)
 
-</details>
-<p>
+Get ready to embark on a journey of web development like no other. Your curiosity is your guide.
 
-<details>
-  <summary>Add CMS (Supabase  | Contenful...)</summary>
-  
-  [https://supabase.com/docs/guides/getting-started/quickstarts/nextjs](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs)
-
-- [ ] Implement supabase to project
-- [ ] move data from dataTS to Supabase
-
-</details>
-<p>
-<details>
-  <summary>Next.js loading</summary>
-
-[Nextjs loading documentation](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
-
-- [ ] use loading.js in project.
-
-</details>
-<p>
-
-<details>
-  <summary>ChatGPT</summary>
-
-[The EASIEST Way to Use OpenAI ChatGPT in Next.js](https://www.youtube.com/watch?v=2xwv4T552lM)
-
-- [ ] Try to implement mockAPI in project for fun.
-
-</details>
-
-</details>
-<p>
-<details>
-  <summary>mockAPI</summary>
-
-[mockapi.io](https://mockapi.io/) - Quickly setup endpoints, generate custom data, and preform operations on it using RESTful interface
-
-- [ ] with help of chatGPT, create meme developer text to existing image.
-
-</details>
-<p>
-<details>
-  <summary>SEO</summary>
-
-Look for info how to implement
-
-</details>
-<p>
-<details>
-  <summary>Page speed</summary>
-
-Look for info on how check pagespeed and make application faster
-
- </details>
- <p>
-<details>
-  <summary>Usability</summary>
-
-- [ ] Testing
-- [ ] Accessibility
-- [ ] The 2-second rule, loading content.
-- [ ] Short-term memory can only retain around **five** out of nine things that a person sees at one time.
-
- </details>
  ---
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 

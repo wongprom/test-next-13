@@ -2,7 +2,7 @@
 name: Idea request
 about: Suggest an idea for this project
 title: "[IDEA]"
-labels: ticket
+labels: idea
 assignees: wongprom
 ---
 

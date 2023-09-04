@@ -11,9 +11,11 @@ const CertificatesPage = () => {
           </div>
           <div className="col-span-4 lg:col-span-3 mt-2">
             <p>
-              Et vel praesentium. Sed commodi iure atque delectus aspernatur.
-              Sapiente suscipit fuga recusandae consectetur nostrum. Nulla autem
-              sed illo et voluptas.
+              Visit my certificate collection, where new qualifications
+              magically appear like rabbits from a magician&apos;s hat – you
+              never know what impressive trick I&apos;ll pull off next! Keep
+              checking in, it&apos;s like unwrapping surprise gifts of
+              expertise.
             </p>
           </div>
         </div>

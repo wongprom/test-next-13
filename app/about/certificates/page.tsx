@@ -1,19 +1,24 @@
 const CertificatesPage = () => {
   const n = 8;
   return (
-    <div className="text-white bg-[#2A2A3B] p-8  ">
+    <div className="text-white bg-[#2A2A3B] p-0 sm:p-8">
       <div className="max-w-screen-lg mx-auto">
-        <div className="">
-          <h1 className="text-2xl">Certificates</h1>
+        <div className="grid grid-cols-4 gap-2">
+          <div className="col-span-4 lg:col-span-1">
+            <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
+              Certificates
+            </h1>
+          </div>
+          <div className="col-span-4 lg:col-span-3 mt-2">
+            <p>
+              Et vel praesentium. Sed commodi iure atque delectus aspernatur.
+              Sapiente suscipit fuga recusandae consectetur nostrum. Nulla autem
+              sed illo et voluptas.
+            </p>
+          </div>
         </div>
-        <div className="mt-2">
-          <p>
-            Et vel praesentium. Sed commodi iure atque delectus aspernatur.
-            Sapiente suscipit fuga recusandae consectetur nostrum. Nulla autem
-            sed illo et voluptas.
-          </p>
-        </div>
-        <div className="relative flex flex-col gap-4 bg-[#2A2A3B] max-w-screen-lg">
+
+        <div className="relative flex flex-col gap-7 bg-[#2A2A3B] max-w-screen-lg py-5 mt-5">
           {[...Array(n)].map((e, i) => (
             <div
               key={i}

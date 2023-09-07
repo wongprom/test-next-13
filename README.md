@@ -17,7 +17,7 @@ react - `18.2.0`<p>
 [package.json](https://github.com/wongprom/test-next-13/blob/main/package.json)
 
 
-### Create issues with template `idea_request.md`, `feature_request.md`, `idea_request.md`
+### Create issues with template `bug_request.md`, `feature_request.md`, `idea_request.md`
 - bug_report.md - https://github.com/wongprom/test-next-13/blob/main/.github/ISSUE_TEMPLATE/bug_report.md
 - feature_request.md - https://github.com/wongprom/test-next-13/blob/main/.github/ISSUE_TEMPLATE/feature_request.md
 - idea_request.md - https://github.com/wongprom/test-next-13/blob/main/.github/ISSUE_TEMPLATE/idea_request.md

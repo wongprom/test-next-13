@@ -1,3 +1,5 @@
+import { testCertificates } from '@/data/data';
+
 const CertificatesPage = () => {
   const n = 8;
   return (
@@ -21,21 +23,19 @@ const CertificatesPage = () => {
         </div>
 
         <div className="relative flex flex-col gap-7 bg-[#2A2A3B] max-w-screen-lg py-5 mt-5">
-          {[...Array(n)].map((e, i) => (
+          {testCertificates.map((certificate) => (
             <div
-              key={i}
+              key={certificate.slug}
               className="bg-[#2E2E41] min-w-min text-slate-50 rounded-lg p-6 max-w-sm odd:self-end shadow-xl z-10"
             >
               <div className="sm:flex justify-between items-center">
-                <p className=" pb-1">Accessibility</p>
-                <p className=" text-[#CD835F] text-xs">WCAG2.1</p>
+                <p className=" pb-1">{certificate.title}</p>
+                <p className=" text-[#CD835F] text-xs">
+                  {certificate.subTitle}
+                </p>
               </div>
 
-              <p className="text-xs font-mono">
-                Doloribus distinctio laudantium maiores neque facere libero ut
-                mollitia qui. Doloribus distinctio laudantium maiores neque
-                facere libero ut mollitia qui.
-              </p>
+              <p className="text-xs font-mono">{certificate.infoText}</p>
 
               <button className="px-6 py-4 bg-[#F09666] text-xs mt-4 text-white rounded-sm">
                 View Certificate

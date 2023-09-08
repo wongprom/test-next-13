@@ -1,3 +1,4 @@
+import CertificateCard from '@/components/CertificateCard';
 import { testCertificates } from '@/data/data';
 
 const CertificatesPage = () => {
@@ -24,23 +25,13 @@ const CertificatesPage = () => {
 
         <div className="relative flex flex-col gap-7 bg-[#2A2A3B] max-w-screen-lg py-5 mt-5">
           {testCertificates.map((certificate) => (
-            <div
+            <CertificateCard
               key={certificate.slug}
-              className="bg-[#2E2E41] min-w-min text-slate-50 rounded-lg p-6 max-w-sm odd:self-end shadow-xl z-10"
-            >
-              <div className="sm:flex justify-between items-center">
-                <p className=" pb-1">{certificate.title}</p>
-                <p className=" text-[#CD835F] text-xs">
-                  {certificate.subTitle}
-                </p>
-              </div>
-
-              <p className="text-xs font-mono">{certificate.infoText}</p>
-
-              <button className="px-6 py-4 bg-[#F09666] text-xs mt-4 text-white rounded-sm">
-                View Certificate
-              </button>
-            </div>
+              slug={certificate.slug}
+              subTitle={certificate.subTitle}
+              infoText={certificate.infoText}
+              title={certificate.title}
+            />
           ))}
           <div className="border-8 border-[#F09666] absolute top-0 right-36 h-full"></div>
         </div>

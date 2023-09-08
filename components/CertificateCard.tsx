@@ -17,7 +17,7 @@ const CertificateCard = ({ slug, subTitle, infoText, title }: Props) => {
       </div>
       <p className="text-xs font-mono">{infoText}</p>
       <Link className="" href={`/about/certificates/${slug}`}>
-        <button className="px-6 py-4 bg-[#F09666] text-xs mt-4 text-white rounded-sm">
+        <button className="px-6 py-4 bg-[#F09666] text-xs mt-4 text-white rounded-sm hover:text-[#F09666] hover:bg-white">
           View Certificate
         </button>
       </Link>

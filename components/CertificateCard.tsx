@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 type Props = {
@@ -14,12 +15,12 @@ const CertificateCard = ({ slug, subTitle, infoText, title }: Props) => {
         <p className=" pb-1">{title}</p>
         <p className=" text-[#CD835F] text-xs">{subTitle}</p>
       </div>
-
       <p className="text-xs font-mono">{infoText}</p>
-
-      <button className="px-6 py-4 bg-[#F09666] text-xs mt-4 text-white rounded-sm">
-        View Certificate
-      </button>
+      <Link className="" href={`/about/certificates/${slug}`}>
+        <button className="px-6 py-4 bg-[#F09666] text-xs mt-4 text-white rounded-sm">
+          View Certificate
+        </button>
+      </Link>
     </div>
   );
 };

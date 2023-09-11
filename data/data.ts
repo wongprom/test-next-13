@@ -144,13 +144,13 @@ const testimonials = [
 ];
 
 const testCertificates = [
-  {
-    slug: 'accessibility',
-    title: 'Accessibility',
-    subTitle: 'WCAG2.1',
-    infoText:
-      'Did you know WCAG2.1 has its own fan club? They are called "Wcaggers", and they are just as passionate about accessibility as your grandma is about knitting.',
-  },
+  // {
+  //   slug: 'accessibility',
+  //   title: 'Accessibility',
+  //   subTitle: 'WCAG2.1',
+  //   infoText:
+  //     'Did you know WCAG2.1 has its own fan club? They are called "Wcaggers", and they are just as passionate about accessibility as your grandma is about knitting.',
+  // },
   {
     slug: 'cpr',
     title: 'cpr',
@@ -158,27 +158,27 @@ const testCertificates = [
     infoText:
       'CPR instructors are basically the DJs of the medical world - they know all the beats to keep the heart pumping, and they all even throw in some "Stayin Alive" by the Bee Gees for good measure.',
   },
-  {
-    slug: 'netflix-navigating',
-    title: 'Netflix Navigating',
-    subTitle: 'Ninja',
-    infoText:
-      'To earn the prestigious "Netflix Navigating Ninja" certificate, binge-watch at least 20 series in a week without falling asleep or losing the remote control. Bonus points for perfecting the art of ordering takeout without leaving your couch!',
-  },
-  {
-    slug: 'cooking',
-    title: 'Cooking',
-    subTitle: 'Microwave Magician',
-    infoText:
-      'Microwave Magicians have turned reheating leftovers into a culinary art form, defying expectations one beep at a time.',
-  },
-  {
-    slug: 'texting',
-    title: 'Texting',
-    subTitle: 'Emoji Ambassador',
-    infoText:
-      'Emoji Ambassadors have unlocked the secret language of emojis, fluently expressing emotions and ideas through the art of tiny digital symbols.',
-  },
+  // {
+  //   slug: 'netflix-navigating',
+  //   title: 'Netflix Navigating',
+  //   subTitle: 'Ninja',
+  //   infoText:
+  //     'To earn the prestigious "Netflix Navigating Ninja" certificate, binge-watch at least 20 series in a week without falling asleep or losing the remote control. Bonus points for perfecting the art of ordering takeout without leaving your couch!',
+  // },
+  // {
+  //   slug: 'cooking',
+  //   title: 'Cooking',
+  //   subTitle: 'Microwave Magician',
+  //   infoText:
+  //     'Microwave Magicians have turned reheating leftovers into a culinary art form, defying expectations one beep at a time.',
+  // },
+  // {
+  //   slug: 'texting',
+  //   title: 'Texting',
+  //   subTitle: 'Emoji Ambassador',
+  //   infoText:
+  //     'Emoji Ambassadors have unlocked the secret language of emojis, fluently expressing emotions and ideas through the art of tiny digital symbols.',
+  // },
 ];
 
 export { characterTestADEPT15, testimonials, testCertificates };

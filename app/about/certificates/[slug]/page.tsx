@@ -17,7 +17,6 @@ export type Certificate = {
 
 const CertificatePage = ({ params }: { params: Certificate }) => {
   const { slug } = params;
-  console.log('🚀 ~ file: page.tsx:20 ~ CertificatePage ~ slug:', slug);
   return (
     <div className="flex flex-col items-center justify-center text-white bg-[#2A2A3B] p-0 sm:p-8 ">
       <div className=" max-w-screen-lg">

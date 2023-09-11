@@ -2,7 +2,6 @@ import CertificateCard from '@/components/CertificateCard';
 import { testCertificates } from '@/data/data';
 
 const CertificatesPage = () => {
-  const n = 8;
   return (
     <div className="text-white bg-[#2A2A3B] p-0 sm:p-8">
       <div className="max-w-screen-lg mx-auto">

@@ -1,9 +1,10 @@
 import CertificateCard from '@/components/CertificateCard';
 import { testCertificates } from '@/data/data';
 import { getCertificates } from '@/sanity/sanity-utils';
+import { Certificate } from '@/types/types';
 
 const CertificatesPage = async () => {
-  const certificates: any = await getCertificates();
+  const certificates: Certificate[] = await getCertificates();
 
   return (
     <div className="text-white bg-[#2A2A3B] p-0 sm:p-8">
@@ -38,7 +39,7 @@ const CertificatesPage = async () => {
           <div className="border-8 border-[#F09666] absolute top-0 right-36 h-full"></div>
         </div>
         <div>
-          {certificates.map((cert: any) => {
+          {certificates.map((cert) => {
             return (
               <div key={cert._id}>
                 <p>{cert.title}</p>

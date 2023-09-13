@@ -1,6 +1,7 @@
+import { Certificate } from '@/types/types';
 import { createClient, groq } from 'next-sanity';
 
-export async function getCertificates() {
+export const getCertificates = (): Promise<Certificate[]> => {
   const client = createClient({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as string,
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET as string,
@@ -18,4 +19,4 @@ export async function getCertificates() {
     "image": image.asset == url,
     url,
   }`);
-}
+};

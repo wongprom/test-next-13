@@ -14,3 +14,18 @@ export const getCertificates = (): Promise<Certificate[]> => {
     url,
   }`);
 };
+export const getCertificate = (slug: string): Promise<Certificate> => {
+  return client.fetch(
+    groq`*[_type == "certificate" && slug.current == $slug][0]{
+    _id,
+    _createdAt,
+    title,
+    subTitle,
+    infoText,
+    "slug": slug.current,
+    "image": image.asset == url,
+    url,
+  }`,
+    { slug }
+  );
+};

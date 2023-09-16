@@ -1,32 +1,39 @@
-import { testCertificates } from '../../../../data/data';
+// import { testCertificates } from '../../../../data/data';
 import React from 'react';
 import Image from 'next/image';
+import { getCertificate, getCertificates } from '@/sanity/sanity-utils';
 
-export const dynamicParams = false;
+// export const dynamicParams = false;
 export async function generateStaticParams() {
-  const allCert = testCertificates;
+  const certificates = await getCertificates();
 
-  return allCert.map((cert) => ({
-    slug: cert.slug,
-  }));
+  return certificates.map((certificate) => {
+    return {
+      slug: certificate.slug,
+    };
+  });
 }
 
 export type Certificate = {
   slug: string;
 };
 
-const CertificatePage = ({ params }: { params: Certificate }) => {
+const CertificatePage = async ({ params }: { params: Certificate }) => {
   const { slug } = params;
+  const certificate = await getCertificate(slug);
+
   return (
     <div className="flex flex-col items-center justify-center text-white bg-[#2A2A3B] p-0 sm:p-8 ">
-      <div className=" max-w-screen-lg">
+      <p>id: {certificate._id}</p>
+      <p>title: {certificate.title}</p>
+      {/* <div className=" max-w-screen-lg">
         <div className="w-full flex items-center justify-center mb-8">
           <Image
             src={'/hlr.png'}
             alt="certificate"
             width="768"
             height="865"
-            priority={true}
+            // priority={true}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw"
             style={{ width: 'auto', height: 'auto' }}
           />
@@ -49,7 +56,7 @@ const CertificatePage = ({ params }: { params: Certificate }) => {
         </div>
 
         <p>some thing</p>
-      </div>
+      </div> */}
     </div>
   );
 };

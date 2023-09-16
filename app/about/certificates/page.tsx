@@ -1,5 +1,4 @@
 import CertificateCard from '@/components/CertificateCard';
-import { testCertificates } from '@/data/data';
 import { getCertificates } from '@/sanity/sanity-utils';
 import { Certificate } from '@/types/types';
 
@@ -27,7 +26,7 @@ const CertificatesPage = async () => {
         </div>
 
         <div className="relative flex flex-col gap-7 bg-[#2A2A3B] max-w-screen-lg py-5 mt-5">
-          {testCertificates.map((certificate) => (
+          {certificates.map((certificate) => (
             <CertificateCard
               key={certificate.slug}
               slug={certificate.slug}
@@ -37,16 +36,6 @@ const CertificatesPage = async () => {
             />
           ))}
           <div className="border-8 border-[#F09666] absolute top-0 right-36 h-full"></div>
-        </div>
-        <div>
-          {certificates.map((cert) => {
-            return (
-              <div key={cert._id}>
-                <p>{cert.title}</p>
-                <p>{cert.subTitle}</p>
-              </div>
-            );
-          })}
         </div>
       </div>
     </div>

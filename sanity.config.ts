@@ -1,5 +1,6 @@
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
+import { visionTool } from '@sanity/vision';
 import schemas from './sanity/schemas';
 
 const config = defineConfig({
@@ -7,8 +8,8 @@ const config = defineConfig({
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET as string,
   title: 'testing-1',
   apiVersion: '2023-09-13',
-  basePath: '/about/certificates/admin',
-  plugins: [deskTool()],
+  basePath: '/admin',
+  plugins: [deskTool(), visionTool()],
   schema: { types: schemas },
 });
 export default config;

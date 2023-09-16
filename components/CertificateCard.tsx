@@ -1,7 +1,7 @@
 import { PortableText } from '@portabletext/react';
-import Link from 'next/link';
 import React from 'react';
 import { PortableTextBlock } from 'sanity';
+import ClientSideLink from './ClientSideLink';
 
 type Props = {
   slug: string;
@@ -20,11 +20,11 @@ const CertificateCard = ({ slug, subTitle, infoText, title }: Props) => {
       <div className="line-clamp-2">
         <PortableText value={infoText} />
       </div>
-      <Link className="" href={`/about/certificates/${slug}`}>
+      <ClientSideLink route={`/about/certificates/${slug}`}>
         <button className="px-6 py-4 bg-[#F09666] text-xs mt-4 text-white rounded-sm hover:text-[#F09666] hover:bg-white">
           View Certificate
         </button>
-      </Link>
+      </ClientSideLink>
     </div>
   );
 };

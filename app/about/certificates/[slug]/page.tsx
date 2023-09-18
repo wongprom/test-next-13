@@ -33,7 +33,7 @@ const CertificatePage = async ({ params }: { params: Certificate }) => {
           <div className="w-full flex items-center justify-center mb-8">
             <Image
               src={certificate.image}
-              alt="//!fix this!!!"
+              alt={certificate.alt}
               width="768"
               height="865"
               // priority={true}

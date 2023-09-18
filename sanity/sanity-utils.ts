@@ -24,7 +24,9 @@ export const getCertificate = (slug: string): Promise<Certificate> => {
     infoText,
     "slug": slug.current,
     "image": image.asset->url,
+    "alt": image.alt,
     url,
+    
   }`,
     { slug }
   );

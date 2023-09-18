@@ -9,4 +9,5 @@ export type Certificate = {
   image: string;
   slug: string;
   infoText: PortableTextBlock[];
+  alt: string;
 };

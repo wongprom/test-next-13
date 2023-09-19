@@ -2,8 +2,11 @@ import { PortableText } from '@portabletext/react';
 import React from 'react';
 import Image from 'next/image';
 import { getCertificate, getCertificates } from '@/sanity/sanity-utils';
+import { RichTextComponent } from '@/components/RichTextComponent';
 
 // export const dynamicParams = false;
+
+export const revalidate = 60;
 export async function generateStaticParams() {
   const certificates = await getCertificates();
 
@@ -21,15 +24,11 @@ export type Certificate = {
 const CertificatePage = async ({ params }: { params: Certificate }) => {
   const { slug } = params;
   const certificate = await getCertificate(slug);
-  console.log(
-    '🚀 ~ file: page.tsx:24 ~ CertificatePage ~ certificate:',
-    certificate
-  );
 
   return (
     <div className="flex flex-col items-center justify-center text-white bg-[#2A2A3B] p-0 sm:p-8 ">
       <div className="max-w-screen-lg">
-        {certificate.image && (
+        {certificate?.image && (
           <div className="w-full flex items-center justify-center mb-8">
             <Image
               src={certificate.image}
@@ -45,11 +44,14 @@ const CertificatePage = async ({ params }: { params: Certificate }) => {
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">
             <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
-              {certificate.title}
+              {certificate?.title}
             </h1>
           </div>
           <div className="text-xl col-span-4 lg:col-span-3 mt-2">
-            <PortableText value={certificate.infoText} />
+            <PortableText
+              value={certificate?.infoText}
+              components={RichTextComponent}
+            />
           </div>
         </div>
       </div>

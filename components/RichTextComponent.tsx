@@ -1,4 +1,21 @@
+import urlFor from '@/sanity/urlFor';
+import Image from 'next/image';
+
 export const RichTextComponent = {
+  types: {
+    image: ({ value }: any) => {
+      return (
+        <div className="relative w-full h-96 m-10 mx-auto">
+          <Image
+            className=" object-contain"
+            src={urlFor(value).url()}
+            alt=""
+            fill
+          />
+        </div>
+      );
+    },
+  },
   marks: {
     strong: ({ children }: any) => (
       <p className="text-xl font-bold">{children}</p>

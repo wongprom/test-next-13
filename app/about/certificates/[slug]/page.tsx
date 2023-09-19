@@ -4,9 +4,7 @@ import Image from 'next/image';
 import { getCertificate, getCertificates } from '@/sanity/sanity-utils';
 import { RichTextComponent } from '@/components/RichTextComponent';
 
-// export const dynamicParams = false;
-
-export const revalidate = 60;
+export const revalidate = 86400; // 24 hours
 export async function generateStaticParams() {
   const certificates = await getCertificates();
 
@@ -35,7 +33,7 @@ const CertificatePage = async ({ params }: { params: Certificate }) => {
               alt={certificate.alt}
               width="768"
               height="865"
-              // priority={true}
+              priority={true}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw"
               style={{ width: 'auto', height: 'auto' }}
             />

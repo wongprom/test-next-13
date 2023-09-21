@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { getCertificate, getCertificates } from '@/sanity/sanity-utils';
 import { RichTextComponent } from '@/components/RichTextComponent';
 
-export const revalidate = 86400; // 24 hours
+// export const revalidate = 86400; // 24 hours
 export async function generateStaticParams() {
   const certificates = await getCertificates();
 

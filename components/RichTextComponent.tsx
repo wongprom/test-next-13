@@ -18,7 +18,7 @@ export const RichTextComponent = {
   },
   marks: {
     strong: ({ children }: any) => (
-      <p className="text-xl font-bold">{children}</p>
+      <span className="text-xl font-bold">{children}</span>
     ),
   },
   list: {

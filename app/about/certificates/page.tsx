@@ -1,7 +1,10 @@
 import CertificateCard from '@/components/CertificateCard';
-import { testCertificates } from '@/data/data';
+import { getCertificates } from '@/sanity/sanity-utils';
+import { Certificate } from '@/types/types';
 
-const CertificatesPage = () => {
+const CertificatesPage = async () => {
+  const certificates: Certificate[] = await getCertificates();
+
   return (
     <div className="text-white bg-[#2A2A3B] p-0 sm:p-8">
       <div className="max-w-screen-lg mx-auto">
@@ -23,7 +26,7 @@ const CertificatesPage = () => {
         </div>
 
         <div className="relative flex flex-col gap-7 bg-[#2A2A3B] max-w-screen-lg py-5 mt-5">
-          {testCertificates.map((certificate) => (
+          {certificates.map((certificate) => (
             <CertificateCard
               key={certificate.slug}
               slug={certificate.slug}

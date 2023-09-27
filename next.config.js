@@ -14,9 +14,7 @@ const nextConfig = {
         hostname: 'images.unsplash.com',
       },
     ],
-  },
-  experimental: {
-    appDir: true,
+    domains: ['cdn.sanity.io'],
   },
 };
 

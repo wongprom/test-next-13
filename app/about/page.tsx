@@ -1,28 +1,6 @@
 import AboutCard from '@/components/AboutCard';
+import { testAboutData } from '@/data/data';
 import React from 'react';
-
-const data = [
-  {
-    href: 'about/jimmy',
-    title: 'Jimmy',
-    text: "This narrative recounts a diverse and meaningful life journey. It begins with a transformative experience as a Buddhist monk in Thailand, reflecting on the cultural tradition of seeking ordination to apologize to parents and express gratitude. The narrative then shifts to the author's educational journey, where they graduated in 2019, driven by a desire to create tech applications that solve real-world problems and contribute positively. Lastly, the author highlights their love for the outdoors, dedication to physical fitness through calisthenics, and the importance of family and friends in maintaining a balanced life.",
-  },
-  {
-    href: 'about/adept',
-    title: 'Adept',
-    text: 'The text describes the results of a test that measures various personality traits. The test provides insight into different aspects of my personality and reveals my behavioral patterns and work style. By understanding and reflecting on these results, I can become aware of my strengths and weaknesses and utilize them to improve my performance and adapt effectively to the work environment',
-  },
-  {
-    href: 'about/testimonial',
-    title: 'Testimonials',
-    text: "Discover a collection of inspiring testimonials I've received from my former colleagues and bosses.",
-  },
-  {
-    href: 'about/certificates',
-    title: 'Certificates',
-    text: "Visit my certificate collection, where new qualifications magically appear like rabbits from a magician's hat – you never know what impressive trick I'll pull off next! Keep checking in, it's like unwrapping surprise gifts of expertise.",
-  },
-];
 
 const about = () => {
   return (
@@ -50,12 +28,10 @@ const about = () => {
             </p>
           </div>
         </div>
-        {/**  Section _____---------------------------------*/}
-
         <section className="w-full">
           <div className=" py-24 mx-auto">
             <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-              {data.map((item) => (
+              {testAboutData.map((item) => (
                 <AboutCard
                   key={item.title}
                   title={item.title}
@@ -66,10 +42,6 @@ const about = () => {
             </div>
           </div>
         </section>
-
-        {/* <div className=" flex flex-col gap-7 bg-[#2A2A3B] max-w-screen-lg py-5 mt-5">
-          Some other content gose here
-        </div> */}
       </div>
     </div>
   );

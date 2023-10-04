@@ -49,8 +49,8 @@ const about = () => {
         {/**  Section _____---------------------------------*/}
 
         <section className="w-full">
-          <div className="px-5 py-24 mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className=" py-24 mx-auto">
+            <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
               {data.map((item) => (
                 <AboutCard
                   key={item.title}

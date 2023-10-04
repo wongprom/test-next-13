@@ -1,13 +1,16 @@
+'use client';
 import React from 'react';
 import { PuzzlePieceIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 export type Props = {
   title: string;
   text: string;
+  href: string;
 };
-export const AboutCard = ({ title, text }: Props) => {
+export const AboutCard = ({ title, text, href }: Props) => {
   return (
-    <div className="">
+    <Link href={href}>
       <div className="group border border-gray-100 p-6 rounded-lg hover:bg-white hover:border-transparent hover:text-[#2A2A3E]">
         <div className="inline-flex items-center justify-center rounded-full mb-4 border-2 p-1 group-hover:border-[#2A2A3E]">
           <PuzzlePieceIcon height={26} width={26} />
@@ -19,7 +22,7 @@ export const AboutCard = ({ title, text }: Props) => {
           {text}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

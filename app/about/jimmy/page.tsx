@@ -17,13 +17,44 @@ const page = () => {
             <p>{testDataJimmy?.text}</p>
           </div>
         </div>
-        <section className="w-full">
+        <section className="bg-white dark:bg-gray-900">
+          <div className="px-6 py-10 mx-auto">
+            <div className="lg:-mx-6 lg:flex lg:items-center">
+              <img
+                className="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
+                src="/munk.jpeg"
+                alt="munk"
+              />
+
+              <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
+                <h1 className="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl ">
+                  My Journey as a Buddhist Monk in Thailand
+                </h1>
+
+                <p className="max-w-lg mt-6 text-gray-500 dark:text-gray-400 ">
+                  I had a unique experience during my time as a monk in
+                  Thailand, which left a lasting impact on my life. I found
+                  myself at two distinct types of temples, one nestled within
+                  the bustling city and the other hidden deep within the
+                  tranquil forest. The reason behind this spiritual journey was
+                  deeply rooted in Thai culture; it&apos;s a tradition for boys
+                  with at least one parent from Thailand to seek ordination as a
+                  monk. It&apos;s a way for us to apologize to our parents for
+                  any pain we might have caused them throughout the years and to
+                  express our heartfelt gratitude for the sacrifices
+                  they&apos;ve made on our behalf.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* <section className="w-full">
           <div className=" py-24 mx-auto">
             <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
               some other content
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
     // <p className="text-[#babdc5]">

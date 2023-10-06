@@ -1,5 +1,6 @@
 import React from 'react';
 import { testAboutData } from '@/data/data';
+import Image from 'next/image';
 
 const page = () => {
   const testDataJimmy = testAboutData.find((data) => data.title == 'Jimmy');
@@ -17,7 +18,7 @@ const page = () => {
             <p>{testDataJimmy?.text}</p>
           </div>
         </div>
-        <section className="bg-white dark:bg-gray-900">
+        <section className="">
           <div className="px-6 py-10 mx-auto">
             <div className="lg:-mx-6 lg:flex lg:items-center">
               <img
@@ -47,48 +48,137 @@ const page = () => {
               </div>
             </div>
           </div>
-        </section>
-        {/* <section className="w-full">
-          <div className=" py-24 mx-auto">
-            <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-              some other content
-            </div>
+          <div className="columns-1 lg:columns-2 xl:columns-3 p-6 [&>img:not(:first-child)]:mt-4">
+            <Image
+              alt=""
+              src={'/fest_flak.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/klipper.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/quote1.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/rakar.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/bilflak.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/svarfar.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+              objectFit="test"
+            />
+            <Image
+              alt=""
+              src={'/quote3.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+              objectFit="test"
+            />
+            <Image
+              alt=""
+              src={'/tempel.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/hus.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/rakning.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/quote2.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/far_mat.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/ata.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
+            <Image
+              alt=""
+              src={'/munk.jpeg'}
+              width={500}
+              height={500}
+              className="w-full"
+            />
           </div>
-        </section> */}
+        </section>
+        <section>
+          2. My Path to Graduation in 2019: A Tech Enthusiast with a Purpose In
+          2017, I embarked on an educational journey that led me to graduate in
+          2019. I chose this path not only because I believe it&apos;s the
+          future but also because I yearned to work on applications that could
+          truly make a difference for each user. I was motivated by a desire to
+          solve real-world problems, whether it was simplifying the process of
+          moving from point A to point B or being a part of a solution that
+          addresses the environmental challenges we face today. Technology, to
+          me, is a tool for creating positive change.
+        </section>
+        <section>
+          3. Balancing Life: From the Outdoors to Family and Friends In my
+          private life, I find solace in the great outdoors. There&apos;s
+          nothing quite like setting up my 4-season tent in the midst of a
+          winter wilderness and simply being one with nature. I also have a
+          passion for calisthenics, pushing my physical limits to achieve
+          personal growth. Taking cold baths when the opportunity arises is
+          another invigorating pursuit. However, my heart belongs to my family,
+          which includes my wife and two older children. They are my anchor, and
+          I relish every moment spent with them. And when they&apos;ve had their
+          fill of my company, I cherish the times I spend with friends, often
+          meeting up at a restaurant for a hearty burger and a refreshing beer.
+          It&apos;s in these moments that I truly appreciate the balance of my
+          life, from introspective solitude to the joy of companionship.
+        </section>
       </div>
     </div>
-    // <p className="text-[#babdc5]">
-    //   1. My Journey as a Buddhist Monk in Thailand I had a unique experience
-    //   during my time as a monk in Thailand, which left a lasting impact on my
-    //   life. I found myself at two distinct types of temples, one nestled within
-    //   the bustling city and the other hidden deep within the tranquil forest.
-    //   The reason behind this spiritual journey was deeply rooted in Thai
-    //   culture; it&apos;s a tradition for boys with at least one parent from
-    //   Thailand to seek ordination as a monk. It&apos;s a way for us to apologize
-    //   to our parents for any pain we might have caused them throughout the years
-    //   and to express our heartfelt gratitude for the sacrifices they&apos;ve
-    //   made on our behalf. 2. My Path to Graduation in 2019: A Tech Enthusiast
-    //   with a Purpose In 2017, I embarked on an educational journey that led me
-    //   to graduate in 2019. I chose this path not only because I believe
-    //   it&apos;s the future but also because I yearned to work on applications
-    //   that could truly make a difference for each user. I was motivated by a
-    //   desire to solve real-world problems, whether it was simplifying the
-    //   process of moving from point A to point B or being a part of a solution
-    //   that addresses the environmental challenges we face today. Technology, to
-    //   me, is a tool for creating positive change. 3. Balancing Life: From the
-    //   Outdoors to Family and Friends In my private life, I find solace in the
-    //   great outdoors. There&apos;s nothing quite like setting up my 4-season
-    //   tent in the midst of a winter wilderness and simply being one with nature.
-    //   I also have a passion for calisthenics, pushing my physical limits to
-    //   achieve personal growth. Taking cold baths when the opportunity arises is
-    //   another invigorating pursuit. However, my heart belongs to my family,
-    //   which includes my wife and two older children. They are my anchor, and I
-    //   relish every moment spent with them. And when they&apos;ve had their fill
-    //   of my company, I cherish the times I spend with friends, often meeting up
-    //   at a restaurant for a hearty burger and a refreshing beer. It&apos;s in
-    //   these moments that I truly appreciate the balance of my life, from
-    //   introspective solitude to the joy of companionship.
-    // </p>
   );
 };
 

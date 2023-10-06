@@ -21,10 +21,12 @@ const page = () => {
         <section className="">
           <div className="px-6 py-10 mx-auto">
             <div className="lg:-mx-6 lg:flex lg:items-center">
-              <img
+              <Image
                 className="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
                 src="/munk.jpeg"
                 alt="munk"
+                width={500}
+                height={500}
               />
 
               <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">

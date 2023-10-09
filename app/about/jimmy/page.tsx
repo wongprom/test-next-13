@@ -154,15 +154,45 @@ const page = () => {
           </div>
         </section>
         <section>
-          2. My Path to Graduation in 2019: A Tech Enthusiast with a Purpose In
-          2017, I embarked on an educational journey that led me to graduate in
-          2019. I chose this path not only because I believe it&apos;s the
-          future but also because I yearned to work on applications that could
-          truly make a difference for each user. I was motivated by a desire to
-          solve real-world problems, whether it was simplifying the process of
-          moving from point A to point B or being a part of a solution that
-          addresses the environmental challenges we face today. Technology, to
-          me, is a tool for creating positive change.
+          <div className="grid place-items-center  py-20">
+            <div className=" bg-[#222222] rounded-md shadow-lg">
+              <div className="lg:flex px-4 leading-none max-w-4xl">
+                <div className=" flex flex-col items-center lg:flex-none">
+                  <Image
+                    src="/medieinstitutet_logo.jpeg"
+                    alt="pic"
+                    className="w-60 rounded-full shadow-2xl transform -translate-y-8"
+                    width={500}
+                    height={500}
+                  />
+                </div>
+                <div className="flex-col text-gray-300">
+                  <p className="text-[#cccccc] text-center pt-4 text-2xl font-bold">
+                    Medieinstitutet
+                  </p>
+                  <hr className="border-none h-[1px] bg-gradient-to-r from-[#2A2A3B] from-10% via-gray-500 via-50% to-[#2A2A3B]to-90%"></hr>
+                  <div className="text-[#bbbbbb] text-md flex justify-between px-4 my-2">
+                    <span className="font-bold">
+                      My Path to Graduation in 2019
+                    </span>
+                  </div>
+                  <p className=" text-[#9b9b9b] block md:mx-auto px-4 my-4 text-sm text-left">
+                    {' '}
+                    A Tech Enthusiast with a Purpose In 2017, I embarked on an
+                    educational journey that led me to graduate in 2019. I chose
+                    this path not only because I believe it&apos;s the future
+                    but also because I yearned to work on applications that
+                    could truly make a difference for each user. I was motivated
+                    by a desire to solve real-world problems, whether it was
+                    simplifying the process of moving from point A to point B or
+                    being a part of a solution that addresses the environmental
+                    challenges we face today. Technology, to me, is a tool for
+                    creating positive change.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section>
           3. Balancing Life: From the Outdoors to Family and Friends In my

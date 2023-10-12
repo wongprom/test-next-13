@@ -1,5 +1,5 @@
 import React from 'react';
-import { testAboutData } from '@/data/data';
+import { testAboutData, testDataJimmyCard } from '@/data/data';
 import Image from 'next/image';
 
 const page = () => {
@@ -28,7 +28,7 @@ const page = () => {
                 width={500}
                 height={500}
               />
-
+              {/* Add text to fakeData/data base  */}
               <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
                 <h1 className="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl ">
                   My Journey as a Buddhist Monk in Thailand
@@ -51,6 +51,7 @@ const page = () => {
             </div>
           </div>
           <div className="columns-1 lg:columns-2 xl:columns-3 p-6 [&>img:not(:first-child)]:mt-4">
+            {/* map array of images */}
             <Image
               alt=""
               src={'/fest_flak.jpeg'}
@@ -154,10 +155,10 @@ const page = () => {
           </div>
         </section>
         <section>
-          <div className="grid place-items-center  py-20">
-            <div className=" bg-[#222222] rounded-md shadow-lg">
+          <div className="grid place-items-center py-20">
+            <div className="bg-[#222222] rounded-md shadow-lg">
               <div className="lg:flex px-4 leading-none max-w-4xl">
-                <div className=" flex flex-col items-center lg:flex-none">
+                <div className="flex flex-col items-center lg:flex-none">
                   <Image
                     src="/medieinstitutet_logo.jpeg"
                     alt="pic"
@@ -176,7 +177,7 @@ const page = () => {
                       My Path to Graduation in 2019
                     </span>
                   </div>
-                  <p className=" text-[#9b9b9b] block md:mx-auto px-4 my-4 text-sm text-left">
+                  <p className="text-[#9b9b9b] block md:mx-auto px-4 my-4 text-sm text-left">
                     {' '}
                     A Tech Enthusiast with a Purpose In 2017, I embarked on an
                     educational journey that led me to graduate in 2019. I chose
@@ -194,20 +195,33 @@ const page = () => {
             </div>
           </div>
         </section>
-        <section>
-          3. Balancing Life: From the Outdoors to Family and Friends In my
-          private life, I find solace in the great outdoors. There&apos;s
-          nothing quite like setting up my 4-season tent in the midst of a
-          winter wilderness and simply being one with nature. I also have a
-          passion for calisthenics, pushing my physical limits to achieve
-          personal growth. Taking cold baths when the opportunity arises is
-          another invigorating pursuit. However, my heart belongs to my family,
-          which includes my wife and two older children. They are my anchor, and
-          I relish every moment spent with them. And when they&apos;ve had their
-          fill of my company, I cherish the times I spend with friends, often
-          meeting up at a restaurant for a hearty burger and a refreshing beer.
-          It&apos;s in these moments that I truly appreciate the balance of my
-          life, from introspective solitude to the joy of companionship.
+        <section className="flex gap-8 flex-wrap items-center justify-center">
+          {testDataJimmyCard.map((card) => (
+            // Create component and map
+            <div
+              key={card.title}
+              className="card group origin-center rotate-0 relative min-w-[250px] max-w-[330px] max-h-[200px] bg-[#f2f2f2] flex items-center justify-center overflow-hidden transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)] rounded-[10px]"
+            >
+              <Image
+                src={card.image}
+                width={300}
+                height={300}
+                objectFit="cover"
+                alt=""
+              />
+              <div
+                className="card__content rotate-180 w-full h-full absolute bg-[#222222]/90 shadow-[0_8px_32px_0_rgba(_31,38,135,0.37_)] border rounded-[10px] border-solid border-[rgba(_255,255,255,0.18_)]
+              origin-top transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)] p-5 left-0 top-0 group-hover:rotate-0"
+              >
+                <p className="card__title text-2xl text-[#cccccc] font-bold m-0">
+                  {card.title}
+                </p>
+                <p className="card__description text-sm text-[#bbbbbb] leading-[1.4] mt-2.5 mb-0 mx-0">
+                  {card.text}
+                </p>
+              </div>
+            </div>
+          ))}
         </section>
       </div>
     </div>

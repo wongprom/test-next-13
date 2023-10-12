@@ -204,4 +204,38 @@ const testAboutData = [
   },
 ];
 
-export { characterTestADEPT15, testimonials, testCertificates, testAboutData };
+const testDataJimmyCard = [
+  {
+    title: 'Great outdoors',
+    text: "I find solace in the great outdoors. There's nothing quite like setting up my 4-season tent in the midst of a winter wilderness and simply being one with nature.",
+    image: '/camping.jpeg',
+  },
+  {
+    title: 'Calisthenics',
+    text: 'I also have a passion for calisthenics, pushing my physical limits to achieve personal growth.',
+    image: '/pullup.jpg',
+  },
+  {
+    title: 'Cold bath',
+    text: 'Taking cold baths when the opportunity arises is another invigorating pursuit.',
+    image: '/iceBath.jpeg',
+  },
+  {
+    title: 'Family',
+    text: 'However, my heart belongs to my family, which includes my wife and two older children. They are my anchor, and  I relish every moment spent with them.',
+    image: '/family.jpeg',
+  },
+  {
+    title: 'Balance',
+    text: "It's in these moments that I truly appreciate the balance of my life, from introspective solitude to the joy of companionship.",
+    image: '/balance.webp',
+  },
+];
+
+export {
+  characterTestADEPT15,
+  testimonials,
+  testCertificates,
+  testAboutData,
+  testDataJimmyCard,
+};

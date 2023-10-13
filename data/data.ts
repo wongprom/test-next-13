@@ -226,6 +226,11 @@ const testDataJimmyCard = [
     image: '/family.jpeg',
   },
   {
+    title: 'Friends',
+    text: 'I cherish the times I spend with friends, often meeting up at a restaurant for a hearty burger and a refreshing drink.',
+    image: '/friends.jpeg',
+  },
+  {
     title: 'Balance',
     text: "It's in these moments that I truly appreciate the balance of my life, from introspective solitude to the joy of companionship.",
     image: '/balance.webp',

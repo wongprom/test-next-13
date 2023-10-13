@@ -6,7 +6,7 @@ const CertificatesPage = async () => {
   const certificates: Certificate[] = await getCertificates();
 
   return (
-    <div className="text-white bg-[#2A2A3B] p-0 sm:p-8">
+    <div className="text-white p-0 sm:p-8">
       <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">
@@ -25,7 +25,7 @@ const CertificatesPage = async () => {
           </div>
         </div>
 
-        <div className="relative flex flex-col gap-7 bg-[#2A2A3B] max-w-screen-lg py-5 mt-5">
+        <div className="relative flex flex-col gap-7 max-w-screen-lg py-5 mt-5">
           {certificates.map((certificate) => (
             <CertificateCard
               key={certificate.slug}

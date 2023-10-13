@@ -11,7 +11,7 @@ export type TestimonialType = {
 
 const page = () => {
   return (
-    <section className="bg-[#aaaaaa] h-screen">
+    <section className="h-screen">
       <div className="max-w-6xl px-6 py-10 max-h-screen overflow-y-auto no-scrollbar scroll-smooth">
         <h1 className="text-2xl font-semibold text-[#dddddd] capitalize lg:text-3xl">
           What colleagues saying

@@ -36,3 +36,16 @@ react - `18.2.0`<p>
 - I wanted image gallery to be a bit more lively than 'Monk' gallery. That's why text magically appears when you hover over the images!
 
 </details>
+
+<details><summary>[BUG] active link style #35</summary>
+
+<sub><sup>[[BUG] active link style #35](https://github.com/wongprom/test-next-13/issues/35)</sup></sub>
+
+### The Fantastic Journey to Cleaner Code! 🧹
+
+- Behold the creation of a superhero component that parent components can now effortlessly map out! Adding new links and routes? Piece of cake! 🍰
+
+### Sprucing Up with Style! 💃
+
+- When it comes to those delightful sublinks emerging from `/about`, we're giving the page a makeover that's cleaner than a freshly laundered superhero cape. What does that mean? We're keeping it as simple as a sidekick's sidekick until we've decided on our grand style and layout reveal! Stay tuned for the fashion show!
+</details>

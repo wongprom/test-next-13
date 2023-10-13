@@ -47,9 +47,7 @@ export default function AboutLayout({
             ))}
           </ul>
         </div>
-        <div className="flex-1 md:rounded-md border-4 border-[#aaaaaa] p-5 overflow">
-          {children}
-        </div>
+        <div className="flex-1 md:rounded-md  p-5 overflow">{children}</div>
       </div>
     </div>
   );

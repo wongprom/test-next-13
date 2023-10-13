@@ -16,7 +16,7 @@ type ListType = {
 const Page = () => {
   const [list, setList] = useState<ListType[]>(characterTestADEPT15);
   return (
-    <div className="bg-[#f2f2f2] h-screen flex justify-center p-5 ">
+    <div className="h-screen flex justify-center p-5 text-white ">
       <div className="flex flex-col gap-5 list max-h-screen overflow-y-auto no-scrollbar scroll-smooth">
         <p className="text-center">
           The text describes the results of a test that measures various

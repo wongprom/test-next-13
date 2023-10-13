@@ -6,7 +6,7 @@ const page = () => {
   const testDataJimmy = testAboutData.find((data) => data.title == 'Jimmy');
 
   return (
-    <div className="text-white bg-[#2A2A3B] p-0 sm:p-8">
+    <div className="text-white p-0 sm:p-8">
       <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">

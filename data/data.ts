@@ -181,4 +181,66 @@ const testCertificates = [
   // },
 ];
 
-export { characterTestADEPT15, testimonials, testCertificates };
+const testAboutData = [
+  {
+    href: 'about/jimmy',
+    title: 'Jimmy',
+    text: "This narrative recounts a diverse and meaningful life journey. It begins with a transformative experience as a Buddhist monk in Thailand, reflecting on the cultural tradition of seeking ordination to apologize to parents and express gratitude. The narrative then shifts to the author's educational journey, where they graduated in 2019, driven by a desire to create tech applications that solve real-world problems and contribute positively. Lastly, the author highlights their love for the outdoors, dedication to physical fitness through calisthenics, and the importance of family and friends in maintaining a balanced life.",
+  },
+  {
+    href: 'about/adept',
+    title: 'Adept',
+    text: 'The text describes the results of a test that measures various personality traits. The test provides insight into different aspects of my personality and reveals my behavioral patterns and work style. By understanding and reflecting on these results, I can become aware of my strengths and weaknesses and utilize them to improve my performance and adapt effectively to the work environment',
+  },
+  {
+    href: 'about/testimonial',
+    title: 'Testimonials',
+    text: "Discover a collection of inspiring testimonials I've received from my former colleagues and bosses.",
+  },
+  {
+    href: 'about/certificates',
+    title: 'Certificates',
+    text: "Visit my certificate collection, where new qualifications magically appear like rabbits from a magician's hat – you never know what impressive trick I'll pull off next! Keep checking in, it's like unwrapping surprise gifts of expertise.",
+  },
+];
+
+const testDataJimmyCard = [
+  {
+    title: 'Great outdoors',
+    text: "I find solace in the great outdoors. There's nothing quite like setting up my 4-season tent in the midst of a winter wilderness and simply being one with nature.",
+    image: '/camping.jpeg',
+  },
+  {
+    title: 'Calisthenics',
+    text: 'I also have a passion for calisthenics, pushing my physical limits to achieve personal growth.',
+    image: '/pullup.jpg',
+  },
+  {
+    title: 'Cold bath',
+    text: 'Taking cold baths when the opportunity arises is another invigorating pursuit.',
+    image: '/iceBath.jpeg',
+  },
+  {
+    title: 'Family',
+    text: 'However, my heart belongs to my family, which includes my wife and two older children. They are my anchor, and  I relish every moment spent with them.',
+    image: '/family.jpeg',
+  },
+  {
+    title: 'Friends',
+    text: 'I cherish the times I spend with friends, often meeting up at a restaurant for a hearty burger and a refreshing drink.',
+    image: '/friends.jpeg',
+  },
+  {
+    title: 'Balance',
+    text: "It's in these moments that I truly appreciate the balance of my life, from introspective solitude to the joy of companionship.",
+    image: '/balance.webp',
+  },
+];
+
+export {
+  characterTestADEPT15,
+  testimonials,
+  testCertificates,
+  testAboutData,
+  testDataJimmyCard,
+};

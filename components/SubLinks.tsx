@@ -16,9 +16,9 @@ const SubLinks = ({ route, linkText }: Props) => {
     <li className="">
       <Link
         href={route}
-        className={`cursor-pointer ${
+        className={`cursor-pointer text-[#aaaaaa] ${
           currentRouteEndsWith && activeLinkStyle
-        } hover:text-orange-600`}
+        } hover:text-white`}
       >
         {linkText}
       </Link>

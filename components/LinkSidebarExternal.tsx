@@ -12,6 +12,7 @@ function LinkSidebarExternal({ link, tooltipText }: Props) {
     <div className="flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21]">
       <Link href={link} target="_blank" className="cursor-pointer">
         <svg
+          className="focus:outline-none"
           xmlns="http://www.w3.org/2000/svg"
           width="15"
           height="15"

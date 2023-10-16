@@ -11,6 +11,11 @@ const EpiGramPage = () => {
             <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
               EpiGram
             </h1>
+            <div className="h-full mt-4 flex flex-col items-center sm:flex-row sm:items-start lg:items-end">
+              <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
+                Add epigram
+              </button>
+            </div>
           </div>
           <div className="col-span-4 lg:col-span-3 mt-2 flex gap-4 flex-col">
             <p>

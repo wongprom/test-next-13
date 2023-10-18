@@ -1,3 +1,4 @@
+import { SignInButton } from '@clerk/nextjs';
 import AboutCard from '@/components/AboutCard';
 import { testEpigramData } from '@/data/data';
 import React from 'react';
@@ -12,9 +13,11 @@ const EpiGramPage = () => {
               EpiGram
             </h1>
             <div className="h-full mt-4 flex flex-col items-center sm:flex-row sm:items-start lg:items-end">
-              <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
-                Add epigram
-              </button>
+              <SignInButton mode="modal" redirectUrl="/projects/epigram/add">
+                <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
+                  Add epigram
+                </button>
+              </SignInButton>
             </div>
           </div>
           <div className="col-span-4 lg:col-span-3 mt-2 flex gap-4 flex-col">
@@ -77,19 +80,6 @@ const EpiGramPage = () => {
         </section>
       </div>
     </div>
-    // <div className="text-white text-4xl grid gap-10">
-    //   <div>
-    //     Some hello text like, This route get information from Supabase DB with
-    //     help of GraphQL
-    //   </div>
-    //   <div>
-    //     <h1>Display all epigrams</h1>
-    //   </div>
-    //   <button>
-    //     button to access Modal add new quote, Before Modal popups, Clerk auth
-    //     will do a check, OK ? Modal form popups : denied
-    //   </button>
-    // </div>
   );
 };
 

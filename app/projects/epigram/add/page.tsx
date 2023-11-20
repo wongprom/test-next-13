@@ -1,29 +1,38 @@
 'use client';
 import React from 'react';
-import { UserButton, currentUser, useUser } from '@clerk/nextjs';
+import { UserButton, useUser } from '@clerk/nextjs';
 import { Button } from '@/components/shadcn/ui/button';
 
 const AddPage = () => {
-  // const user = await currentUser();
   const { isSignedIn, user, isLoaded } = useUser();
-  console.log('🚀 ~ file: page.tsx:8 ~ AddPage ~ user:', user);
 
   if (!isLoaded) {
     return <p>CLERK IS LOADING......</p>;
   }
   if (isSignedIn) {
     return (
-      <div className="text-white">
-        <div className="text-4xl">
-          <p>Add Page</p>
-        </div>
-        <Button variant="destructive">test</Button>
-        <div className="flex">
-          <UserButton afterSignOutUrl="/projects/epigram" />{' '}
-          <p>
-            Hello User:{' '}
-            {user.firstName || user.username || user.fullName || user.lastName}
-          </p>
+      <div className="text-white p-0 sm:p-8">
+        <div className="max-w-screen-lg mx-auto">
+          <div className="grid grid-cols-4 gap-2">
+            <div className="col-span-4 lg:col-span-1">
+              <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
+                Add Quote
+              </h1>
+            </div>
+            <div className="col-span-4 lg:col-span-3 mt-2">
+              <p>
+                Enim id molestie viverra potenti accumsan netus aliquet.
+                Faucibus at cras senectus donec justo pellentesque quisque.Enim
+                id molestie viverra potenti accumsan netus aliquet. Faucibus at
+                cras senectus donec justo pellentesque quisque.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            <div className="col-span-4 lg:col-start-2 col-end-4 ">
+              <section className="w-full">form here</section>
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -11,14 +11,19 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/shadcn/ui/form';
+
 import { Input } from '@/components/shadcn/ui/input';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { Textarea } from '@/components/shadcn/ui/textarea';
 
 const formSchema = z.object({
   title: z.string().min(2, {
     message: 'Title must be at least 2 characters.',
+  }),
+  quote: z.string().min(5, {
+    message: 'Quote must be at least 5 characters.',
   }),
 });
 
@@ -30,6 +35,7 @@ const AddPage = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: '',
+      quote: '',
     },
   });
 
@@ -37,7 +43,7 @@ const AddPage = () => {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    console.log('form values ', values);
   }
   if (!isLoaded) {
     return <p>CLERK IS LOADING......</p>;
@@ -80,16 +86,35 @@ const AddPage = () => {
                         <FormItem>
                           <FormLabel>Title</FormLabel>
                           <FormControl>
-                            <Input placeholder="shadcn" {...field} />
+                            <Input {...field} className="text-black" />
                           </FormControl>
                           <FormDescription>
-                            This is your public display name.
+                            This is the title of the quote.
                           </FormDescription>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-                    <Button type="submit">Submit</Button>
+                    <FormField
+                      control={form.control}
+                      name="quote"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Quote</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              className="resize-none text-black"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormDescription>This is the quote.</FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <Button type="submit" size="lg">
+                      Submit Quote
+                    </Button>
                   </form>
                 </Form>
               </section>

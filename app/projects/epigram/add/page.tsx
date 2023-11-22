@@ -1,7 +1,9 @@
 'use client';
 import React from 'react';
+import { useForm, useWatch } from 'react-hook-form';
+import * as z from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { UserButton, useUser } from '@clerk/nextjs';
-import { Button } from '@/components/shadcn/ui/button';
 import {
   Form,
   FormControl,
@@ -11,16 +13,13 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/shadcn/ui/form';
-
+import { Button } from '@/components/shadcn/ui/button';
 import { Input } from '@/components/shadcn/ui/input';
-import * as z from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
 import { Textarea } from '@/components/shadcn/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/shadcn/ui/radio-group';
 
 /**
- * todo Make this page a server component by making for a client side component.
+ * todo Make this page a server component by making form a client side component.
  */
 
 const formSchema = z.object({
@@ -33,6 +32,7 @@ const formSchema = z.object({
   creater: z.enum(['you', 'other'], {
     required_error: 'You need to select created by.',
   }),
+  other: z.string(),
 });
 
 const AddPage = () => {
@@ -40,12 +40,22 @@ const AddPage = () => {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {},
+    defaultValues: {
+      title: '',
+      quote: '',
+      creater: undefined,
+      other: '',
+    },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const useWatchTest = useWatch({
+    control: form.control,
+    name: 'creater',
+  });
+
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log('form values ', values);
-  }
+  };
   if (!isLoaded) {
     return <p>CLERK IS LOADING......</p>;
   }
@@ -150,6 +160,26 @@ const AddPage = () => {
                         </FormItem>
                       )}
                     />
+                    {useWatchTest === 'other' && (
+                      <FormField
+                        control={form.control}
+                        name="other"
+                        render={({ field }) => {
+                          return (
+                            <FormItem>
+                              <FormLabel>Name of Creater</FormLabel>
+                              <FormControl>
+                                <Input {...field} className="text-black" />
+                              </FormControl>
+                              <FormDescription>
+                                Write name of the creater for quote
+                              </FormDescription>
+                              <FormMessage />
+                            </FormItem>
+                          );
+                        }}
+                      />
+                    )}
                     <Button type="submit" size="lg">
                       Submit Quote
                     </Button>

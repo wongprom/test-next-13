@@ -17,6 +17,7 @@ import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { Textarea } from '@/components/shadcn/ui/textarea';
+import { RadioGroup, RadioGroupItem } from '@/components/shadcn/ui/radio-group';
 
 const formSchema = z.object({
   title: z.string().min(2, {
@@ -24,6 +25,9 @@ const formSchema = z.object({
   }),
   quote: z.string().min(5, {
     message: 'Quote must be at least 5 characters.',
+  }),
+  creater: z.enum(['you', 'other', ''], {
+    required_error: 'You need to select created by.',
   }),
 });
 
@@ -108,6 +112,44 @@ const AddPage = () => {
                             />
                           </FormControl>
                           <FormDescription>This is the quote.</FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="creater"
+                      render={({ field }) => (
+                        <FormItem className="space-y-3">
+                          <FormLabel>Created by</FormLabel>
+                          <FormControl>
+                            <RadioGroup
+                              onValueChange={field.onChange}
+                              defaultValue={field.value}
+                              className="flex flex-col space-y-1"
+                            >
+                              <FormItem className="flex items-center space-x-3 space-y-0">
+                                <FormControl>
+                                  <RadioGroupItem value="you" />
+                                </FormControl>
+                                <FormLabel className="font-normal">
+                                  You
+                                </FormLabel>
+                              </FormItem>
+                              <FormItem className="flex items-center space-x-3 space-y-0">
+                                <FormControl>
+                                  <RadioGroupItem value="other" />
+                                </FormControl>
+                                <FormLabel className="font-normal">
+                                  Other
+                                </FormLabel>
+                              </FormItem>
+                            </RadioGroup>
+                          </FormControl>
+                          <FormDescription>
+                            Did you come up with this quote, or have you copied
+                            from internet?
+                          </FormDescription>
                           <FormMessage />
                         </FormItem>
                       )}

@@ -19,6 +19,10 @@ import { useForm } from 'react-hook-form';
 import { Textarea } from '@/components/shadcn/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/shadcn/ui/radio-group';
 
+/**
+ * todo Make this page a server component by making for a client side component.
+ */
+
 const formSchema = z.object({
   title: z.string().min(2, {
     message: 'Title must be at least 2 characters.',
@@ -26,7 +30,7 @@ const formSchema = z.object({
   quote: z.string().min(5, {
     message: 'Quote must be at least 5 characters.',
   }),
-  creater: z.enum(['you', 'other', ''], {
+  creater: z.enum(['you', 'other'], {
     required_error: 'You need to select created by.',
   }),
 });
@@ -34,19 +38,12 @@ const formSchema = z.object({
 const AddPage = () => {
   const { isSignedIn, user, isLoaded } = useUser();
 
-  // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: '',
-      quote: '',
-    },
+    defaultValues: {},
   });
 
-  // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log('form values ', values);
   }
   if (!isLoaded) {
@@ -125,7 +122,6 @@ const AddPage = () => {
                           <FormControl>
                             <RadioGroup
                               onValueChange={field.onChange}
-                              defaultValue={field.value}
                               className="flex flex-col space-y-1"
                             >
                               <FormItem className="flex items-center space-x-3 space-y-0">

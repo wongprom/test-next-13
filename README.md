@@ -49,3 +49,43 @@ react - `18.2.0`<p>
 
 - When it comes to those delightful sublinks emerging from `/about`, we're giving the page a makeover that's cleaner than a freshly laundered superhero cape. What does that mean? We're keeping it as simple as a sidekick's sidekick until we've decided on our grand style and layout reveal! Stay tuned for the fashion show!
 </details>
+
+<p>
+<p>
+
+## Supabase
+
+<details><summary> How to Update schema.prisma</summary>
+
+After making changes/update schema.prisma
+ex,
+
+```prisma
+model Quote {
+  id        String   @id @default(uuid())
+  title     String
+  image     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  owner     Owner[]
+}
+
+model Owner {
+  id           String      @id @default(uuid())
+  name         String
+  Quote        Quote?      @relation(fields: [quoteId], references: [id])
+  quoteId      String?
+  LifeLesson   LifeLesson? @relation(fields: [lifeLessonId], references: [id])
+  lifeLessonId String?
+}
+```
+
+type in terminal and push to supabase to sync new schema
+
+```bash
+npx prisma db push
+```
+
+DONE! 👍
+
+</details>

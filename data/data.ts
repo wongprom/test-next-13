@@ -204,6 +204,29 @@ const testAboutData = [
   },
 ];
 
+const testEpigramData = [
+  {
+    href: '#',
+    title: 'Stay afraid',
+    text: 'Stay afraid, but do it anyway. What’s important is the action. You don’t have to wait to be confident. Just do it and eventually the confidence will follow.',
+  },
+  {
+    href: '#',
+    title: 'Tide will turn',
+    text: 'When you get into a tight place and everything goes against you…never give up then, for that is just the place and time that the tide will turn.',
+  },
+  {
+    href: '#',
+    title: 'Distance Traveled',
+    text: 'We should not judge people by their peak of excellence; but by the distance they have traveled from the point where they started.',
+  },
+  {
+    href: '#',
+    title: 'Crazy enough',
+    text: 'People who are crazy enough to think they can change the world are the ones who do.',
+  },
+];
+
 const testDataJimmyCard = [
   {
     title: 'Great outdoors',
@@ -243,4 +266,5 @@ export {
   testCertificates,
   testAboutData,
   testDataJimmyCard,
+  testEpigramData,
 };

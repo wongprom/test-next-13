@@ -60,7 +60,7 @@ const AddPage = () => {
     },
   });
 
-  const useWatchTest = useWatch({
+  const useWatchCreater = useWatch({
     control: form.control,
     name: 'creater',
   });
@@ -176,7 +176,7 @@ const AddPage = () => {
                         </FormItem>
                       )}
                     />
-                    {useWatchTest === 'other' && (
+                    {useWatchCreater === 'other' && (
                       <FormField
                         control={form.control}
                         name="other"

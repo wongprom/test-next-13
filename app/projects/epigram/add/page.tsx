@@ -17,9 +17,21 @@ import { Button } from '@/components/shadcn/ui/button';
 import { Input } from '@/components/shadcn/ui/input';
 import { Textarea } from '@/components/shadcn/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/shadcn/ui/radio-group';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from '@/components/shadcn/ui/dialog';
+import { Separator } from '@/components/shadcn/ui/separator';
 
 /**
  * todo Make this page a server component by making form a client side component.
+ * todo Style Dialog, when pressing button "Preview"
  */
 
 const formSchema = z.object({
@@ -52,8 +64,12 @@ const AddPage = () => {
     control: form.control,
     name: 'creater',
   });
+  const useWatchAll = useWatch({
+    control: form.control,
+  });
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
+    console.log('SUBMITTED');
     console.log('form values ', values);
   };
   if (!isLoaded) {
@@ -167,12 +183,12 @@ const AddPage = () => {
                         render={({ field }) => {
                           return (
                             <FormItem>
-                              <FormLabel>Name of Creater</FormLabel>
+                              <FormLabel>Name of other Creater</FormLabel>
                               <FormControl>
                                 <Input {...field} className="text-black" />
                               </FormControl>
                               <FormDescription>
-                                Write name of the creater for quote
+                                Write name of other creater for quote
                               </FormDescription>
                               <FormMessage />
                             </FormItem>
@@ -180,9 +196,42 @@ const AddPage = () => {
                         }}
                       />
                     )}
-                    <Button type="submit" size="lg">
-                      Submit Quote
-                    </Button>
+                    <Separator />
+                    <div className="flex gap-4 flex-wrap">
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button type="button" variant="secondary">
+                            Preview
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-[425px]">
+                          <DialogHeader>
+                            <DialogTitle>Preview</DialogTitle>
+                            <DialogDescription>
+                              Preview of Quote that will be added when pressisng
+                              button &quot;Submit Quote&quot;
+                            </DialogDescription>
+                          </DialogHeader>
+                          <div className="grid gap-4 py-4">
+                            <div className="grid grid-cols-1 items-center gap-4">
+                              <p>Title: {useWatchAll.title}</p>
+                              <p>Quote: {useWatchAll.quote}</p>
+                              <p>Created by: {useWatchAll.creater}</p>
+                              <p>Name of other Creater: {useWatchAll.other}</p>
+                            </div>
+                            {/* <div className="grid grid-cols-4 items-center gap-4"></div> */}
+                          </div>
+                          <DialogFooter>
+                            <DialogClose asChild>
+                              <Button variant={'destructive'}>Close</Button>
+                            </DialogClose>
+                          </DialogFooter>
+                        </DialogContent>
+                      </Dialog>
+                      <Button type="submit" size="lg">
+                        Submit Quote
+                      </Button>
+                    </div>
                   </form>
                 </Form>
               </section>

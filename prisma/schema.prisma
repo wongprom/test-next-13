@@ -28,15 +28,16 @@ model Author {
 }
 
 model Quote {
-  id        String   @id @default(uuid())
+  id        String      @id @default(uuid())
   title     String
+  quoteText String
   image     String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  owner     Owner[]
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  createdBy CreatedBy[]
 }
 
-model Owner {
+model CreatedBy {
   id           String      @id @default(uuid())
   name         String
   Quote        Quote?      @relation(fields: [quoteId], references: [id])
@@ -46,8 +47,9 @@ model Owner {
 }
 
 model LifeLesson {
-  id     String  @id @default(uuid())
-  lesson String
-  order  String?
-  owner  Owner[]
+  id        String      @id @default(uuid())
+  title     String
+  lesson    String
+  order     String?
+  createdBy CreatedBy[]
 }

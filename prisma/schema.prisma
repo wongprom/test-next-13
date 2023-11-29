@@ -20,36 +20,8 @@ model Novel {
 }
 
 model Author {
-  id   String @id @default(uuid())
-  name String
-
+  id      String  @id @default(uuid())
+  name    String
   Novel   Novel?  @relation(fields: [novelId], references: [id])
   novelId String?
-}
-
-model Quote {
-  id        String      @id @default(uuid())
-  title     String
-  quoteText String
-  image     String?
-  createdAt DateTime    @default(now())
-  updatedAt DateTime    @updatedAt
-  createdBy CreatedBy[]
-}
-
-model CreatedBy {
-  id           String      @id @default(uuid())
-  name         String
-  Quote        Quote?      @relation(fields: [quoteId], references: [id])
-  quoteId      String?
-  LifeLesson   LifeLesson? @relation(fields: [lifeLessonId], references: [id])
-  lifeLessonId String?
-}
-
-model LifeLesson {
-  id        String      @id @default(uuid())
-  title     String
-  lesson    String
-  order     String?
-  createdBy CreatedBy[]
 }

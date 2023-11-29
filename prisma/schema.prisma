@@ -15,8 +15,8 @@ model Novel {
   title     String
   image     String?
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  author    Author[]
+  updatedAt DateTime @default(now())
+  authors   Author[]
 }
 
 model Author {

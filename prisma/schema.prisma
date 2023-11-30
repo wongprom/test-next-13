@@ -25,3 +25,19 @@ model Author {
   Novel   Novel?  @relation(fields: [novelId], references: [id])
   novelId String?
 }
+
+model Quote {
+  id        String    @id @default(uuid())
+  title     String?
+  quote     String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+  creaters  Creater[]
+}
+
+model Creater {
+  id      String  @id @default(uuid())
+  name    String
+  Quote   Quote?  @relation(fields: [quoteId], references: [id])
+  quoteId String?
+}

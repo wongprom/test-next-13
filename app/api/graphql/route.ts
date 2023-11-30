@@ -21,6 +21,16 @@ const resolvers = {
         },
       });
     },
+    quotes: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.quote.findMany();
+    },
+    quote: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.quote.findUnique({
+        where: {
+          id: args.id,
+        },
+      });
+    },
   },
   Novel: {
     authors: async (parent: any, args: any, context: Context) => {
@@ -29,9 +39,30 @@ const resolvers = {
       });
     },
   },
+  Quote: {
+    creaters: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.creater.findMany({
+        where: { quoteId: parent.id },
+      });
+    },
+  },
 };
 
 export const typeDefs = gql`
+  type Quote {
+    id: ID!
+    title: String
+    quote: String
+    createdAt: String
+    updatedAt: String
+    creaters: [Creater]
+  }
+  type Creater {
+    id: ID!
+    name: String
+    quoteID: String
+  }
+
   type Novel {
     id: ID!
     title: String
@@ -48,6 +79,8 @@ export const typeDefs = gql`
   type Query {
     novel(id: ID!): Novel
     novels: [Novel]
+    quotes: [Quote]
+    quote(id: ID!): Quote
   }
 `;
 

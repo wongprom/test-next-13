@@ -41,3 +41,10 @@ model Creater {
   Quote   Quote?  @relation(fields: [quoteId], references: [id])
   quoteId String?
 }
+
+model LifeLession {
+  id       String @id @default(uuid())
+  lession  String
+  sequense Int
+  likes    Int
+}

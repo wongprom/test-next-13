@@ -31,6 +31,9 @@ const resolvers = {
         },
       });
     },
+    lifeLessions: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.lifeLession.findMany();
+    },
   },
   Novel: {
     authors: async (parent: any, args: any, context: Context) => {
@@ -49,9 +52,14 @@ const resolvers = {
 };
 
 export const typeDefs = gql`
+  type LifeLession {
+    id: ID!
+    lession: String
+    sequense: Int
+    likes: Int
+  }
   type Quote {
     id: ID!
-    title: String
     quote: String
     createdAt: String
     updatedAt: String
@@ -81,6 +89,7 @@ export const typeDefs = gql`
     novels: [Novel]
     quotes: [Quote]
     quote(id: ID!): Quote
+    lifeLessions: [LifeLession]
   }
 `;
 

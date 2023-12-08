@@ -1,5 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
+// ! npx prisma db push
 
 generator client {
   provider = "prisma-client-js"
@@ -10,36 +11,35 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// info Next.js 13, Apollo and GraphQL: Building a powerful and efficient API | Full time: 24:20 https://www.youtube.com/watch?v=ufKuYohCt0w
+// info Mastering Next.js 13.x with GraphQL in 60 Minute: Building Modern Web Apps. time 20:44  https://www.youtube.com/watch?v=9G9_2a2k2Ls
+
+model Author {
+  id           String        @id @default(uuid())
+  name         String
+  novels       Novel[]
+  quotes       Quote[]
+  lifeLessions LifeLession[]
+}
+
 model Novel {
   id        String   @id @default(uuid())
   title     String
   image     String?
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
-  authors   Author[]
-}
-
-model Author {
-  id      String  @id @default(uuid())
-  name    String
-  Novel   Novel?  @relation(fields: [novelId], references: [id])
-  novelId String?
+  author    Author   @relation(fields: [authorId], references: [id])
+  authorId  String
 }
 
 model Quote {
-  id        String    @id @default(uuid())
+  id        String   @id @default(uuid())
   title     String?
   quote     String
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @default(now())
-  creaters  Creater[]
-}
-
-model Creater {
-  id      String  @id @default(uuid())
-  name    String
-  Quote   Quote?  @relation(fields: [quoteId], references: [id])
-  quoteId String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  author    Author   @relation(fields: [authorId], references: [id])
+  authorId  String
 }
 
 model LifeLession {
@@ -47,4 +47,7 @@ model LifeLession {
   lession  String
   sequense Int
   likes    Int
+
+  author   Author @relation(fields: [authorId], references: [id])
+  authorId String
 }

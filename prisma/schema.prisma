@@ -12,7 +12,31 @@ datasource db {
 }
 
 // info Next.js 13, Apollo and GraphQL: Building a powerful and efficient API | Full time: 24:20 https://www.youtube.com/watch?v=ufKuYohCt0w
+
 // info Mastering Next.js 13.x with GraphQL in 60 Minute: Building Modern Web Apps. time 20:44  https://www.youtube.com/watch?v=9G9_2a2k2Ls
+
+// info https://www.prisma.io/docs/orm/prisma-client/queries/relation-queries
+
+model SerieTidning {
+  id           String     @id @default(uuid())
+  tidningsNamn String
+  creater      Scribent[]
+  scribentId   String
+}
+
+model TidningArtikel {
+  id         String   @id @default(uuid())
+  titel      String
+  scribent   Scribent @relation(fields: [scribentId], references: [id])
+  scribentId String
+}
+
+model Scribent {
+  id               String           @id @default(uuid())
+  scribentNamn     String
+  TidningsArtiklar TidningArtikel[]
+  SerieTidningar   SerieTidning[]
+}
 
 model Author {
   id           String        @id @default(uuid())

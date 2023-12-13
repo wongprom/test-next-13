@@ -11,16 +11,32 @@ export type Context = {
 
 const resolvers = {
   Query: {
-    authors: async (parent: any, args: any, context: Context) => {
-      return await context.prisma.author.findMany();
+    scribenter: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.scribent.findMany({
+        include: { TidningsArtiklar: true, SerieTidningar: true },
+      });
     },
+    tidningsArtiklar: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.tidningArtikel.findMany({
+        include: { scribent: true },
+      });
+    },
+    serieTidningar: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.serieTidning.findMany({
+        include: { creater: true },
+      });
+    },
+
+    // authors: async (parent: any, args: any, context: Context) => {
+    //   return await context.prisma.author.findMany();
+    // },
     //   novels: async (parent: any, args: any, context: Context) => {
     //     return await context.prisma.novel.findMany();
     //   },
-    lifeLessions: async (parent: any, args: any, context: Context) => {
-      console.log('Query lifeLessions context ', context);
-      return await context.prisma.lifeLession.findMany();
-    },
+    // lifeLessions: async (parent: any, args: any, context: Context) => {
+    //   console.log('Query lifeLessions context ', context);
+    //   return await context.prisma.lifeLession.findMany();
+    // },
     //   quotes: async (parent: any, args: any, context: Context) => {
     //     return await context.prisma.quote.findMany();
     //   },
@@ -46,26 +62,60 @@ const resolvers = {
     //     });
     //   },
   },
+  // Scribent: {
+  //   TidningsArtiklar: async (parent: any, _args: any, context: Context) => {
+  //     console.log(
+  //       '🚀 ~ file: route.ts:63 ~ TidningsArtiklar: ~ parent:',
+  //       parent
+  //     );
 
-  Author: {
-    lifeLessions: async (parent: any, _args: any, context: Context) => {
-      console.log('Author: lifeLessionscontext ', context);
-      return await context.prisma.lifeLession.findMany({
-        where: {
-          authorId: parent.id,
-        },
-      });
-    },
-  },
-  LifeLession: {
-    author: async (parent: any, _args: any, context: Context) => {
-      return await context.prisma.lifeLession.findMany({
-        where: {
-          authorId: parent.id,
-        },
-      });
-    },
-  },
+  //     return await context.prisma.tidningArtikel.findMany({
+  //       where: {
+  //         scribentId: parent.id,
+  //       },
+  //     });
+  //   },
+  // },
+  // TidningArtikel: {
+  //   scribent: async (parent: any, _args: any, context: Context) => {
+  //     return await context.prisma.tidningArtikel.findMany({
+  //       where: {
+  //         scribentId: parent.id,
+  //       },
+  //     });
+  //   },
+  // },
+  // SerieTidning: {
+  //   creater: async (parent: any, _args: any, context: Context) => {
+  //     console.log('🚀 ~ file: route.ts:83 ~ creater: ~ _args:', _args);
+
+  //     return await context.prisma.serieTidning.findMany({
+  //       where: {
+  //         scribentId: parent.id,
+  //       },
+  //     });
+  //   },
+  // },
+
+  // Author: {
+  //   lifeLessions: async (parent: any, _args: any, context: Context) => {
+  //     console.log('Author: lifeLessionscontext ', context);
+  //     return await context.prisma.lifeLession.findMany({
+  //       where: {
+  //         authorId: parent.id,
+  //       },
+  //     });
+  //   },
+  // },
+  // LifeLession: {
+  //   author: async (parent: any, _args: any, context: Context) => {
+  //     return await context.prisma.lifeLession.findMany({
+  //       where: {
+  //         authorId: parent.id,
+  //       },
+  //     });
+  //   },
+  // },
 
   // Novel: {
   //   authors: async (parent: any, args: any, context: Context) => {
@@ -90,7 +140,28 @@ const resolvers = {
   // },
 };
 
-export const typeDefs = gql`
+export const typeDefs = `#graphql
+type SerieTidning {
+  id:ID!
+  tidningsNamn: String
+  creater: [Scribent]
+  scribentId: String
+}
+
+type TidningArtikel{
+  id:ID!
+  titel: String
+  scribent: Scribent
+  scribentId: String
+}
+
+type Scribent {
+  id: ID!
+  scribentNamn: String
+  TidningsArtiklar: [TidningArtikel]
+  SerieTidningar: [SerieTidning]
+}
+
   type LifeLession {
     id: ID!
     lession: String
@@ -125,10 +196,13 @@ export const typeDefs = gql`
     lifeLessions: [LifeLession]
   }
   type Query {
-    authors: [Author]
+    scribenter: [Scribent]
+    tidningsArtiklar: [TidningArtikel]
+    serieTidningar: [SerieTidning]
+    # authors: [Author]
     # novels: [Novel]
     # quotes: [Quote]
-    lifeLessions: [LifeLession]
+    # lifeLessions: [LifeLession]
     # quote(id: ID!): Quote
     # lifeLession(id: ID!): LifeLession
     # novel(id: ID!): Novel

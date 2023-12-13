@@ -260,6 +260,28 @@ const testDataJimmyCard = [
   },
 ];
 
+const quotesTEstData = [
+  {
+    quote:
+      'There are two mistakes along the way to Self-Mastery: Not starting it and not going all the way.',
+    author: 'Shi Heng Yi',
+  },
+  {
+    quote: 'Freedom goes hand in hand with your ability to restrict yourself',
+    author: 'Shi Heng Yi',
+  },
+  {
+    quote:
+      'It’s not important what you mean by your words. It’s important how the other person understands what you just said.',
+    author: 'Shi Heng Yi',
+  },
+  {
+    quote:
+      'To regain control, we must train the mind to be more present, to live in the here and now, and to find the answers within ourselves, to perceive every moment as it is, and feel the subtle changes within, to continuously work on it. That is the essential practice.',
+    author: 'Shi Heng Yi',
+  },
+];
+
 export {
   characterTestADEPT15,
   testimonials,

@@ -11,156 +11,60 @@ export type Context = {
 
 const resolvers = {
   Query: {
-    scribenter: async (parent: any, args: any, context: Context) => {
-      return await context.prisma.scribent.findMany({
-        include: { TidningsArtiklar: true, SerieTidningar: true },
-      });
-    },
-    tidningsArtiklar: async (parent: any, args: any, context: Context) => {
-      return await context.prisma.tidningArtikel.findMany({
-        include: { scribent: true },
-      });
-    },
-    serieTidningar: async (parent: any, args: any, context: Context) => {
-      return await context.prisma.serieTidning.findMany({
-        include: { creater: true },
+    authors: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.author.findMany({
+        include: { lifeLessions: true, books: true, quotes: true },
       });
     },
 
-    // authors: async (parent: any, args: any, context: Context) => {
-    //   return await context.prisma.author.findMany();
-    // },
-    //   novels: async (parent: any, args: any, context: Context) => {
-    //     return await context.prisma.novel.findMany();
-    //   },
-    // lifeLessions: async (parent: any, args: any, context: Context) => {
-    //   console.log('Query lifeLessions context ', context);
-    //   return await context.prisma.lifeLession.findMany();
-    // },
-    //   quotes: async (parent: any, args: any, context: Context) => {
-    //     return await context.prisma.quote.findMany();
-    //   },
-    //   novel: async (parent: any, args: any, context: Context) => {
-    //     return await context.prisma.novel.findUnique({
-    //       where: {
-    //         id: args.id,
-    //       },
-    //     });
-    //   },
-    //   quote: async (parent: any, args: any, context: Context) => {
-    //     return await context.prisma.quote.findUnique({
-    //       where: {
-    //         id: args.id,
-    //       },
-    //     });
-    //   },
-    //   lifeLession: async (parent: any, args: any, context: Context) => {
-    //     return await context.prisma.lifeLession.findUnique({
-    //       where: {
-    //         id: args.id,
-    //       },
-    //     });
-    //   },
+    books: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.book.findMany({
+        include: { author: true },
+      });
+    },
+
+    quotes: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.quote.findMany({
+        include: {
+          author: true,
+        },
+      });
+    },
+    lifeLessions: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.lifeLession.findMany({
+        include: {
+          author: true,
+        },
+      });
+    },
+    comics: async (parent: any, args: any, context: Context) => {
+      return await context.prisma.comic.findMany({
+        include: {
+          author: true,
+        },
+      });
+    },
   },
-  // Scribent: {
-  //   TidningsArtiklar: async (parent: any, _args: any, context: Context) => {
-  //     console.log(
-  //       '🚀 ~ file: route.ts:63 ~ TidningsArtiklar: ~ parent:',
-  //       parent
-  //     );
-
-  //     return await context.prisma.tidningArtikel.findMany({
-  //       where: {
-  //         scribentId: parent.id,
-  //       },
-  //     });
-  //   },
-  // },
-  // TidningArtikel: {
-  //   scribent: async (parent: any, _args: any, context: Context) => {
-  //     return await context.prisma.tidningArtikel.findMany({
-  //       where: {
-  //         scribentId: parent.id,
-  //       },
-  //     });
-  //   },
-  // },
-  // SerieTidning: {
-  //   creater: async (parent: any, _args: any, context: Context) => {
-  //     console.log('🚀 ~ file: route.ts:83 ~ creater: ~ _args:', _args);
-
-  //     return await context.prisma.serieTidning.findMany({
-  //       where: {
-  //         scribentId: parent.id,
-  //       },
-  //     });
-  //   },
-  // },
-
-  // Author: {
-  //   lifeLessions: async (parent: any, _args: any, context: Context) => {
-  //     console.log('Author: lifeLessionscontext ', context);
-  //     return await context.prisma.lifeLession.findMany({
-  //       where: {
-  //         authorId: parent.id,
-  //       },
-  //     });
-  //   },
-  // },
-  // LifeLession: {
-  //   author: async (parent: any, _args: any, context: Context) => {
-  //     return await context.prisma.lifeLession.findMany({
-  //       where: {
-  //         authorId: parent.id,
-  //       },
-  //     });
-  //   },
-  // },
-
-  // Novel: {
-  //   authors: async (parent: any, args: any, context: Context) => {
-  //     return await context.prisma.author.findMany({
-  //       where: { novelId: parent.id },
-  //     });
-  //   },
-  // },
-  // Quote: {
-  //   authors: async (parent: any, args: any, context: Context) => {
-  //     return await context.prisma.author.findMany({
-  //       where: { quoteId: parent.id },
-  //     });
-  //   },
-  // },
-  // LifeLession: {
-  //   Author: async (parent: any, args: any, context: Context) => {
-  //     return context.prisma.lifeLession.findMany({
-  //       where: { authorId: parent.id },
-  //     });
-  //   },
-  // },
 };
 
 export const typeDefs = `#graphql
-type SerieTidning {
-  id:ID!
-  tidningsNamn: String
-  creater: [Scribent]
-  scribentId: String
-}
+type Author {
+    id: ID!
+    name: String
+    books: [Book]
+    quotes: [Quote]
+    lifeLessions: [LifeLession]
+  }
 
-type TidningArtikel{
-  id:ID!
-  titel: String
-  scribent: Scribent
-  scribentId: String
-}
-
-type Scribent {
-  id: ID!
-  scribentNamn: String
-  TidningsArtiklar: [TidningArtikel]
-  SerieTidningar: [SerieTidning]
-}
+  type Comic {
+    id: ID!
+    title: String
+    image: String
+    createdAt: String
+    updatedAt: String
+    authorId: String
+    author: [Author]
+  }
 
   type LifeLession {
     id: ID!
@@ -168,7 +72,7 @@ type Scribent {
     sequense: Int
     likes: Int
     authorId: String
-    author: Author
+    author: [Author]
   }
 
   type Quote {
@@ -178,34 +82,29 @@ type Scribent {
     createdAt: String
     updatedAt: String
     authorId: String
+    author: [Author]
   }
 
-  type Novel {
+  type Book {
     id: ID!
     title: String
     image: String
     createdAt: String
     updatedAt: String
     authorId: String
+    author: [Author]
   }
-  type Author {
-    id: ID!
-    name: String
-    novels: [Novel]
+ 
+  type Query {
+    authors: [Author]
+    books: [Book]
     quotes: [Quote]
     lifeLessions: [LifeLession]
-  }
-  type Query {
-    scribenter: [Scribent]
-    tidningsArtiklar: [TidningArtikel]
-    serieTidningar: [SerieTidning]
-    # authors: [Author]
-    # novels: [Novel]
-    # quotes: [Quote]
-    # lifeLessions: [LifeLession]
+    comics: [Comic]
     # quote(id: ID!): Quote
     # lifeLession(id: ID!): LifeLession
-    # novel(id: ID!): Novel
+    # book(id: ID!): Book
+    # author(id: ID!): Author
   }
 `;
 

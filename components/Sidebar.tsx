@@ -70,9 +70,9 @@ const Sidebar = () => {
           <LinksSidebarTitle title="Where to find me" />
           <LinkSidebarExternal
             link="https://github.com/wongprom"
-            tooltipText="CV"
+            tooltipText="Github"
           />
-          <LinkSidebar linkText="Resume/CV" url="/cv" Icon={NewspaperIcon} />
+          {/* <LinkSidebar linkText="Resume/CV" url="/cv" Icon={NewspaperIcon} /> */}
         </LinksSidebarWrapper>
       </nav>
       <div className="mt-auto">

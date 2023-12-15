@@ -143,7 +143,7 @@ const Navbar = () => {
                   Github
                 </Link>
               </li>
-              <li className="flex items-center pt-4">
+              {/* <li className="flex items-center pt-4">
                 <DocumentIcon className="h-5 w-5" />
 
                 <Link
@@ -153,7 +153,7 @@ const Navbar = () => {
                 >
                   Resume/CV
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <div className="mt-auto flex justify-center">
               <button className="flex justify-center p-4 w-full rounded-lg cursor-pointer text-[#e5e6e9]  bg-[#23252a]">

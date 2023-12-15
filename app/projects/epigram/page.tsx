@@ -12,6 +12,7 @@ import {
   TooltipTrigger,
 } from '@/components/shadcn/ui/tooltip';
 import { InfoIcon } from 'lucide-react';
+import ClientSideLink from '@/components/ClientSideLink';
 
 const EpiGramPage = () => {
   return (
@@ -88,9 +89,27 @@ const EpiGramPage = () => {
             </div>
           </div>
         </section> */}
-        <section>
+        <section className="relative">
           <SectionHeading headingText={'Quotes'} />
-
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="text-blue-300 absolute top-12 right-0 ">
+                <InfoIcon size={18} />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="max-w-xs">
+                  Quotes are retrieved from Supabase using apollo-client
+                  useQuery hook and displayed with Shadcn component library.{' '}
+                </p>
+                <ClientSideLink
+                  styles={'text-xs text-blue-500'}
+                  route="/projects"
+                >
+                  More info...
+                </ClientSideLink>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           {/* <TooltipProvider>
             <Tooltip>
               <TooltipTrigger className="text-blue-400 absolute top-0 right-0 ">
@@ -106,8 +125,27 @@ const EpiGramPage = () => {
 
           <Quotes />
         </section>
-        <section>
+        <section className="relative">
           <SectionHeading headingText={'Life Lessons'} />
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="text-blue-300 absolute top-12 right-0 ">
+                <InfoIcon size={18} />
+              </TooltipTrigger>
+              <TooltipContent sideOffset={9}>
+                <p className="max-w-xs">
+                  Life Lessons are retrieved from Supabase using apollo-client
+                  useQuery hook and displayed with Shadcn component library.{' '}
+                </p>
+                <ClientSideLink
+                  styles={'text-xs text-blue-500'}
+                  route="/projects"
+                >
+                  More info...
+                </ClientSideLink>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           <LifeLessons />
         </section>
       </div>

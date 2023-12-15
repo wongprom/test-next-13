@@ -1,6 +1,4 @@
 import { SignInButton } from '@clerk/nextjs';
-import AboutCard from '@/components/AboutCard';
-import { testEpigramData } from '@/data/data';
 import React from 'react';
 import Quotes from '@/components/Quotes';
 import SectionHeading from '@/components/SectionHeading';
@@ -75,20 +73,6 @@ const EpiGramPage = () => {
             </p>
           </div>
         </div>
-        {/* <section className="w-full">
-          <div className=" py-24 mx-auto">
-            <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-              {testEpigramData.map((item) => (
-                <AboutCard
-                  key={item.title}
-                  title={item.title}
-                  text={item.text}
-                  href={'#'}
-                />
-              ))}
-            </div>
-          </div>
-        </section> */}
         <section className="relative">
           <SectionHeading headingText={'Quotes'} />
           <TooltipProvider>
@@ -110,19 +94,6 @@ const EpiGramPage = () => {
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-          {/* <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger className="text-blue-400 absolute top-0 right-0 ">
-                <InfoIcon size={18} />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p className="max-w-xs">
-                  Some info aboure where and how Quotes comes from
-                </p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider> */}
-
           <Quotes />
         </section>
         <section className="relative">

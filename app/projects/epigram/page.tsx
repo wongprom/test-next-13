@@ -2,6 +2,8 @@ import { SignInButton } from '@clerk/nextjs';
 import AboutCard from '@/components/AboutCard';
 import { testEpigramData } from '@/data/data';
 import React from 'react';
+import Quotes from '@/components/Quotes';
+import SectionHeading from '@/components/SectionHeading';
 
 const EpiGramPage = () => {
   return (
@@ -77,6 +79,14 @@ const EpiGramPage = () => {
               ))}
             </div>
           </div>
+        </section>
+        <section>
+          <SectionHeading
+            url={'/about'}
+            linkText={'Full journey'}
+            headingText={'Quotes'}
+          />
+          <Quotes />
         </section>
       </div>
     </div>

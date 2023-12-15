@@ -4,6 +4,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 import '../styles/globals.css';
 
 import { alegreya, roboto_slab, nunito_sans, mulish } from './fonts/fonts';
+import { Providers } from './api/graphql/Providers';
 
 export const metadata = {
   title: 'test-1',
@@ -28,7 +29,7 @@ export default function RootLayout({
           <div className="flex">
             <Sidebar />
             <div className="flex-1 p-5 h-screen overflow-auto overflow-x-hidden no-scrollbar">
-              {children}
+              <Providers>{children}</Providers>
             </div>
           </div>
         </body>

@@ -81,11 +81,7 @@ const EpiGramPage = () => {
           </div>
         </section>
         <section>
-          <SectionHeading
-            url={'/about'}
-            linkText={'Full journey'}
-            headingText={'Quotes'}
-          />
+          <SectionHeading headingText={'Quotes'} />
           <Quotes />
         </section>
       </div>

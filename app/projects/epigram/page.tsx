@@ -5,6 +5,13 @@ import React from 'react';
 import Quotes from '@/components/Quotes';
 import SectionHeading from '@/components/SectionHeading';
 import LifeLessons from '@/components/LifeLessons';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/shadcn/ui/tooltip';
+import { InfoIcon } from 'lucide-react';
 
 const EpiGramPage = () => {
   return (
@@ -83,6 +90,20 @@ const EpiGramPage = () => {
         </section> */}
         <section>
           <SectionHeading headingText={'Quotes'} />
+
+          {/* <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="text-blue-400 absolute top-0 right-0 ">
+                <InfoIcon size={18} />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="max-w-xs">
+                  Some info aboure where and how Quotes comes from
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider> */}
+
           <Quotes />
         </section>
         <section>

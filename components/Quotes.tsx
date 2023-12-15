@@ -33,7 +33,7 @@ const Quotes = () => {
     <div className="relative columns-1 lg:columns-2 xl:columns-3 ">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger className="text-blue-300 absolute -top-7 right-0 ">
+          <TooltipTrigger className="text-blue-300 absolute -top-9 right-0 ">
             <InfoIcon size={18} />
           </TooltipTrigger>
           <TooltipContent>
@@ -50,7 +50,7 @@ const Quotes = () => {
       {data.quotes.map((quote: Quote) => (
         <Card
           key={quote.id}
-          className="group hover:dark hover:scale-105 my-4 first:my-0 break-inside-avoid-column"
+          className="my-4 first-of-type:my-0 group hover:dark hover:scale-105 break-inside-avoid-column"
         >
           <CardHeader>
             <QuoteIcon />

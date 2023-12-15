@@ -9,8 +9,15 @@ import {
   CardFooter,
   CardHeader,
 } from './shadcn/ui/card';
-import { HeartIcon } from 'lucide-react';
+import { HeartIcon, InfoIcon } from 'lucide-react';
 import { Author, LifeLesson } from '@/types/types';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from './shadcn/ui/tooltip';
+import ClientSideLink from './ClientSideLink';
 
 /**
  * info if (!data) return <p>return SKELETON...</p>;
@@ -23,11 +30,27 @@ const LifeLessons = () => {
   if (!data) return <p>return SKELETON...</p>;
 
   return (
-    <div className="columns-1 lg:columns-2 xl:columns-3 ">
+    <div className="relative columns-1 lg:columns-2 xl:columns-3 ">
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger className="text-blue-300 absolute -top-9 right-0 ">
+            <InfoIcon size={18} />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p className="max-w-xs">
+              Life Lessons are retrieved from Supabase using apollo-client
+              useQuery hook and displayed with Shadcn component library.{' '}
+            </p>
+            <ClientSideLink styles={'text-xs text-blue-500'} route="/projects">
+              More info...
+            </ClientSideLink>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
       {data.lifeLessions.map((lifeLesson: LifeLesson) => (
         <Card
           key={lifeLesson.id}
-          className="group hover:dark hover:scale-105 my-4 first:my-0 break-inside-avoid-column"
+          className="my-4 first-of-type:my-0 group hover:dark hover:scale-105  break-inside-avoid-column"
         >
           <CardHeader className="">Nr {lifeLesson.sequense}.</CardHeader>
           <CardContent className="">

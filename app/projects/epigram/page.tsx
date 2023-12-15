@@ -4,6 +4,7 @@ import { testEpigramData } from '@/data/data';
 import React from 'react';
 import Quotes from '@/components/Quotes';
 import SectionHeading from '@/components/SectionHeading';
+import LifeLessons from '@/components/LifeLessons';
 
 const EpiGramPage = () => {
   return (
@@ -66,7 +67,7 @@ const EpiGramPage = () => {
             </p>
           </div>
         </div>
-        <section className="w-full">
+        {/* <section className="w-full">
           <div className=" py-24 mx-auto">
             <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
               {testEpigramData.map((item) => (
@@ -79,10 +80,14 @@ const EpiGramPage = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
         <section>
           <SectionHeading headingText={'Quotes'} />
           <Quotes />
+        </section>
+        <section>
+          <SectionHeading headingText={'Life Lessons'} />
+          <LifeLessons />
         </section>
       </div>
     </div>

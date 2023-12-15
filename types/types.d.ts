@@ -18,6 +18,14 @@ export type Quote = {
   quote: string;
   __typename: string;
 };
+export type LifeLesson = {
+  id: string;
+  likes: number;
+  sequense: number;
+  author: [];
+  lession: string;
+  __typename: string;
+};
 
 export type Author = {
   __typename: string;

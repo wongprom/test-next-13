@@ -11,3 +11,15 @@ export const GET_QUOTES = gql`
     }
   }
 `;
+export const GET_LIFE_LESSONS = gql`
+  query LifeLessions {
+    lifeLessions {
+      likes
+      sequense
+      lession
+      author {
+        name
+      }
+    }
+  }
+`;

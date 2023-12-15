@@ -8,11 +8,14 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from './shadcn/ui/card';
 import { QuoteIcon } from 'lucide-react';
+import { Author, Quote } from '@/types/types';
 
-type Quote = {};
+/**
+ * info if (!data) return <p>return SKELETON...</p>;
+ *
+ */
 
 const Quotes = () => {
   const { data } = useQuery(GET_QUOTES);
@@ -20,10 +23,10 @@ const Quotes = () => {
 
   return (
     <div className="columns-1 lg:columns-2 xl:columns-3 ">
-      {data.quotes.map((quote: any) => (
+      {data.quotes.map((quote: Quote) => (
         <Card
           key={quote.id}
-          className="my-4 first:my-0 break-inside-avoid-column"
+          className="group hover:dark hover:scale-105 my-4 first:my-0 break-inside-avoid-column"
         >
           <CardHeader>
             <QuoteIcon />
@@ -35,7 +38,7 @@ const Quotes = () => {
             <CardDescription className="">
               {quote.author.length === 0
                 ? ''
-                : quote.author.map((writer: any, index: any) => (
+                : quote.author.map((writer: Author, index: number) => (
                     <em key={index}>- {writer.name}</em>
                   ))}
             </CardDescription>

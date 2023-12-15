@@ -26,6 +26,9 @@ export const resolvers = {
         include: {
           author: true,
         },
+        orderBy: {
+          sequense: 'asc',
+        },
       });
     },
     comics: async (parent: any, args: any, context: Context) => {

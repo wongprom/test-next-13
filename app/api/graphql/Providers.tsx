@@ -7,10 +7,10 @@ import {
 } from '@apollo/client';
 
 import { ReactNode } from 'react';
-
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 export const Providers = ({ children }: { children: ReactNode }) => {
   const client = new ApolloClient({
-    uri: process.env.NEXT_PUBLIC_SUPABASE_URL + '/api/graphql',
+    uri: supabaseUrl + '/api/graphql',
     cache: new InMemoryCache(),
   });
   return <ApolloProvider client={client}>{children}</ApolloProvider>;

@@ -7,10 +7,12 @@ import {
 } from '@apollo/client';
 
 import { ReactNode } from 'react';
+const testBranchVercel =
+  'https://test-next-13-git-34-idea-quotes-advice-wongprom.vercel.app';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 export const Providers = ({ children }: { children: ReactNode }) => {
   const client = new ApolloClient({
-    uri: supabaseUrl + '/api/graphql',
+    uri: testBranchVercel + '/api/graphql',
     cache: new InMemoryCache(),
   });
   return <ApolloProvider client={client}>{children}</ApolloProvider>;

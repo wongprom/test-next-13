@@ -14,6 +14,7 @@ export const GET_QUOTES = gql`
 export const GET_LIFE_LESSONS = gql`
   query LifeLessions {
     lifeLessions {
+      id
       likes
       sequense
       lession

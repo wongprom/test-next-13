@@ -1,4 +1,4 @@
-import { SignInButton } from '@clerk/nextjs';
+import { SignInButton, UserButton, auth } from '@clerk/nextjs';
 import React from 'react';
 import Quotes from '@/components/Quotes';
 import SectionHeading from '@/components/SectionHeading';
@@ -13,6 +13,7 @@ import { InfoIcon } from 'lucide-react';
 import ClientSideLink from '@/components/ClientSideLink';
 
 const EpiGramPage = () => {
+  const { userId }: { userId: string | null } = auth();
   return (
     <div className="text-white p-0 sm:p-8">
       <div className="max-w-screen-lg mx-auto">
@@ -22,11 +23,25 @@ const EpiGramPage = () => {
               EpiGram
             </h1>
             <div className="h-full mt-4 flex flex-col items-center sm:flex-row sm:items-start lg:items-end">
-              <SignInButton mode="modal" redirectUrl="/projects/epigram/add">
+              {/* <SignInButton mode="modal" redirectUrl="/projects/epigram/add">
                 <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
                   Add epigram
                 </button>
-              </SignInButton>
+              </SignInButton> */}
+              {userId === null ? (
+                <SignInButton mode="modal" redirectUrl="/projects/epigram/add">
+                  <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
+                    Add epigram
+                  </button>
+                </SignInButton>
+              ) : (
+                <ClientSideLink route="/projects/epigram/add">
+                  {' '}
+                  <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
+                    Add epigram
+                  </button>
+                </ClientSideLink>
+              )}
             </div>
           </div>
           <div className="col-span-4 lg:col-span-3 mt-2 flex gap-4 flex-col">

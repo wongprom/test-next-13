@@ -8,5 +8,8 @@
   "editor.formatOnSaveMode": "file", // required to format on save
   "files.autoSave": "onFocusChange", // optional but recommended
   "vs-code-prettier-eslint.prettierLast": "false",
-  "editor.acceptSuggestionOnEnter": "on" // set as "true" to run 'prettier' last not first
+  "editor.acceptSuggestionOnEnter": "on", // set as "true" to run 'prettier' last not first
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }

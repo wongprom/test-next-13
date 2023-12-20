@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// ! npx prisma db push
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// info Next.js 13, Apollo and GraphQL: Building a powerful and efficient API | Full time: 24:20 https://www.youtube.com/watch?v=ufKuYohCt0w
+
+// info Mastering Next.js 13.x with GraphQL in 60 Minute: Building Modern Web Apps. time 20:44  https://www.youtube.com/watch?v=9G9_2a2k2Ls
+
+// info https://www.prisma.io/docs/orm/prisma-client/queries/relation-queries
+
+model Author {
+  id           String        @id @default(uuid())
+  name         String
+  books        Book[]
+  quotes       Quote[]
+  lifeLessions LifeLession[]
+  comics       Comic[]
+}
+
+model Comic {
+  id        String   @id @default(uuid())
+  title     String
+  image     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  author    Author[]
+  authorId  String
+}
+
+model Book {
+  id        String   @id @default(uuid())
+  title     String
+  image     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  author    Author[]
+  authorId  String
+}
+
+model Quote {
+  id        String   @id @default(uuid())
+  title     String?
+  quote     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  author    Author[]
+  authorId  String
+}
+
+model LifeLession {
+  id       String @id @default(uuid())
+  lession  String
+  sequense Int
+  likes    Int
+
+  author   Author[]
+  authorId String
+}

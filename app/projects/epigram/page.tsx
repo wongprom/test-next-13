@@ -1,9 +1,19 @@
-import { SignInButton } from '@clerk/nextjs';
-import AboutCard from '@/components/AboutCard';
-import { testEpigramData } from '@/data/data';
+import { SignInButton, UserButton, auth } from '@clerk/nextjs';
 import React from 'react';
+import Quotes from '@/components/Quotes';
+import SectionHeading from '@/components/SectionHeading';
+import LifeLessons from '@/components/LifeLessons';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/shadcn/ui/tooltip';
+import { InfoIcon } from 'lucide-react';
+import ClientSideLink from '@/components/ClientSideLink';
 
 const EpiGramPage = () => {
+  const { userId }: { userId: string | null } = auth();
   return (
     <div className="text-white p-0 sm:p-8">
       <div className="max-w-screen-lg mx-auto">
@@ -13,11 +23,25 @@ const EpiGramPage = () => {
               EpiGram
             </h1>
             <div className="h-full mt-4 flex flex-col items-center sm:flex-row sm:items-start lg:items-end">
-              <SignInButton mode="modal" redirectUrl="/projects/epigram/add">
+              {/* <SignInButton mode="modal" redirectUrl="/projects/epigram/add">
                 <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
                   Add epigram
                 </button>
-              </SignInButton>
+              </SignInButton> */}
+              {userId === null ? (
+                <SignInButton mode="modal" redirectUrl="/projects/epigram/add">
+                  <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
+                    Add epigram
+                  </button>
+                </SignInButton>
+              ) : (
+                <ClientSideLink route="/projects/epigram/add">
+                  {' '}
+                  <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
+                    Add epigram
+                  </button>
+                </ClientSideLink>
+              )}
             </div>
           </div>
           <div className="col-span-4 lg:col-span-3 mt-2 flex gap-4 flex-col">
@@ -64,19 +88,51 @@ const EpiGramPage = () => {
             </p>
           </div>
         </div>
-        <section className="w-full">
-          <div className=" py-24 mx-auto">
-            <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-              {testEpigramData.map((item) => (
-                <AboutCard
-                  key={item.title}
-                  title={item.title}
-                  text={item.text}
-                  href={'#'}
-                />
-              ))}
-            </div>
-          </div>
+        <section className="relative">
+          <SectionHeading headingText={'Quotes'} />
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="text-blue-300 absolute top-12 right-0 ">
+                <InfoIcon size={18} />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="max-w-xs">
+                  Quotes are retrieved from Supabase using apollo-client
+                  useQuery hook and displayed with Shadcn component library.{' '}
+                </p>
+                <ClientSideLink
+                  styles={'text-xs text-blue-500'}
+                  route="/projects"
+                >
+                  More info...
+                </ClientSideLink>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <Quotes />
+        </section>
+        <section className="relative">
+          <SectionHeading headingText={'Life Lessons'} />
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="text-blue-300 absolute top-12 right-0 ">
+                <InfoIcon size={18} />
+              </TooltipTrigger>
+              <TooltipContent sideOffset={9}>
+                <p className="max-w-xs">
+                  Life Lessons are retrieved from Supabase using apollo-client
+                  useQuery hook and displayed with Shadcn component library.{' '}
+                </p>
+                <ClientSideLink
+                  styles={'text-xs text-blue-500'}
+                  route="/projects"
+                >
+                  More info...
+                </ClientSideLink>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <LifeLessons />
         </section>
       </div>
     </div>

@@ -65,5 +65,6 @@ const NoteBook = (props: any) => {
     </HTMLFlipBook>
   );
 };
+NoteBook.displayName = 'NoteBook';
 
 export default NoteBook;

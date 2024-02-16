@@ -43,6 +43,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.48.2",
+    "react-pageflip": "^2.0.3",
     "react-pdf": "^7.3.3",
     "react-tooltip": "^5.21.1",
     "sanity": "^3.16.7",

@@ -20,6 +20,7 @@ const FrontCover = React.forwardRef((props: any, ref: any) => {
     </div>
   );
 });
+FrontCover.displayName = 'FrontCover';
 
 const Page = React.forwardRef((props: any, ref: any) => {
   return (
@@ -36,7 +37,9 @@ const Page = React.forwardRef((props: any, ref: any) => {
     </div>
   );
 });
-export default function NoteBook() {
+Page.displayName = 'Page';
+
+const NoteBook = () => {
   return (
     // @ts-ignore
     <HTMLFlipBook
@@ -63,4 +66,6 @@ export default function NoteBook() {
       <FrontCover number="5">The End</FrontCover>
     </HTMLFlipBook>
   );
-}
+};
+
+export default NoteBook;

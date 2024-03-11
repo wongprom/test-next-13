@@ -3,36 +3,41 @@ import Image from 'next/image';
 import React from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import deathNoteBlankPage from '../../../../public/images/deathNote/blank.png';
-import deathNoteFrontCover from '../../../../public/images/deathNote/frontCover.png';
+import deathNoteFrontCover from '../../../../public/images/deathNote/frontcover.png';
 import { useRef } from 'react';
 
-const FrontCover = React.forwardRef((props: any, ref: any) => {
+const Cover = React.forwardRef((props: any, ref: any) => {
   return (
     <div
-      className="page page-cover fixed bg-red-600"
+      className="page page-cover relative bg-death-note-cover bg-cover border border-pink-300"
       ref={ref}
       data-density="hard"
     >
-      <Image fill src={deathNoteFrontCover} alt="deathNote" />
+      {/* <Image src={deathNoteFrontCover} alt="deathNote" /> */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 page-content">
         <h2>{props.children}</h2>
       </div>
     </div>
   );
 });
-FrontCover.displayName = 'FrontCover';
+Cover.displayName = 'Cover';
 
 const Page = React.forwardRef((props: any, ref: any) => {
+  console.log(ref);
   return (
-    <div className="page" ref={ref}>
-      <Image fill src={deathNoteBlankPage} alt="deathNote" />
-      <div className="page-content">
-        <h2 className="page-header">Page header - {props.number}</h2>
-        <div className="page-image"></div>
-        <div className="page-text">{props.children}</div>
-        <div className="page-footer">{`Page number ${
-          Number(props.number) + 1
-        }`}</div>
+    <div
+      className="page bg-death-note-blank-page bg-cover bg-center p-10"
+      ref={ref}
+    >
+      <div className="page-content w-full h-full flex flex-col  ">
+        <h2 className="page-header text-center pt-10">
+          Page header - {props.number}
+        </h2>
+        {/* <div className="page-image bg-yellow-200"></div> */}
+        <div className="page-text bg-red-200 ">{props.children}</div>
+        <div className="page-footer mt-auto mx-auto bg-blue-200">{`-- ${Number(
+          props.number
+        )} --`}</div>
       </div>
     </div>
   );
@@ -43,27 +48,28 @@ const NoteBook = () => {
   return (
     // @ts-ignore
     <HTMLFlipBook
-      width={550}
-      height={733}
+      width={500}
+      minWidth={400}
+      maxWidth={500}
       size="stretch"
-      minWidth={315}
-      maxWidth={1000}
-      minHeight={400}
-      maxHeight={1533}
+      height={700}
+      minHeight={700}
+      maxHeight={800}
       maxShadowOpacity={0.5}
       showCover={true}
+
       // mobileScrollSupport={true}
       // onFlip={this.onPage}
       // onChangeOrientation={this.onChangeOrientation}
       // onChangeState={this.onChangeState}
       // className="demo-book"
     >
-      <FrontCover>Start Cover</FrontCover>
-      <Page number="1"></Page>
+      <Cover>Start Cover</Cover>
+      <Page number="1">some text here</Page>
       <Page number="2"></Page>
       <Page number="3"></Page>
       <Page number="4"></Page>
-      <FrontCover number="5">The End</FrontCover>
+      <Cover number="5">The End</Cover>
     </HTMLFlipBook>
   );
 };

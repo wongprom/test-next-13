@@ -14,7 +14,7 @@ const localBranch = 'http://localhost:3000/api/graphql';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 export const Providers = ({ children }: { children: ReactNode }) => {
   const client = new ApolloClient({
-    uri: supabaseUrl,
+    uri: localBranch,
     cache: new InMemoryCache(),
   });
   return <ApolloProvider client={client}>{children}</ApolloProvider>;

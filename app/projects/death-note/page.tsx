@@ -40,7 +40,7 @@ const DeathNotePage = () => {
             </p>{' '}
           </div>
         </div>
-        <section className="block border border-white">
+        <section className=" border border-white">
           <NoteBook />
         </section>
       </div>

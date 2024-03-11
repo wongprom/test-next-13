@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'death-note-blank-page': "url('/public/images/deathNote/blank.png')",
+        'death-note-cover': "url('/images/deathNote/frontcover.png')",
+        'death-note-blank-page': "url('/images/deathNote/blank.png')",
       },
       colors: {
         border: 'hsl(var(--border))',

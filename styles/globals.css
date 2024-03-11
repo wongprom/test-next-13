@@ -28,6 +28,11 @@
  *fint-weigt string
 **/
 
+@font-face {
+  font-family: 'Death-note-font';
+  src: url('../public/fonts/deathnote_font.ttf');
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

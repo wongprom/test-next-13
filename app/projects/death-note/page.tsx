@@ -8,7 +8,7 @@ const DeathNotePage = () => {
       <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">
-            <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
+            <h1 className="text-4xl text-center sm:text-left lg:text-5xl font-deathNote">
               Death Note
             </h1>
             <div className="h-full mt-4 flex flex-col items-center sm:flex-row sm:items-start lg:items-end"></div>

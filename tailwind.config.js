@@ -8,6 +8,9 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   theme: {
+    fontFamily: {
+      deathNote: ['Death-note-font', 'sans-serif'],
+    },
     container: {
       center: true,
       padding: '2rem',

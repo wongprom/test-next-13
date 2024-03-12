@@ -2,19 +2,33 @@
 import Image from 'next/image';
 import React from 'react';
 import HTMLFlipBook from 'react-pageflip';
-import deathNoteBlankPage from '../../../../public/images/deathNote/blank.png';
-import deathNoteFrontCover from '../../../../public/images/deathNote/frontcover.png';
 import { useRef } from 'react';
+import { testDeathNoteRules } from '../../../../data/data';
+
+const numOfRules = testDeathNoteRules.length;
+const displayDeatNoteRulesText = (ruleText: string[]) => {
+  return ruleText.map((rule: string) => (
+    <p
+      className="first-line:uppercase first-line:tracking-widest first-line:text-gray-200
+      first-letter:text-7xl first-letter:font-bold first-letter:text-gray-200
+      first-letter:mr-3 first-letter:float-left tracking-wide"
+    >
+      {rule}
+      <br />
+      <br />
+    </p>
+  ));
+};
 
 const Cover = React.forwardRef((props: any, ref: any) => {
   return (
     <div
-      className="page page-cover relative bg-death-note-cover bg-cover border border-pink-300"
+      className="page page-cover relative font-deathNote bg-death-note-cover font-bold bg-cover text-gray-900 text-6xl"
       ref={ref}
       data-density="hard"
     >
       {/* <Image src={deathNoteFrontCover} alt="deathNote" /> */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 page-content">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 page-content animate-pulse ">
         <h2>{props.children}</h2>
       </div>
     </div>
@@ -22,27 +36,34 @@ const Cover = React.forwardRef((props: any, ref: any) => {
 });
 Cover.displayName = 'Cover';
 
-const Page = React.forwardRef((props: any, ref: any) => {
-  console.log(ref);
+const RulePage = React.forwardRef((props: any, ref: any) => {
   return (
     <div
-      className="page bg-death-note-blank-page bg-cover bg-center p-10"
+      className="page font-deathNote bg-death-note-blank-page bg-cover bg-center p-10"
       ref={ref}
     >
-      <div className="page-content w-full h-full flex flex-col  ">
-        <h2 className="page-header text-center pt-10">
-          Page header - {props.number}
+      <div className="page-content w-full h-full flex flex-col overflow-y-auto">
+        <h2 className="page-header text-5xl text-center pt-10">
+          Rule {props.pageNumber} / {numOfRules}
         </h2>
+        <br />
         {/* <div className="page-image bg-yellow-200"></div> */}
-        <div className="page-text bg-red-200 ">{props.children}</div>
-        <div className="page-footer mt-auto mx-auto bg-blue-200">{`-- ${Number(
-          props.number
+        <h3 className="text-3xl uppercase underline decoration-gray-400 tracking-wide">
+          {props.rule.heading}
+        </h3>
+        <br />
+        <div className="page-text">{props.children}</div>
+        <div className="page-text text-3xl text-gray-400">
+          {displayDeatNoteRulesText(props.rule.text)}
+        </div>
+        <div className="page-footer mt-auto mx-auto">{`-- ${Number(
+          props.pageNumber
         )} --`}</div>
       </div>
     </div>
   );
 });
-Page.displayName = 'Page';
+RulePage.displayName = 'RulePage';
 
 const NoteBook = () => {
   return (
@@ -55,7 +76,7 @@ const NoteBook = () => {
       height={700}
       minHeight={700}
       maxHeight={800}
-      maxShadowOpacity={0.5}
+      maxShadowOpacity={1}
       showCover={true}
 
       // mobileScrollSupport={true}
@@ -64,12 +85,15 @@ const NoteBook = () => {
       // onChangeState={this.onChangeState}
       // className="demo-book"
     >
-      <Cover>Start Cover</Cover>
-      <Page number="1">some text here</Page>
+      <Cover>Doo it...</Cover>
+      {testDeathNoteRules.map((rule, index) => {
+        return <RulePage pageNumber={index + 1} rule={rule}></RulePage>;
+      })}
+      {/* <Page number="1" subHeading="Entering Names"></Page>
       <Page number="2"></Page>
       <Page number="3"></Page>
-      <Page number="4"></Page>
-      <Cover number="5">The End</Cover>
+      <Page number="4"></Page> */}
+      <Cover number="5">...end</Cover>
     </HTMLFlipBook>
   );
 };

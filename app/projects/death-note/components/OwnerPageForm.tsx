@@ -33,8 +33,7 @@ const FormSchema = z.object({
 });
 
 const OwnerPageForm = forwardRef((props: any, ref: any) => {
-  // console.log('🚀 ~ OwnerPageForm ~ props:', props);
-
+  console.log('🚀 ~ OwnerPageForm ~ props:', props);
   // console.log('🚀 ~ OwnerPageForm ~ ref:', ref);
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -47,6 +46,7 @@ const OwnerPageForm = forwardRef((props: any, ref: any) => {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log('Submitesd with this data: ', data);
+    props.setFormData(data);
     // toast({
     //   title: 'You submitted the following values:',
     //   description: (

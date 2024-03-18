@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 
 const OwnerPage = forwardRef((props: any, ref: any) => {
+  const { formData } = props;
   return (
     <div
       className="page font-deathNote bg-death-note-blank-page bg-cover bg-center p-10"
@@ -10,7 +11,8 @@ const OwnerPage = forwardRef((props: any, ref: any) => {
         <h2 className="page-header text-5xl text-center pt-10">Death Note</h2>
         <br />
         {/* <div className="page-image bg-yellow-200"></div> */}
-        <p>Name: Jimmy Backstrom</p>
+
+        <p>Name: {formData ? formData.yourName : 'Ingen data'}</p>
         <p>Year of Birth:...</p>
         <p>Your Shinigami: ".Get Shinigami from array Shinigami's "</p>
         <p>Zodiac: Rooster (tori)</p>

@@ -72,7 +72,7 @@ const NoteBook = (props: any) => {
         // className="demo-book"
       >
         <Cover>Doo it...</Cover>
-        <OwnerPage />
+        <OwnerPage formData={props.formData} />
         {testDeathNoteRules.map((rule, index) => {
           return (
             <RulePage

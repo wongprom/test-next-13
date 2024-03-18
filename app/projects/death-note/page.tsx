@@ -1,9 +1,12 @@
-import React from 'react';
+'use client';
+import { useState } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import NoteBook from './components/NoteBook';
 import OwnerPageForm from './components/OwnerPageForm';
 
 const DeathNotePage = () => {
+  const [formData, setFormData] = useState(null);
+
   return (
     <div className="text-white p-0 sm:p-8">
       <div className="max-w-screen-lg mx-auto">
@@ -43,8 +46,8 @@ const DeathNotePage = () => {
         </div>
 
         <section className="border border-white">
-          <OwnerPageForm />
-          <NoteBook />
+          <OwnerPageForm setFormData={setFormData} />
+          <NoteBook formData={formData} />
         </section>
       </div>
     </div>

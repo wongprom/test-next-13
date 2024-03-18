@@ -22,6 +22,8 @@ module.exports = {
       backgroundImage: {
         'death-note-cover': "url('/images/deathNote/frontcover.png')",
         'death-note-blank-page': "url('/images/deathNote/blank.png')",
+        'death-note-blank-skrynklig': "url('/images/deathNote/skrynklig.png')",
+        'death-note-blank-old-paper': "url('/images/deathNote/old-paper.png')",
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -64,6 +66,10 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
+        'caret-blink': {
+          '0%,70%,100%': { opacity: '1' },
+          '20%,50%': { opacity: '0' },
+        },
         'accordion-down': {
           from: { height: 0 },
           to: { height: 'var(--radix-accordion-content-height)' },
@@ -74,6 +80,7 @@ module.exports = {
         },
       },
       animation: {
+        'caret-blink': 'caret-blink 1.25s ease-out infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },

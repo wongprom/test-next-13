@@ -1,3 +1,5 @@
+'use client';
+
 import { forwardRef } from 'react';
 import { displayDeatNoteRulesText } from './NoteBook';
 
@@ -12,7 +14,6 @@ const RulePage = forwardRef((props: any, ref: any) => {
           Rule {props.pageNumber} / {props.numOfRules}
         </h2>
         <br />
-        {/* <div className="page-image bg-yellow-200"></div> */}
         <h3 className="text-3xl uppercase underline decoration-gray-400 tracking-wide">
           {props.rule.heading}
         </h3>

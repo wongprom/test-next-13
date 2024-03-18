@@ -11,15 +11,16 @@ const OwnerPage = forwardRef((props: any, ref: any) => {
         <br />
         {/* <div className="page-image bg-yellow-200"></div> */}
         <p>Name: Jimmy Backstrom</p>
-        <p>Alias: Wongprom</p>
-        <p>Age: 42</p>
-        <p>Gender: Man</p>
-        <p>Your Shinigami: Ryuk</p>
-        <p>Likes:...</p>
-        <p>Disslikes:...</p>
-        <p>Main wish:...</p>
+        <p>Year of Birth:...</p>
+        <p>Your Shinigami: ".Get Shinigami from array Shinigami's "</p>
         <p>Zodiac: Rooster (tori)</p>
-        <p>Personality based of your Zodiac:...</p>
+        <p>englishSign:...</p>
+        <p>japaneseSign:...</p>
+        <p>animalKanji:...</p>
+        <p>birthYear:...</p>
+        <p>positiveAttributes:...</p>
+        <p>negativeAttributes:...</p>
+        <p>info:...</p>
         <h3 className="text-3xl uppercase underline decoration-gray-400 tracking-wide">
           {}
         </h3>

@@ -1,6 +1,7 @@
 import React from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import NoteBook from './components/NoteBook';
+import OwnerPageForm from './components/OwnerPageForm';
 
 const DeathNotePage = () => {
   return (
@@ -40,7 +41,9 @@ const DeathNotePage = () => {
             </p>{' '}
           </div>
         </div>
-        <section className=" border border-white">
+
+        <section className="border border-white">
+          <OwnerPageForm />
           <NoteBook />
         </section>
       </div>

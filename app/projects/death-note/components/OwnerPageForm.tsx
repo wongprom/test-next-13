@@ -24,10 +24,10 @@ import { Input } from '@/components/shadcn/ui/input';
 import { toast } from '@/components/shadcn/ui/use-toast';
 
 const FormSchema = z.object({
-  yourName: z.string().min(6, {
-    message: 'Username must be at least 2 characters.',
+  name: z.string().min(1, {
+    message: 'Name must be at least 2 characters.',
   }),
-  pin: z.string().min(4, {
+  birthYear: z.string().length(4, {
     message: 'Your year of birth must be 4 characters: ex, 1999',
   }),
 });
@@ -39,8 +39,8 @@ const OwnerPageForm = forwardRef((props: any, ref: any) => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      yourName: '',
-      pin: '',
+      name: '',
+      birthYear: '',
     },
   });
 
@@ -76,7 +76,7 @@ const OwnerPageForm = forwardRef((props: any, ref: any) => {
         >
           <FormField
             control={form.control}
-            name="yourName"
+            name="name"
             render={({ field }) => (
               <FormItem className="">
                 <FormLabel>Your name</FormLabel>
@@ -97,7 +97,7 @@ const OwnerPageForm = forwardRef((props: any, ref: any) => {
           />
           <FormField
             control={form.control}
-            name="pin"
+            name="birthYear"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Year of Birth</FormLabel>

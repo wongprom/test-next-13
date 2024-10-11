@@ -1,8 +1,8 @@
-'use client';
-import { useState } from 'react';
-import HTMLFlipBook from 'react-pageflip';
-import NoteBook from './components/NoteBook';
-import OwnerPageForm from './components/OwnerPageForm';
+"use client";
+import { useState } from "react";
+import HTMLFlipBook from "react-pageflip";
+import NoteBook from "./components/NoteBook";
+import OwnerPageForm from "./components/OwnerPageForm";
 
 const DeathNotePage = () => {
   const [formData, setFormData] = useState(null);
@@ -23,30 +23,16 @@ const DeathNotePage = () => {
               instructions (known as &apos;Rules of the Death Note&apos;)
               written on the inside. When used correctly, it allows anyone to
               commit a murder, knowing only the victim&apos;s name and face.
-            </p>{' '}
+            </p>
             <p>
               In this iteration, the Death Note takes on a new dimension beyond
-              its original purpose. Apart from its ability to cause physical
-              demise, it is also wielded as a tool to manipulate emotions,
-              thoughts, and karma. The owner of the Death Note can utilize it to
-              rid themselves of burdensome feelings, intrusive thoughts, and
-              negative karmic consequences. By inscribing specific directives
-              within the Death Note, the owner can effectively erase or alter
-              their own emotional and mental landscape, purging themselves of
-              undesirable thoughts and emotions. This manipulation of internal
-              states adds a layer of complexity to the story, exploring the
-              psychological and moral implications of wielding such power over
-              one&apos;s own psyche. As the narrative unfolds, the consequences
-              of tampering with emotions and karma become central themes,
-              driving the characters to grapple with the ethical dilemmas
-              inherent in controlling not just external events, but also
-              internal states of being.
-            </p>{' '}
+              its original purpose...
+            </p>
           </div>
         </div>
 
         <section className="border border-white">
-          <OwnerPageForm setFormData={setFormData} />
+          {/* <OwnerPageForm setFormData={setFormData} /> */}
           <NoteBook formData={formData} />
         </section>
       </div>

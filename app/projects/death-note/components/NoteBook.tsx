@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useCallback, useEffect, useState } from 'react';
-import HTMLFlipBook from 'react-pageflip';
-import { useRef } from 'react';
-import { testDeathNoteRules } from '../../../../data/data';
-import OwnerPage from './OwnerPage';
-import RulePage from './RulePage';
+import React, { useCallback, useEffect, useState } from "react";
+import HTMLFlipBook from "react-pageflip";
+import { useRef } from "react";
+import { testDeathNoteRules } from "../../../../data/data";
+import OwnerPage from "./OwnerPage";
+import RulePage from "./RulePage";
 
 const numOfRules = testDeathNoteRules.length;
 
@@ -39,57 +39,51 @@ const Cover = React.forwardRef((props: any, ref: any) => {
     </div>
   );
 });
-Cover.displayName = 'Cover';
+Cover.displayName = "Cover";
 
 const NoteBook = (props: any) => {
   const onFlip = useCallback((e: any) => {
-    console.log('Current page: ' + e.data);
+    console.log("Current page: " + e.data);
   }, []);
 
-  //@ts-ignore
-  // const pageCount = pageFlip.current.getPageFlip().getPageCount();
-
   return (
-    <>
-      {/* @ts-ignore */}
-      <HTMLFlipBook
-        width={500}
-        minWidth={400}
-        maxWidth={500}
-        size="stretch"
-        height={700}
-        minHeight={700}
-        maxHeight={800}
-        maxShadowOpacity={1}
-        showCover={true}
-        disableFlipByClick={true}
-        startZIndex={0}
-        onFlip={onFlip}
-        // mobileScrollSupport={true}
-        // onFlip={this.onPage}
-        // onChangeOrientation={this.onChangeOrientation}
-        // onChangeState={this.onChangeState}
-        // className="demo-book"
-      >
-        <Cover>Doo it...</Cover>
-        <OwnerPage formData={props.formData} />
-        {testDeathNoteRules.map((rule, index) => {
-          return (
-            <RulePage
-              key={rule.heading}
-              pageNumber={index + 1}
-              rule={rule}
-              numOfRules={numOfRules}
-            ></RulePage>
-          );
-        })}
-        {/* <Page number="1" subHeading="Entering Names"></Page>
-      <Page number="2"></Page>
-      <Page number="3"></Page>
-      <Page number="4"></Page> */}
-        <Cover number="5">...end</Cover>
-      </HTMLFlipBook>
-    </>
+    <HTMLFlipBook
+      width={500} // Justera detta efter behov
+      height={800}
+      minHeight={400}
+      maxHeight={800} // 90% av viewport-höjden
+      minWidth={300} // Lägger till minsta bredd
+      maxWidth={900} // Lägger till största bredd
+      size="stretch"
+      showCover={true}
+      disableFlipByClick={true}
+      startZIndex={0}
+      onFlip={onFlip}
+      className="demo-book"
+      style={{ margin: "0 auto" }}
+      startPage={1}
+      drawShadow={true}
+      flippingTime={1000}
+      useMouseEvents={true}
+      usePortrait={true}
+      autoSize={true}
+      maxShadowOpacity={0.5}
+      mobileScrollSupport={true}
+      clickEventForward={true}
+      swipeDistance={30}
+      showPageCorners={true}
+    >
+      <Cover>Doo it...</Cover>
+      {testDeathNoteRules.map((rule, index) => (
+        <RulePage
+          key={rule.heading}
+          pageNumber={index + 1}
+          rule={rule}
+          numOfRules={numOfRules}
+        />
+      ))}
+      <Cover>...end</Cover>
+    </HTMLFlipBook>
   );
 };
 

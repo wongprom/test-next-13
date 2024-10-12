@@ -18,9 +18,9 @@ const RulePage = forwardRef((props: any, ref: any) => {
           {props.rule.heading}
         </h3>
         <br />
-        <p className="page-text text-3xl text-gray-400">
+        <div className="page-text text-3xl text-gray-400">
           {displayDeatNoteRulesText(props.rule.text)}
-        </p>
+        </div>
       </div>
       <p className="page-footer absolute bottom-4 left-1/2 transform -translate-x-1/2">{`-- ${Number(
         props.pageNumber

@@ -1,9 +1,9 @@
-import React from 'react';
-import { testAboutData, testDataJimmyCard } from '@/data/data';
-import Image from 'next/image';
+import React from "react";
+import { testAboutData, testDataJimmyCard } from "@/data/data";
+import Image from "next/image";
 
 const page = () => {
-  const testDataJimmy = testAboutData.find((data) => data.title == 'Jimmy');
+  const testDataJimmy = testAboutData.find((data) => data.title == "Jimmy");
 
   return (
     <div className="text-white p-0 sm:p-8">
@@ -54,50 +54,42 @@ const page = () => {
             {/* map array of images */}
             <Image
               alt=""
-              src={'/fest_flak.jpeg'}
+              src={"/fest_flak.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/klipper.jpeg'}
+              src={"/klipper.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/quote1.jpeg'}
+              src={"/quote1.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/rakar.jpeg'}
+              src={"/rakar.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/bilflak.jpeg'}
+              src={"/bilflak.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/svarfar.jpeg'}
-              width={500}
-              height={500}
-              className="w-full"
-              objectFit="test"
-            />
-            <Image
-              alt=""
-              src={'/quote3.jpeg'}
+              src={"/svarfar.jpeg"}
               width={500}
               height={500}
               className="w-full"
@@ -105,49 +97,57 @@ const page = () => {
             />
             <Image
               alt=""
-              src={'/tempel.jpeg'}
+              src={"/quote3.jpeg"}
+              width={500}
+              height={500}
+              className="w-full"
+              objectFit="test"
+            />
+            <Image
+              alt=""
+              src={"/tempel.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/hus.jpeg'}
+              src={"/hus.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/rakning.jpeg'}
+              src={"/rakning.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/quote2.jpeg'}
+              src={"/quote2.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/far_mat.jpeg'}
+              src={"/far_mat.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/ata.jpeg'}
+              src={"/ata.jpeg"}
               width={500}
               height={500}
               className="w-full"
             />
             <Image
               alt=""
-              src={'/munk.jpeg'}
+              src={"/munk.jpeg"}
               width={500}
               height={500}
               className="w-full"
@@ -178,7 +178,7 @@ const page = () => {
                     </span>
                   </div>
                   <p className="text-[#9b9b9b] block md:mx-auto px-4 my-4 text-sm text-left">
-                    {' '}
+                    {" "}
                     A Tech Enthusiast with a Purpose In 2017, I embarked on an
                     educational journey that led me to graduate in 2019. I chose
                     this path not only because I believe it&apos;s the future
@@ -200,7 +200,7 @@ const page = () => {
             // Create component and map
             <div
               key={card.title}
-              className="card group origin-center rotate-0 relative min-w-[250px] max-w-[330px] max-h-[200px] bg-[#f2f2f2] flex items-center justify-center overflow-hidden transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)] rounded-[10px]"
+              className="card group origin-center rotate-0 relative min-w-[250px] max-w-[330px] max-h-[200px] bg-[#f2f2f2] flex items-center justify-center overflow-hidden transition-all duration-&lsqb;0.6s&rsqb; ease-&lsqb;cubic-bezier(0.175,0.885,0.32,1.275)&rsqb; rounded-[10px]"
             >
               <Image
                 src={card.image}
@@ -211,7 +211,7 @@ const page = () => {
               />
               <div
                 className="card__content rotate-180 w-full h-full absolute bg-[#222222]/90 shadow-[0_8px_32px_0_rgba(_31,38,135,0.37_)] border rounded-[10px] border-solid border-[rgba(_255,255,255,0.18_)]
-              origin-top transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)] p-5 left-0 top-0 group-hover:rotate-0"
+              origin-top transition-all duration-&lsqb;0.6s&rsqb; ease-&lsqb;cubic-bezier(0.175,0.885,0.32,1.275)&rsqb; p-5 left-0 top-0 group-hover:rotate-0"
               >
                 <p className="card__title text-2xl text-[#cccccc] font-bold m-0">
                   {card.title}

@@ -29,8 +29,8 @@
 **/
 
 @font-face {
-  font-family: 'Death-note-font';
-  src: url('../public/fonts/deathnote_font.ttf');
+  font-family: "Death-note-font";
+  src: url("../public/fonts/deathnote_font.ttf");
 }
 
 @layer base {
@@ -115,5 +115,42 @@
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  /* Volymreglage styling */
+  .volume-slider {
+    -webkit-appearance: none; /* Ta bort standardutseende */
+    width: 100%;
+    height: 4px; /* Gör reglaget tunnare */
+    background: linear-gradient(
+      to right,
+      black,
+      red
+    ); /* Aktiv och inaktiv färg */
+    border-radius: 5px; /* Runda hörnen */
+    outline: none;
+  }
+
+  .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: red; /* Färg på reglaget */
+    cursor: pointer;
+  }
+
+  .volume-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+  }
+
+  /* För spåret i Firefox */
+  .volume-slider::-moz-range-track {
+    background: linear-gradient(to right, black, red);
   }
 }

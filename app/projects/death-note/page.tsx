@@ -5,6 +5,7 @@ import NoteBook from "./components/NoteBook";
 import OwnerPageForm from "./components/OwnerPageForm";
 import Image from "next/image";
 import testImage from "../../../public/images/deathNote/ghost.png";
+import AudioPlayer from "./components/AudioPlayer";
 
 const DeathNotePage = () => {
   const [formData, setFormData] = useState(null);
@@ -15,6 +16,10 @@ const DeathNotePage = () => {
         <h1 className="text-4xl text-center lg:text-5xl font-deathNote">
           Death Note
         </h1>
+        <div className="mx-auto flex justify-center">
+          <AudioPlayer />
+        </div>
+
         <div className="grid grid-cols-7 gap-2">
           <div className="col-span-3">
             <p>How the original works</p>
@@ -35,13 +40,12 @@ const DeathNotePage = () => {
               its original purpose...
             </p>
           </div>
-          <div className="col-span-4 ">
+          <div className="col-span-4">
             <Image
               src={testImage}
               alt="test image"
-              className="rounded-lg filter blur-sm shadow-sm"
+              className="rounded-sm border-transparent ring-gray-500  shadow-sm opacity-20"
             />
-            <div className="absolute inset-0 rounded-lg border-4 border-transparent ring-4 ring-gray-500 blur-lg"></div>
           </div>
         </div>
 

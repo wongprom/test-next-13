@@ -24,10 +24,10 @@ const DeathNotePage = () => {
           <div className="col-span-3">
             <p>How the original works</p>
             <p>
-              The 'Death Note' itself, a black notebook with instructions (known
-              as 'Rules of the Death Note') written on the inside. When used
-              correctly, it allows anyone to commit a murder, knowing only the
-              victim's name and face.
+              The &apos;Death Note&apos; itself, a black notebook with
+              instructions (known as &apos;Rules of the Death Note&apos;)
+              written on the inside. When used correctly, it allows anyone to
+              commit a murder, knowing only the victim&apos;s name and face.
             </p>
             <p>
               The notebook was dropped into the human world by Ryuk, a Shinigami

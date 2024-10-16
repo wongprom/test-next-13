@@ -48,12 +48,12 @@ const NoteBook = (props: any) => {
 
   return (
     <HTMLFlipBook
-      width={500} // Justera detta efter behov
+      width={500}
       height={800}
       minHeight={400}
-      maxHeight={800} // 90% av viewport-höjden
-      minWidth={300} // Lägger till minsta bredd
-      maxWidth={900} // Lägger till största bredd
+      maxHeight={800}
+      minWidth={300}
+      maxWidth={900}
       size="stretch"
       showCover={true}
       disableFlipByClick={true}

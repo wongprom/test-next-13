@@ -59,7 +59,7 @@ const NoteBook = (props: any) => {
       disableFlipByClick={true}
       startZIndex={0}
       onFlip={onFlip}
-      className="demo-book bg-black shadow-[8px_8px_16px_16px_rgba(0,0,0,0.2),-8px_-8px_16px_16px_rgba(255,255,255,0.7)] border-opacity-20"
+      className="demo-book bg-death-note-blank-cracks shadow-[8px_8px_16px_16px_rgba(0,0,0,0.2),-8px_-8px_16px_16px_rgba(255,255,255,0.7)]"
       style={{ margin: "0 auto", backgroundColor: "gray" }}
       startPage={1}
       drawShadow={true}

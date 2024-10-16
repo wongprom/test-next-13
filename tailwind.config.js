@@ -22,8 +22,9 @@ module.exports = {
       backgroundImage: {
         "death-note-cover": "url('/images/deathNote/frontcover.png')",
         "death-note-blank-page": "url('/images/deathNote/blank.png')",
-        "death-note-blank-skrynklig": "url('/images/deathNote/skrynklig.png')",
-        "death-note-blank-old-paper": "url('/images/deathNote/old-paper.png')",
+        "death-note-blank-cracks": "url('/images/deathNote/sprickor.png')",
+        "death-note-blank-wrinkled":
+          "url('/images/deathNote/wrinkled-page.png')",
       },
       colors: {
         border: "hsl(var(--border))",

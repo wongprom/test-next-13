@@ -52,7 +52,7 @@ const NoteBook = (props: any) => {
       height={800}
       minHeight={400}
       maxHeight={800}
-      minWidth={300}
+      minWidth={500}
       maxWidth={900}
       size="stretch"
       showCover={true}

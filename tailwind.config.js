@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     fontFamily: {
       deathNote: ["Death-note-font", "sans-serif"],
+      specialElite: ["Special-elite", "sans-serif"],
     },
     container: {
       center: true,

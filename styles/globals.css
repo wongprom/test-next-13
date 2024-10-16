@@ -30,7 +30,13 @@
 
 @font-face {
   font-family: "Death-note-font";
-  src: url("../public/fonts/deathnote_font.ttf");
+  src: url("../public/fonts/deathnote_font.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Special-elite";
+  src: url("../public/fonts/SpecialElite-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
 }
 
 @layer base {

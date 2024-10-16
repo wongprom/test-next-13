@@ -6,7 +6,7 @@ import { displayDeatNoteRulesText } from "./NoteBook";
 const RulePage = forwardRef((props: any, ref: any) => {
   return (
     <div
-      className="page relevant font-deathNote bg-death-note-blank-page bg-cover bg-center"
+      className="page relevant font-deathNote bg-death-note-blank-page bg-cover bg-center rounded-lg border border-gray-300 shadow-[0_0_15px_rgba(0,0,0,0.1)]"
       ref={ref}
     >
       <p className="page-header text-2xl text-right pt-8 pr-8">

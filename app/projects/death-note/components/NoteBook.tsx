@@ -29,7 +29,7 @@ export const displayDeatNoteRulesText = (ruleText: string[]) => {
 const Cover = React.forwardRef((props: any, ref: any) => {
   return (
     <div
-      className="page page-cover font-deathNote bg-death-note-cover font-bold bg-cover text-gray-900 text-6xl"
+      className="page page-cover font-deathNote bg-death-note-cover font-bold bg-cover text-gray-900 text-6xl rounded-lg border border-gray-300 shadow-[0_0_15px_rgba(0,0,0,0.1)]"
       ref={ref}
       data-density="hard"
     >
@@ -59,15 +59,15 @@ const NoteBook = (props: any) => {
       disableFlipByClick={true}
       startZIndex={0}
       onFlip={onFlip}
-      className="demo-book"
-      style={{ margin: "0 auto" }}
+      className="demo-book bg-black shadow-[8px_8px_16px_16px_rgba(0,0,0,0.2),-8px_-8px_16px_16px_rgba(255,255,255,0.7)] border-opacity-20"
+      style={{ margin: "0 auto", backgroundColor: "gray" }}
       startPage={1}
       drawShadow={true}
       flippingTime={1000}
       useMouseEvents={true}
       usePortrait={true}
       autoSize={true}
-      maxShadowOpacity={0.5}
+      maxShadowOpacity={0.1}
       mobileScrollSupport={true}
       clickEventForward={true}
       swipeDistance={30}

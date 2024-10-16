@@ -49,11 +49,8 @@ const DeathNotePage = () => {
           </div>
         </div>
 
-        <section className="border border-white">
-          {/* <OwnerPageForm setFormData={setFormData} /> */}
-          <p>Death not component</p>
-          {/* <NoteBook formData={formData} /> */}
-        </section>
+        {/* <OwnerPageForm setFormData={setFormData} /> */}
+        <NoteBook formData={formData} />
       </div>
     </div>
   );

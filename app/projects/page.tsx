@@ -15,8 +15,8 @@ const ProjectsPage = () => {
             <p>
               Welcome to my projects page. Here you can explore some of the work
               I have done, including the various techniques and technologies
-              that I've utilized. These projects showcase my skills and passion
-              for development.
+              that I&apos;ve utilized. These projects showcase my skills and
+              passion for development.
             </p>
             <p className="mt-4">
               Feel free to browse through the cards below to learn more about

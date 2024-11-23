@@ -8,6 +8,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      deathNote: ["Death-note-font", "sans-serif"],
+      specialElite: ["Special-elite", "sans-serif"],
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -16,6 +20,13 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "death-note-cover": "url('/images/deathNote/frontcover.png')",
+        "death-note-blank-page": "url('/images/deathNote/blank.png')",
+        "death-note-blank-cracks": "url('/images/deathNote/sprickor.png')",
+        "death-note-blank-wrinkled":
+          "url('/images/deathNote/wrinkled-page.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +68,10 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "caret-blink": {
+          "0%,70%,100%": { opacity: "1" },
+          "20%,50%": { opacity: "0" },
+        },
         "accordion-down": {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -67,6 +82,7 @@ module.exports = {
         },
       },
       animation: {
+        "caret-blink": "caret-blink 1.25s ease-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

@@ -1,9 +1,9 @@
-'use client';
-import { FaceSmileIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React from 'react';
-import { Tooltip } from 'react-tooltip';
+"use client";
+import { FaceSmileIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
+import { Tooltip } from "react-tooltip";
 
 type Props = {
   linkText: string;
@@ -16,11 +16,11 @@ const LinkSidebar = ({ linkText, url, Icon, numOfProjects }: Props) => {
   const currentRoute = usePathname();
   const isCurrentRouteStartsWithURL = currentRoute.startsWith(url);
 
-  const activeLinkStyle = 'text-orange-600';
+  const activeLinkStyle = "text-orange-600";
   return (
     <div
       className={`flex w-full items-center justify-center rounded-xl px-3 py-2 xl:hover:bg-[#1c1d21] ${
-        isCurrentRouteStartsWithURL && 'xl:bg-[#1c1d21]'
+        isCurrentRouteStartsWithURL && "xl:bg-[#1c1d21]"
       }`}
     >
       <Link
@@ -31,6 +31,7 @@ const LinkSidebar = ({ linkText, url, Icon, numOfProjects }: Props) => {
       >
         <Icon
           className="h-6 w-6 focus:outline-none"
+          aria-hidden="false"
           data-tooltip-id={linkText}
           data-tooltip-content={linkText}
         />
@@ -40,7 +41,7 @@ const LinkSidebar = ({ linkText, url, Icon, numOfProjects }: Props) => {
           className="xl:hidden text-sm font-normal rounded-lg tracking-wider"
         />
       </Link>
-      <p className={`hidden xl:block ml-2 ${!numOfProjects && 'mr-auto'}`}>
+      <p className={`hidden xl:block ml-2 ${!numOfProjects && "mr-auto"}`}>
         {linkText}
       </p>
       {numOfProjects && (

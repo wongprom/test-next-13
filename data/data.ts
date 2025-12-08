@@ -813,6 +813,460 @@ const testDataJapaneseZodiacSigns = [
   },
 ];
 
+const chantbookPhraPhutthakun = [
+  {
+    title: "วิธีทำสมาธิแบบง่าย ๆ",
+    titleRomanized: "Withi Tham Samathi Bæp Ngai Ngai",
+    description: `
+    This chapter provides a simple and practical method for mindfulness meditation.
+    It explains how to sit, where to place attention (on the rising and falling of the abdomen),
+    and how to handle physical discomfort, wandering thoughts, and emotions using a noting technique.
+    It emphasizes consistent awareness during both formal sitting and everyday activities,
+    forming the foundation of insight meditation (vipassanā).
+  `,
+    paragraphs: [
+      {
+        thai: "ทำสมาธิเพื่อให้จิตสงบ มีพลัง มีประโยชน์ ในปัจจุบัน คือ ทำให้ใจสบาย คลายทุกข์ หนักแน่น มั่นคง อารมณ์แจ่มใส ความจำดี ทำงานมีประสิทธิภาพ สุขภาพดี นอนหลับสบาย เรียนหนังสือเก่ง ที่สำคัญคือได้บุญมาก",
+        romanized:
+          "Tham samathi phuea hai chit sangop mi phalang mi prayot nai patjuban khue tham hai chai sabai khlai thuk naknaen mankhong arom jaem sai khwamjam di thamngan mi prasitthiphap sukhaphap di nonlap sabai rian nangsue keng thi samkhan khue dai bun mak",
+        eng: "Practice meditation to calm the mind, build strength, and bring practical benefits in everyday life — such as easing suffering, strengthening mental stability, brightening emotions, improving memory, increasing work efficiency, promoting health, better sleep, and success in studies. Most importantly, it brings great merit.",
+      },
+      {
+        thai: "วิธีนั่งให้นั่งขัดสมาธิ คือ ขาขวาทับขาซ้าย นั่งตัวตรง หลับตา เอาสติมาจับอยู่ที่สะดือ ที่ท้องพองยุบ...",
+        romanized:
+          "Withi nang hai nang khat samathi khue kha khwa thap kha sai nang tua trong lap ta ao sati ma chap yu thi sadu thi thong phong yub...",
+        eng: "Sit cross-legged with the right leg over the left, keep your back straight, and close your eyes. Bring awareness to the navel area and observe the rising and falling of the abdomen.",
+      },
+      {
+        thai: "ในขณะที่นั่งหรือเดินจงกรมอยู่นั้น ถ้ามีเวทนา ความเจ็บปวด เมื่อย คัน เกิดขึ้น ให้หยุดเดิน หรือหยุดกำหนดพองยุบ...",
+        romanized:
+          "Nai khana thi nang rue doen jongkrom yu nan tha mi wethana khwam chep puat mueai khan koet khuen hai yut doen rue yut kamnot phong yub...",
+        eng: "While sitting or walking in meditation, if painful sensations like aches or itching arise, stop walking or stop the 'rising-falling' noting. Bring mindfulness to the sensation and observe it as it is.",
+      },
+      {
+        thai: "จิตเวลานั่งอยู่หรือเดินอยู่ ถ้าจิตคิดถึงบ้าน คิดถึงทรัพย์สิน หรือคิดฟุ้งซ่านต่าง ๆ นานา...",
+        romanized:
+          "Chit wela nang yu rue doen yu tha chit khit thueng ban khit thueng sap sin rue khit fungsan tang tang nana...",
+        eng: "When the mind wanders — thinking about home, possessions, or other distractions — place attention at the solar plexus and note 'thinking... thinking...' until the thoughts fade.",
+      },
+      {
+        thai: "ดีใจ เสียใจ หรือโกรธ ก็ให้กำหนดเช่นเดียวกัน ว่า ดีใจหนอ ๆ ๆ ๆ เสียใจหนอ ๆ ๆ ๆ โกรธหนอ ๆ ๆ ๆ เป็นต้น",
+        romanized:
+          "Di chai sia chai rue krot ko hai kamnot chen diao kan wa di chai no no no no sia chai no no no no krot no no no pen ton",
+        eng: "When feeling joy, sadness, or anger, apply the same technique — noting 'happy... happy...', 'sad... sad...', or 'angry... angry...' accordingly.",
+      },
+      {
+        thai: "เวลานอน ค่อย ๆ เอนตัวนอน พร้อมกับกำหนด เอาสติมาจับที่ท้อง แล้วกำหนดว่า พองหนอ ยุบหนอ...",
+        romanized:
+          "Wela non khoi khoi en tua non phrom kap kamnot ao sati ma chap thi thong laeo kamnot wa phong no yub no...",
+        eng: "When lying down to sleep, gently recline and place mindfulness at the abdomen, noting 'rising... falling...' continuously until you fall asleep.",
+      },
+      {
+        thai: "อิริยาบถต่าง ๆ การเดินไปในที่ต่าง ๆ การเข้าห้องน้ำ การเข้าห้องส้วม การรับประทานอาหาร และการกระทำกิจการงานทั้งปวง...",
+        romanized:
+          "Iriyabot tang tang kan doen pai nai thi tang tang kan khao hong nam kan khao hong suam kan rapprathan ahan lae kan kratham kitjakan ngan thang puang...",
+        eng: "During all activities — walking, using the restroom, eating, and working — maintain mindfulness in every movement and posture.",
+      },
+      {
+        thai: "ผู้ปฏิบัติต้องมีสติกำหนดอยู่ทุกขณะในอาการเหล่านี้ ตามความเป็นจริง คือมีสติสัมปชัญญะเป็นปัจจุบันอยู่ตลอดเวลา",
+        romanized:
+          "Phu patibat tong mi sati kamnot yu thuk khana nai akarn lao ni tam khwam pen ching khue mi sati sampachanya pen patjuban yu talot wela",
+        eng: "A practitioner must remain mindful at all times in all postures and actions, staying present in the moment with continuous awareness.",
+      },
+    ],
+  },
+  {
+    title: "อนุโมทนา",
+    titleRomanized: "Anumodana",
+    description: `
+    This is a blessing and encouragement to recite prayers regularly as part of daily life.
+    It emphasizes the spiritual and moral benefits of chanting for individuals, families,
+    and society at large. It highlights how chanting brings wisdom, happiness, and discipline,
+    especially to younger generations, and ends with a formal well-wishing by Phra Rajsuddhiyanmongkol.
+  `,
+    paragraphs: [
+      {
+        thai: "สวดมนต์ไหว้พระเป็นธรรมประจำชีวิต เป็นข้อคิดประจำชีวิต เกิดผลผลิเพื่องอกงามสร้างความดีแก่ตน ผลกำไรเป็นความดีเพื่อมอบให้แก่เพื่อนร่วมชาติ ร่วมโลกได้อยู่ด้วยความมีโชคดี ทุกๆ ท่าน",
+        romanized:
+          "Suat mon wai phra pen thammacham pracham chiwit pen khokhit pracham chiwit koet phonphali phuea ngok-ngam sang khwam di kae ton phonkamrai pen khwam di phuea mop hai kae phuean ruam chat ruam lok dai yu duai khwam mi chok di thuk thuk than",
+        eng: "Reciting chants and paying homage to the Buddha should be a regular part of life. It serves as daily reflection, brings spiritual growth, and cultivates goodness within oneself. The benefit is not only personal but can be shared with fellow citizens and all beings in the world, bringing good fortune to everyone.",
+      },
+      {
+        thai: "ขอให้ท่านพร้อมสมาชิกในครอบครัวได้สวดมนต์กันทุกคน ทุกครอบครัวเพื่อเป็นมงคลในชีวิต จะเกิดฐานะดีมีปัญญาจะได้มีความสุข ความเจริญยิ่ง ๆ ขึ้นไปในชีวิต",
+        romanized:
+          "Kho hai than phrom samachik nai khropkhruea dai suat mon kan thuk khon thuk khropkhruea phuea pen mongkhon nai chiwit cha koet thana di mi panya cha dai mi khwam suk khwam charoen ying ying khuen pai nai chiwit",
+        eng: "May you and your family members all recite these chants together. This will bring auspiciousness into your lives, leading to prosperity, wisdom, happiness, and continued success.",
+      },
+      {
+        thai: "ขอให้ท่านๆ ชายหญิงทั่วกัน ลูกหลานทุกๆ คนสวดมนต์ก่อนนอน ถ้าทั้งหลายตั้งใจ ศรัทธาเชื่อมั่น ลูกหลานได้สวดมนต์ตามหนังสือนี้แล้ว ผลที่ได้รับจากการสวดมนต์นั้น",
+        romanized:
+          "Kho hai than than chai ying thua kan luk lan thuk thuk khon suat mon kon non tha thang lai tangchai sattha chuea man luk lan dai suat mon tam nangsue ni laeo phon thi dai rap chak kan suat mon nan",
+        eng: "May all men and women, and every child, recite these prayers before sleeping. If everyone does so with intention and faith, the benefits from these chants will be as follows:",
+      },
+      {
+        thai: "๑. ลูกหลานจะมีระเบียบวินัยที่ดี",
+        romanized: "Nueng. Luk lan cha mi rabieb winai thi di",
+        eng: "1. Children will develop good discipline.",
+      },
+      {
+        thai: "๒. ลูกหลานจะไม่เถียง จะเคารพเชื่อฟังพ่อแม่ เขาจะรู้ว่าเขาเป็นเด็กหรือผู้ใหญ่ จะวางตัวได้เหมาะสม",
+        romanized:
+          "Song. Luk lan cha mai thiang cha khao-rop chuea fang pho mae khao cha ru wa khao pen dek rue phu yai cha wang tua dai mosom",
+        eng: "2. Children will not be argumentative; they will respect and obey their parents, know their place, and behave appropriately.",
+      },
+      {
+        thai: "๓. เมื่อเจริญวัยเป็นหนุ่มสาว ก็จะเป็นลูกหลานที่ดีของพ่อแม่ เป็นพลเมืองที่ดีของสังคมและประเทศชาติ",
+        romanized:
+          "Sam. Muea charoen wai pen num sao ko cha pen luk lan thi di khong pho mae pen phonlamueang thi di khong sangkhom lae prathet chat",
+        eng: "3. As they grow into young adults, they will become good children to their parents and responsible citizens of society and the nation.",
+      },
+      {
+        thai: "๔. ผู้ที่สวดและปฏิบัติเป็นประจำ จะเจริญรุ่งเรือง พัฒนาสถาพร จะรวย จะสวย จะดี มีปัญญา จะสมประสงค์ในสิ่งที่ดีงามตลอดไปทุกประการ",
+        romanized:
+          "Si. Phu thi suat lae patibat pen pracham cha charoen rung rueang patthana sathaphon cha ruai cha suai cha di mi panya cha som prasong nai sing thi di ngam talot pai thuk prakan",
+        eng: "4. Those who chant and practice regularly will flourish, develop lasting stability, gain wealth, beauty, goodness, wisdom, and fulfill all wholesome aspirations permanently.",
+      },
+      {
+        thai: "ขออำนวยพร",
+        romanized: "Kho amnuai phon",
+        eng: "May you be blessed.",
+      },
+      {
+        thai: "พระราชสุทธิญาณมงคล วัดอัมพวัน อ. พรหมบุรี จ. สิงห์บุรี",
+        romanized:
+          "Phra Ratchasuthiyanmongkhon Wat Amphawan, Phromburi District, Singburi Province",
+        eng: "Phra Rajsuddhiyanmongkol, Wat Amphawan, Phromburi District, Singburi Province",
+      },
+    ],
+  },
+  {
+    title: "อานิสงส์ของการสวดพระพุทธคุณ",
+    titleRomanized: "Anisong Khong Kan Suat Phra Phutthakun",
+    description: `
+    This short teaching from Phra Ratchasuthiyanmongkhon encourages people to chant the Buddha's qualities (Phra Phutthakun) regularly.
+    It explains that instead of turning to astrologers or fortune tellers for bad luck,
+    one can use chanting as a practical, spiritual remedy.
+    Chanting should be done according to one's age (or more) to improve mindfulness, clarity, and inner stability.
+  `,
+    paragraphs: [
+      {
+        thai: "อานิสงส์ของการสวดพระพุทธคุณ พระราชสุทธิญาณมงคล",
+        romanized:
+          "Anisong Khong Kan Suat Phra Phutthakun Phra Ratcha Sutthiyanmongkhon",
+        eng: "Merits of chanting the Buddha's qualities – Phra Ratchasuthiyanmongkhon",
+      },
+      {
+        thai: "พระพุทธคุณอาตมาสังเกตมาว่า บางคนเขาไปหาหมอดู เคราะห์ร้ายก็ต้องสะเดาะเคราะห์ อาตมาก็มาดูเหตุการณ์โชคลางไม่ดีก็เป็นความจริงของหมอดู",
+        romanized:
+          "Phra Phutthakun atama sangket ma wa bang khon khao pai ha mo du khro r rai ko tong sada khro atama ko ma du hetkan choklang mai di ko pen khwam ching khong mo du",
+        eng: "I've observed that some people go to fortune tellers when faced with bad luck and are told they must perform rituals to remove it. I too examined situations of bad omens and found that there is truth in what they describe.",
+      },
+      {
+        thai: "อาตมาก็ตั้งตำราขึ้นมาด้วยสติ บอกว่าโยมไปสวดพุทธคุณเท่าอายุให้เกินกว่า ๑ ให้ได้ เพื่อให้สติดีเท่าที่ใช้ได้ผล",
+        romanized:
+          "Atama ko tang tamra khuen ma duai sati bok wa yom pai suat Phutthakun thao ayu hai koen kwa nueng hai dai phuea hai sati di thao thi chai dai phon",
+        eng: "So I created a guideline using mindfulness: I told laypeople to chant the Buddha's qualities as many times as their age plus one, in order to cultivate stronger mindfulness that yields real results.",
+      },
+      {
+        thai: "สวดตั้งแต่ นะโมพุทธัง ธรรมมัง สังฆัง พุทธคุณ ธรรมคุณ สังฆคุณ พาหุงมหากา",
+        romanized:
+          "Suat tangtae Namo Phutthang Thammamang Sanghang Phutthakun Thammakun Sangkhakun Pahung Mahaka",
+        eng: "Begin chanting from: Namo Buddhāya, Dhammāya, Saṅghāya; followed by Buddha's, Dhamma's, and Sangha's qualities; and the Pahung Mahākā chant.",
+      },
+      {
+        thai: "จบแล้วย้อนกลับมาข้างต้น เอาพุทธคุณห้องเดียว ห้องละ ๑ จบ ต่อ ๑ อายุ ๔๐ สวด ๔๑ อายุ ๓๕ สวด ๓๖ ก็ได้ผล",
+        romanized:
+          "Chop laeo yon klap ma khang ton ao Phutthakun hong diao hong la nueng chop tor nueng ayu si sip suat si sip et ayu sam sip ha suat sam sip hok ko dai phon",
+        eng: "After finishing, return to the beginning and recite only the Buddha's qualities — one round per room, one chant per year of age. For example: if you are 40, chant 41 times; age 35, chant 36 times — it will bring results.",
+      },
+    ],
+  },
+  {
+    title: "ชาวคริสต์กับพระพุทธคุณ",
+    titleRomanized: "Chao Khrist Kap Phra Phutthakun",
+    description: `
+    This story recounts a real-life encounter with a Christian woman who, despite her religious background,
+    began chanting Buddhist protective verses to help her troubled son succeed in school.
+    It emphasizes that faith, perseverance, and chanting can transform lives, even healing emotional
+    and physical struggles. The story also reflects on the power of a mother's merit and compassion.
+  `,
+    paragraphs: [
+      {
+        thai: "มีชาวคริสต์คนหนึ่ง อยู่แถวลาดพร้าว อายุ ๕๑ ปี มีลูกชายคนเดียว สามีตาย เป็นเศรษฐีที่ กทม.",
+        romanized:
+          "Mi chao Khrist khon neung yu thaew Lat Phrao, ayu ha-sip-et pi, mi luk chai khon diao, sami tai, pen setthi thi Krung Thep.",
+        eng: "There was a Christian woman living in Lat Phrao, 51 years old, with one son. Her husband had passed away and she was a wealthy woman in Bangkok.",
+      },
+      {
+        thai: "ราชาที่ดิน ที่ดินข้างคลองแสนแสบของเขาทั้งนั้นไปจรดลาดพร้าวหลายร้อยไร่...",
+        romanized:
+          "Racha thi din, thi din khang khlong Saen Saep khong khao thang nan pai charot Lat Phrao lai roi rai...",
+        eng: "She owned land along the Saen Saep canal, stretching all the way to Lat Phrao, totaling hundreds of acres...",
+      },
+      {
+        thai: "เมื่อลูกเรียนไม่เก่งก็ส่งลูกไปเรียนเมืองนอก ไปเรียนปริญญาที่อเมริกา...",
+        romanized:
+          "Muea luk rian mai keng ko song luk pai rian mueang nok, pai rian parinya thi America...",
+        eng: "When her son didn't do well in school, she sent him abroad to study for a degree in America...",
+      },
+      {
+        thai: "ลูกใช้เงินเยอะ เรียนไม่จบ สุดท้ายหาหมอดู หมอดูให้สะเดาะเคราะห์...",
+        romanized:
+          "Luk chai ngoen yoe, rian mai chop, sutthai ha mo du, mo du hai sadok khro...",
+        eng: "Her son spent a lot of money, didn't finish his studies, and eventually she turned to a fortune teller who told her to perform rituals to remove bad luck...",
+      },
+      {
+        thai: "อาตมาเจอเขาโดยบังเอิญ เขาไม่อยากแวะวัด แกล้งบอกว่าปวดท้องเพื่อเข้าห้องน้ำ...",
+        romanized:
+          "Atama choe khao doi bang-oen, khao mai yak wae wat, klaeng bok wa puat thong phuea khao hong nam...",
+        eng: "I happened to meet them by chance. They didn't want to stop at the temple, pretending to need the restroom...",
+      },
+      {
+        thai: "อาตมาไม่รู้ว่าเขาเป็นคริสต์ ขอให้ช่วยเพราะลูกชายไม่เรียน บอกว่าเป็นโรคประสาทแล้ว...",
+        romanized:
+          "Atama mai ru wa khao pen Khrist, kho hai chuai phro luk chai mai rian, bok wa pen rok prasan laeo...",
+        eng: "I didn't know they were Christian. They asked for help because the son wasn't studying and she feared he had a nervous breakdown...",
+      },
+      {
+        thai: "อาตมาดูหน้าแล้วรู้ว่าลูกชายต้องสำเร็จ แต่ทำไมยังไม่จบปริญญา อาตมาเสนอให้สวดมนต์...",
+        romanized:
+          "Atama du na laeo ru wa luk chai tong samret, tae thammai yang mai chop parinya, atama sanoe hai suat mon...",
+        eng: "From looking at his face, I knew the son would succeed, but why hadn't he graduated yet? I suggested she try chanting...",
+      },
+      {
+        thai: "โยมบอกว่าสวดไม่ได้เพราะเป็นคริสต์ อาตมาจึงแนะนำให้อ่านตามตัว ใช้ไม้ขีดนับรอบ...",
+        romanized:
+          "Yom bok wa suat mai dai phro pen Khrist, atama chuai nae nam hai an tam tua, chai mai khit nap rop...",
+        eng: "She said she couldn't chant because she was Christian. I advised her to just read the text and use matchsticks to count repetitions...",
+      },
+      {
+        thai: "หลังจากสวดได้ 3 เดือน เริ่มจำได้ ไม่ต้องใช้ไม้ขีดอีก เกิดอานิสงส์ 2 ประการ...",
+        romanized:
+          "Lang jak suat dai sam duean, roem jam dai, mai tong chai mai khit ik, koet anisong song prakarn...",
+        eng: "After three months of chanting, she could recite it from memory without the matchsticks. Two major benefits emerged...",
+      },
+      {
+        thai: "หนึ่ง หายโรคประสาท ใจดีขึ้น นอนหลับดี เริ่มแผ่เมตตาให้ลูก...",
+        romanized:
+          "Neung: hai rok prasan, chai di khuen, non lap di, roem phae metta hai luk...",
+        eng: "First, her nervous disorder disappeared, her mood improved, she slept well, and began radiating loving-kindness to her son...",
+      },
+      {
+        thai: "อีก 6 เดือน ลูกชายประสบอุบัติเหตุ รถชนเสาไฟฟ้า เพื่อนกระเด็นออกมาแต่ไม่เป็นไร...",
+        romanized:
+          "Ik hok duean, luk chai prasop u-bat-ti-het, rot chon sao faifa, phuean kraden ok ma tae mai pen rai...",
+        eng: "Six months later, her son was in a car accident. The car hit a power pole. His friends were thrown out unharmed...",
+      },
+      {
+        thai: "ลูกต้องรักษาตัว พี่ชายที่เป็นหมอในอเมริกาบอกว่าไม่รอดแน่...",
+        romanized:
+          "Luk tong raksa tua, phi chai thi pen mo nai America bok wa mai rot nae...",
+        eng: "Her son had to be hospitalized. A cousin who was a doctor in America said he wouldn't survive...",
+      },
+      {
+        thai: "วันรุ่งขึ้นลูกฟื้นตัว น้ำตาไหล คิดถึงแม่ รู้ซึ้งถึงบุญคุณของแม่...",
+        romanized:
+          "Wan rung khuen luk fuen tua, nam ta lai, khit thueng mae, ru sueng thueng bun khun khong mae...",
+        eng: "The next day, her son woke up with tears in his eyes, finally realizing his mother's love and merit...",
+      },
+      {
+        thai: "ลูกชายกลับมาวัด มาวิปัสสนา ไม่ยอมกลับอเมริกา...",
+        romanized:
+          "Luk chai klap ma wat, ma vipassana, mai yom klap America...",
+        eng: "The son returned to the temple, practiced vipassana, and refused to go back to America...",
+      },
+      {
+        thai: "แม่บอกว่าอาตมาช่วยไว้ สุดท้ายลูกสวดมนต์เอง ตัดผม เปลี่ยนพฤติกรรม...",
+        romanized:
+          "Mae bok wa atama chuai wai, sutthai luk suat mon eng, tat phom, plian phruekkatham...",
+        eng: "The mother said I had saved them. Eventually, the son began chanting on his own, cut his hair, and changed his behavior...",
+      },
+      {
+        thai: "บทสรุป: ถ้าใครเคราะห์ร้ายหรือดวงไม่ดี ให้สร้างพระเข้าตัว สวดมนต์เป็นยาทา วิปัสสนาเป็นยากิน",
+        romanized:
+          "Bot sarup: tha khrai khro rai rue duang mai di, hai sang Phra khao tua, suat mon pen ya tha, vipassana pen ya kin.",
+        eng: "In conclusion: if someone has bad luck or misfortune, let them build Buddha into themselves. Chanting is like a balm; meditation is like medicine.",
+      },
+    ],
+  },
+  {
+    title: "พาหุงมหากาและนิมิตจากสมเด็จพระพนรัตน์",
+    titleRomanized: "Phāhung Mahākā læ Nimit chāk Somdet Phra Phonarat",
+    description:
+      "En berättelse om en vision från Somdet Phra Phonarat som ledde till spridningen av den kraftfulla bönen 'Phāhung Mahākā'. Kapitlet beskriver hur bönen ger seger, skydd och andlig kraft – både i kunglig historia och för dagens utövare.",
+    paragraphs: [
+      {
+        thai: "เมื่ออาตมาได้พบกับ สมเด็จพระพนรัตน์ วัดป่าแก้ว คืนวันหนึ่งอาตมานอนหลับแล้วฝันไปว่า อาตมาได้เดินไปในสถานที่แห่งหนึ่งพบกับพระสงฆ์รูปหนึ่งครองจีวรคร่ำ สมณสารูปเรียบร้อยน่าเลื่อมใส",
+        romanized:
+          "Muea ātamā dai phop kap Somdet Phra Phonarat Wat Pa Kaew, kheun wan nueng ātamā non lap læo fan pai wā ātamā dai doen pai nai sathanthi hæng nueng, phop kap phra song rūp nueng khrong jīwon khram, samanasārūp riaproi nā lueam sai.",
+        eng: "When I encountered Somdet Phra Phonarat of Wat Pa Kaew, one night I dreamed that I was walking in a place where I met a monk in worn robes with a dignified and inspiring appearance.",
+      },
+      {
+        thai: 'อาตมาเห็นว่าเป็นพระอาวุโสผู้รัตตัญญู จึงน้อมนมัสการท่าน ท่านหยุดยืนตรงหน้าอาตมา แล้วกล่าวกับอาตมาว่า "ฉันคือสมเด็จพระพนรัตน์ วัดป่าแก้วแห่งกรุงศรีอยุธยา ฉันต้องการให้เธอได้ไปที่วัดใหญ่ชัยมงคลเพื่อดูจารึกที่ฉันได้จารึกถวายพระเกียรติแก่สมเด็จพระนเรศวรมหาราชผู้เป็นเจ้า"',
+        romanized:
+          'Ātamā hen wā pen phra āwuso phū rattanyu, jeung nôm namatsakān than. Than yūt yūn trong nā ātamā læo glāw kap ātamā wā "Chan khue Somdet Phra Phonarat Wat Pa Kaew hæng Krung Si Ayutthaya. Chan tong kān hai thoe dai pai thī Wat Yai Chai Mongkhon phuea dū jārik thī chan dai jārik thawai phra kīat kæ Somdet Phra Naresuan Mahārāt phū pen chāo."',
+        eng: "I realized he was a senior monk with deep insight, so I respectfully greeted him. He stood directly in front of me and said, "I am Somdet Phra Phonarat of Wat Pa Kaew in Ayutthaya. I want you to go to Wat Yai Chai Mongkhon and look at the inscription I carved in honor of King Naresuan the Great."",
+      },
+      {
+        thai: 'ประเทศไทยจากหงสาวดีเป็นครั้งแรก เธอไปดูไว้ แล้วจดจํามาเผยแพร่ออกไป ถึงเวลาที่เธอจะได้รับรู้แล้ว"',
+        romanized:
+          "Prathet Thai jāk Hongsawadi pen khrang ræk. Thoe pai dū wai læo jot jam mā phoey phrae ōk pai. Thueng wela thī thoe cha dai rap rū læo.",
+        eng: '"It was the first time Thailand gained independence from Hongsawadi. Go and study it, remember it, and spread it. Now is the time for you to understand."',
+      },
+      {
+        thai: "ในฝันอาตมารับปากท่าน ท่านก็บอกตำแหน่งให้แล้วก็ตกใจตื่นนอนตอนใกล้รุ่ง อาตมาก็ทบทวนความฝัน ก็นึกอยู่ในใจว่าเราเองนั้นกำหนดจิตด้วยกรรมฐาน มีสติอยู่เสมอ เรื่องฝันฟุ้งซ่านเป็นไม่มี",
+        romanized:
+          "Nai fan ātamā rap pāk than. Than kō bōk tamnaeng hai læo kō tokjai tūen non tŏn klai rūng. Ātamā kō thopthuān khwām fan, kō nuek yū nai jai wā rao eng nán kamnot chit dûai kammathān mī sati yū samœ. Rūang fan fúngsān pen mai mī.",
+        eng: "In the dream, I agreed to his request. He showed me the location, and I suddenly woke up at dawn. I reflected on the dream and thought: I always practice mindfulness meditation, so such a scattered dream is unusual for me.",
+      },
+      {
+        thai: "อาตมาก็ได้ข่าวในวันนั้นแหละว่า ทางกรมศิลปากรทำการบูรณะปฏิสังขรณ์พระเจดีย์ใหญ่ในวัดใหญ่ชัยมงคล และจะทำการบรรจุบัวยอดพระเจดีย์ อันเป็นนิมิตหมายการสิ้นสุดการบูรณะ แล้วจะรื้อนั่งร้านทั้งหมดออกเป็นการเสร็จสิ้น",
+        romanized:
+          "Ātamā kō dai khāo nai wan nán læ wa thāng krom sinlapākon tham kān būrana patisangkōn phra chedī yai nai Wat Yai Chai Mongkhon læ ja tham kān banju bua yōt phra chedī an pen nimit māi kān sin sut kān būrana læ ja rʉ̄ nāng rāan thang mot ōk pen kān set sin.",
+        eng: "That same day, I heard the news that the Fine Arts Department was restoring the large stupa at Wat Yai Chai Mongkhon, and that they would enshrine the finial as the final act of the renovation, after which all scaffolding would be removed.",
+      },
+      {
+        thai: "อาตมาจึงได้ขอร้อง ดร.กิ่งแก้ว อัตถากร ให้เลื่อนการปิดยอดบัวไปอีกวันหนึ่ง เพื่อที่อาตมาจะได้นำพระชุมเสมาชัย ซุ้มเสมาขอ ที่อาตมาได้สร้างขึ้นตามแบบดั้งเดิมที่พบในเจดีย์ใหญ่ใกล้กับวัดอัมพวัน ซึ่งพังลงน้ำ ที่กึงเหล็งเป็นคนรวบรวมเอามาให้อาตมาตั้งแต่เมื่อเริ่มพัฒนาวัดใหม่ ๆ แต่แตกหักผุพังทั้งนั้น หลายสิบปีแล้ว อาตมาได้ป่นเอามาผสมสร้างเป็นองค์พระใหม่ ไปร่วมบรรจุไว้ที่ยอดพระเจดีย์บ้าง",
+        romanized:
+          "Ātamā jeung dai khōr rōng Dr. Kingkaew Atthākorn hai lʉ̄an kān pit yōt bua pai ik wan nʉeng, phʉ̄a thī ātamā cha dai nam Phra Chum Sema Chai, sum semā khō, thī ātamā dai sāng khʉn tām bǣp dang dœ̄m thī phop nai chedī yai klai kap Wat Ampha Wan, sʉ̄ng phang long nām, thī Kueng Leng pen khon ruapruam ao mā hai ātamā tangtǣ mʉ̄a rœ̄m phatthanā wat mai mai, tǣ taek hak phu phang thang nán, lāi sip pī lǣo. Ātamā dai pon ao mā phasom sāng pen ong Phra mai pai ruam banju wai thī yōt phra chedī bāng.",
+        eng: "I therefore asked Dr. Kingkaew Atthakorn to postpone the enshrinement of the lotus finial by one day, so I could bring the Phra Chum Sema Chai—ornamental boundary markers—I had recreated based on the original style found in the large stupa near Wat Ampha Wan, which had collapsed into the river. Kueng Leng had collected the fragments for me decades ago when I began restoring the monastery. I had ground and mixed them to form a new Buddha image, to be enshrined within the stupa's pinnacle.",
+      },
+      {
+        thai: "วันนั้นอาตมาได้เดินทางไปถึง ก็ได้เดินขึ้นไปบน แล้วมองเห็นโพรงที่ทางเขาเจดีย์ตอนที่สุดบ ทำไว้สำหรับลงไปด้านล่าง มีรานไม้พอไต่ลงไปภายใน ตั้งใจเด็ดเดี่ยวว่าลงไปคราวนี้ ถ้าพลาดตกลงไปจากนั่งร้านไม้ก็ยอมตาย",
+        romanized:
+          "Wan nán ātamā dai doen thāng pai thʉng, kō dai doen khʉn pai bon, læo mong hen phrōng thī thāng khao chedī ton thī sut ba tham wai samrap long pai dān lāng, mī rāan māi phō tai long pai phāi nai, tangjai detdīao wā long pai khrao nī, thā phlāt tok long pai jāk nāng rān māi kō yōm tāi.",
+        eng: "That day I arrived and climbed up the stupa, where I saw a shaft at its uppermost part, made for descending inside. There was a wooden scaffold just enough to climb down. I was determined: if I were to fall from it, I would accept death.",
+      },
+      {
+        thai: "คนที่ร่วมเดินทางมาด้วยเข้ามัวแต่ไปบนลานชั้นบน อาตมาก็ดิ่งลงไปชั้นล่าง มีไฟฉายดวงหนึ่ง เวลานั้นประมาณ ๐๙.๐๐ น. อาตมาลงไปภายใน แล้วก็พบนิมิตดังที่สมเด็จพระพนรัตน์ได้บอกไว้จริง ๆ",
+        romanized:
+          "Khon thī ruam doen thāng mā dûai khao mua tæ pai bon lān chan bon. Ātamā kō dīng long pai chan lāng, mī fai chāi duang nʉeng, wela nán bpramān kao mōng nā. Ātamā long pai phāi nai, læo kō phop nimit dang thī Somdet Phra Phonarat dai bōk wai jing jing.",
+        eng: "Those who traveled with me were still walking around the upper platform, but I went straight down into the lower level with a flashlight. It was around 9:00 AM. Once I entered, I found the vision just as Somdet Phra Phonarat had told me.",
+      },
+      {
+        thai: "อาตมาจึงได้พบว่าแท้ที่จริงแล้ว สิ่งที่สมเด็จพระพนรัตน์ วัดป่าแก้วท่านได้จารึกถวายพระพร ก็คือบทสวดที่เรียกว่า "พาหุงมหาการุณิโก"",
+        romanized:
+          "Ātamā jʉng dai phop wā thæ thī jing læo, sing thī Somdet Phra Phonarat Wat Pa Kaew than dai jārik thawai phraporn, kō khue bot suat thī riak wā 'Phāhung Mahā Kārunikō'.",
+        eng: "I then realized that what Somdet Phra Phonarat of Wat Pa Kaew had actually inscribed as a royal blessing was the chant known as 'Phahung Maha Karuniko'.",
+      },
+      {
+        thai: "ท้ายของนิมิตนั้นระบุว่า "เราสมเด็จพระพนรัตน์ วัดป่าแก้วศรีอโยธเยศ คือผู้จารึกนิมิต รจนาเอาไว้ถวายพระพรแด่มหาบพิตรเจ้าสมเด็จพระนเรศวรมหาราช"",
+        romanized:
+          "Thāi khong nimit nán rabū wā 'Rao Somdet Phra Phonarat Wat Pa Kaew Si Ayotthayēt khue phū jārik nimit rojana ao wai thawai phraporn dɛ̄ Mahābophit Chāo Somdet Phra Naresuan Mahārat.'",
+        eng: "At the end of the vision, it stated: 'We, Somdet Phra Phonarat of Wat Pa Kaew Si Ayotthaya, are the ones who inscribed this vision and composed it as a royal blessing to His Majesty King Naresuan the Great.'",
+      },
+      {
+        thai: "พาหุงมหากา ก็คือบทสวดสรรเสริญพระพุทธคุณ พระธรรมคุณ พระสังฆคุณ แล้วก็พระพาหุง อันเริ่มด้วย 'พาหุงสหัสส' ไปจนถึง 'ทุคาฮทิฏฐิ' แล้วเรื่อยไปจนถึง 'มหากรุณิโก นาโถ หิตายะ' และจบลงด้วย 'ภะวะตุสัพพะมังคะลัง สัพพะพุทธา สัพพะธัมมา สัพพะสังฆานุภาเวนะ สะทา โสตถี ภะวันตุ เต'",
+        romanized:
+          "Phāhung Mahākā kō khue bot suat sansern Phra Phutthakhun, Phra Thammakhun, Phra Sangkhakhun, læo kō Phra Phāhung an rœ̄m dûai 'Phāhung sahassa' pai jon thueng 'Thukāhathitthi' læo rʉ̄ai pai jon thueng 'Mahā Karuniko Nātho Hitāya', læ chob long dûai 'Bhavatu Sabbha Maṅgalaṃ, Sabbha Buddhā Sabbha Dhammā Sabbha Saṅghānubhāvena Sadā Sotthī Bhavantu Te.'",
+        eng: "The 'Phahung Mahākā' is a chant that praises the virtues of the Buddha, the Dhamma, and the Sangha, beginning with 'Phāhung sahassa…' up to 'Thukāhathitthi', continuing through 'Mahā Karuniko Nātho Hitāya', and concluding with 'Bhavatu Sabbha Maṅgalaṃ, Sabbha Buddhā, Sabbha Dhammā, Sabbha Saṅghānubhāvena, Sadā Sotthī Bhavantu Te.'",
+      },
+      {
+        thai: "อาตมาเรียกรวมกันว่า 'พาหุงมหากา' อาตมาจึงเข้าใจในบัดนั้นเองว่า บทพาหุงนี้คือบทสวดมนต์ที่สมเด็จพระพนรัตน์ วัดป่าแก้ว ได้ถวายให้พระบาทสมเด็จพระนเรศวรมหาราชไว้สวดเป็นประจำ เวลาอยู่กับพระมหาราชวัง และในระหว่างศึกสงคราม",
+        romanized:
+          "Ātamā riak ruam kan wā 'Phāhung Mahākā'. Ātamā jʉng khaochai nai bat nán eng wā bot Phāhung nī khue bot suatmon thī Somdet Phra Phonarat Wat Pa Kaew dai thawai hai Phra Bāt Somdet Phra Naresuan Mahārat wai suat pen pracham wela yū kap Phra Mahārāchawang læ nai rawāng sʉk songkhrām.",
+        eng: "I collectively referred to it as 'Phahung Mahākā'. I understood then that this chant was what Somdet Phra Phonarat of Wat Pa Kaew had given King Naresuan the Great to chant regularly, both while in the royal palace and during times of war.",
+      },
+      {
+        thai: "จึงปรากฏว่าพระบาทสมเด็จพระนเรศวรมหาราชเจ้าทรงรบ ณ ที่ใด ทรงมีชัยชนะอยู่ตลอดมามิได้ทรงเพลี่ยงพล้ำเลย แม้จะเพียงลำพังสองพระองค์กับสมเด็จพระอนุชาธิราชเจ้า ท่ามกลางกองทัพพม่าจำนวนนับแสนคน ก็ทรงมีชัยชนะเหนือกองทัพพม่าด้วยการกระทำยุทธหัตถี มีชัยเหนือพระมหาอุปราชา ณ ดอนเจดีย์ ปูชนียสถาน",
+        romanized:
+          "Jʉng prākot wā Phra Bāt Somdet Phra Naresuan Mahārat Chāo song rop na thī dai, song mī chai chana yū talōt mā mi dai song plīang phlām lœ̄i. Mæ chā phiang lampang sōng Phra Ong kap Somdet Phra Anuchāthirāt Chāo, thām klāng kong thap Phamā jamnuan nap sæn khon, kō song mī chai chana nʉ̄a kong thap Phamā dûai kān kratham yutthahatti, mī chai nʉ̄a Phra Mahā Upparātā na Don Chedī, pūchaniyasathān.",
+        eng: "Thus, it became evident that wherever King Naresuan the Great fought, he always emerged victorious without ever being defeated. Even when it was just him and his younger brother against the massive Burmese army of hundreds of thousands, he still prevailed — winning a war elephant duel over the Crown Prince of Burma at Don Chedi, a revered historical site.",
+      },
+      {
+        thai: "แม้ข้าศึกจะยิงปืนไฟเข้าใส่พระองค์ในตอนที่เข้ากันพระศพของพระมหาอุปราชาออกไปราวกับห่าฝนก็มิปาน แต่ก็มิได้ต้องพระองค์ ด้วยเดชะพาหุงมหากาที่ทรงเจริญอยู่เป็นประจำนั่นเอง",
+        romanized:
+          "Mæ khāsʉk ja ying pʉ̄n fai khao sai Phra Ong nai ton thī khao kan Phra Soph khong Phra Mahā Upparātā ōk pai rāo kap hā fon kō mi pān, tæ kō mi dai tong Phra Ong. Dūai dēcha Phāhung Mahākā thī song jaroen yū pen pracham nán eng.",
+        eng: "Even when the enemy fired volleys of gunfire at His Majesty during the procession of the Crown Prince's remains—like rainstorms—it did not harm him. It was due to the power of the Phahung Mahākā, which he had regularly recited.",
+      },
+      {
+        thai: "อาตมาพบนิมิตแล้ว ก็ไต่ขึ้นมาด้วยความสบายใจถึงปากปล่องที่ลงไป ใช้เวลาเกือบสามชั่วโมง เนื้อตัวมีแต่หยากไย่ เดินลงมาแม่ชีเห็นเข้ายังร้องว่า "หลวงพ่อเข้าไปในโพรงนั้นมาหรือ" แต่อาตมาไม่ตอบ",
+        romanized:
+          "Ātamā phop nimit læo, kō tai khʉn mā dûai khwām sabāi jai thʉng pāk plòng thī long pai, chai wela kʉ̄ap sām chūamōng. Nʉ̄a tūa mī tæ yāk yai. Doen long mā, mæ chī hen khao yang rōng wā 'Luang Phō khao pai nai phrōng nán mā rʉ̄?' Tæ ātamā mai tōp.",
+        eng: "After discovering the vision, I climbed back up calmly to the mouth of the shaft I had descended—having spent nearly three hours inside. My body was covered in cobwebs. As I came down, a nun saw me and exclaimed, 'Did you go into that hole, Venerable Father?' But I did not reply.",
+      },
+      {
+        thai: "ตั้งแต่นั้นมา อาตมาจึงสอนการสวดพาหุงมหากาให้แก่ญาติโยมเป็นต้นมา เพราะอะไร เพราะพาหุงมหากานั้นเป็นบทสวดมนต์ที่มีค่าที่สุด มีผลดีที่สุด เพราะเป็นชัยชนะอย่างสูงสุดของพระบรมศาสดา",
+        romanized:
+          "Tâng tǣ nán mā, ātamā jʉng sōn kān suat Phāhung Mahākā hai kɛ̄ yāt yōm pen ton mā. Phro àrai? Phro Phāhung Mahākā nán pen bot suatmon thī mī khā thī sūt, mī phon thī dī thī sūt, phro pen chai chana yāng sūng sūt khōng Phra Borommasātadā.",
+        eng: "From that time on, I began teaching laypeople to recite the Phahung Mahākā. Why? Because this chant is the most valuable and effective one—it represents the Supreme Victory of the Great Teacher, the Buddha.",
+      },
+      {
+        thai: "จากพญาวัสวดีมาร จากอาฬาวกะยักษ์ จากช้างนาฬาคิรี จากองคุลีมาล จากนางจิญจมาณวิกา จากสัจจะกะนิครนธ์ จากพญานันโทปนันทนาคราช และท่านท้าวผกาพรหม",
+        romanized:
+          "Chāk Phayā Wasawadī Mān, chāk Ālāwakayak, chāk Chāng Nālākhirī, chāk Ongkulīmāl, chāk Nāng Chinchāmanawikā, chāk Sajjakanikron, chāk Phayā Nanthōpanan Nākhārāt, læ than Thāo Phakhāphrom.",
+        eng: "From the demon king Wasawadee, the ogre Āḷavaka, the elephant Nāḷāgiri, the bandit Angulimāla, the slander by Lady Cincā Māṇavikā, the ascetic Saccaka, the nāga king Nandopananda, and even the Brahma god Phakkhaprom.",
+      },
+      {
+        thai: "เป็นชัยชนะที่พระพุทธองค์ทรงได้มาด้วยอิทธิปาฏิหาริย์ และด้วยอำนาจแห่งบารมีธรรมโดยแท้ ผู้ใดได้สวดไว้เป็นประจำทุกวัน จะมีชัยชนะ มีความเจริญรุ่งเรืองตลอดกาลนาน มีสติ",
+        romanized:
+          "Pen chai chana thī Phra Phuttha Ong song dai mā dûai itthipātihān, læ dûai amnāt hɛ̀ng bāramītham dōi thǽ. Phū dai dai suat wai pen pracham thúk wan, ja mī chai chana, mī khwām jarœ̄n rūng rʉ̄ang talōt kān nān, mī sati.",
+        eng: "These were victories the Buddha attained through miraculous powers and the strength of His spiritual perfections. Whoever recites this chant regularly each day will enjoy victory, prosperity, and mindfulness throughout time.",
+      },
+      {
+        thai: "ระลึกได้ จะตายก็ไปสู่สุคติภูมิ ขอให้ญาติโยมสวดพาหุงมหากากันให้ทั่วหน้า นอกจากจะคุ้มตัวแล้วยังคุ้มครองครอบครัวได้",
+        romanized:
+          "Ralʉk dai, ja tāi kō pai sū sukhatiphūmi. Khō hai yāt yōm suat Phāhung Mahākā kan hai thùa nā. Nòk jāk ja khūm tua læo yang khūm khrōng khrōpkhrua dai.",
+        eng: "With mindfulness, even at the moment of death, one will reach a fortunate realm. May all laypeople chant Phahung Mahākā widely—not only for self-protection, but also for the protection of their families.",
+      },
+      {
+        thai: "สวดมาก ๆ เข้า สวดกันทั้งประเทศ ก็ทำให้ประเทศมีแต่ความรุ่งเรือง พวกคนพาลสันดานหยาบก็แพ้ภัยไปอย่างถ้วนหน้า",
+        romanized:
+          "Suat mâk mâk khâo, suat kan thāng prathēt, kō tham hai prathēt mī tæ khwām rūng rʉ̄ang. Phûak khon phān sandān yāb kō phæ̂ phai pai yāng thûan nā.",
+        eng: "When many people chant—if the whole nation does—it will bring prosperity to the country. Wicked and coarse-natured people will be overcome by their own misdeeds.",
+      },
+      {
+        thai: "ไม่ใช่แต่พระบาทสมเด็จพระนเรศวรมหาราชเท่านั้น ที่พบความมหัศจรรย์ของบทพาหุงมหากา แม้พระบาทสมเด็จพระเจ้าตากสินมหาราชก็ทรงพบเช่นกัน",
+        romanized:
+          "Mai chai tæ Phra Bāt Somdet Phra Naresuan Mahārat thâonán thī phop khwām mahatsajan khōng bot Phāhung Mahākā. Mæ Phra Bāt Somdet Phra Chāo Taksin Mahārat kō song phop chên kan.",
+        eng: "It wasn't only King Naresuan the Great who experienced the marvel of the Phahung Mahākā chant; even King Taksin the Great did as well.",
+      },
+      {
+        thai: "โดยมีบันทึกโบราณบอกไว้ว่าดังนี้ "เมื่อพระเจ้าตากสินมหาราชตีเมืองจันทบุรีได้แล้ว ก็ทรงเห็นว่าสงครามกู้ชาติต่อจากนี้ไปจะต้องหนักหนาและยืดยาว"",
+        romanized:
+          "Dōi mī banthʉk bōrān bōk wai wā dang nī: 'Mʉ̄a Phra Chāo Taksin Mahārat tī Mʉ̄ang Chanthaburī dai læo, kō song hen wā songkhrām kū chāt tō chak nī pai ja tông nakh nā læ yʉ̄t yāo.'",
+        eng: "An ancient record states: 'When King Taksin the Great conquered Chanthaburi, he foresaw that the war to reclaim the nation would become heavier and prolonged from that point on.'",
+      },
+      {
+        thai: "จึงทรงโปรดเกล้าฯ ให้สร้างพระยอดธงแบบศรีอยุธยาขึ้น แล้วนิมนต์พระเถระทั้งหลายมาสวดบทพาหุงมหากา บรรจุไว้ในองค์พระ",
+        romanized:
+          "Jʉng song prōt klâo hâi săng Phra Yōt Thong bǣp Sī Ayutthayā khʉ̂n, læo nimon Phra Thera thang lǎi mā suat bot Phāhung Mahākā, banju wai nai ong Phra.",
+        eng: "So he graciously ordered the creation of a Phra Yot Thong Buddha statue in the Ayutthaya style, and invited senior monks to chant the Phahung Mahākā and enshrine it within the statue.",
+      },
+      {
+        thai: "และพระองค์ก็ทรงเจริญรอยตามพระบาทสมเด็จพระนเรศวรมหาราชด้วยการเจริญพาหุงมหากา จึงบันดาลให้ทรงกู้ชาติสำเร็จ",
+        romanized:
+          "Læ Phra Ong kō song jarœ̄n roi tām Phra Bāt Somdet Phra Naresuan Mahārat dûai kān jarœ̄n Phāhung Mahākā. Jʉng bandān hâi song kū chāt samret.",
+        eng: "And His Majesty followed in the footsteps of King Naresuan the Great by regularly reciting the Phahung Mahākā, which brought about his success in restoring the nation.",
+      },
+      {
+        thai: "สวดพาหุงมหากากันให้ได้ทุกบ้าน สวดให้ได้มาก ๆ จะมีแต่ความเจริญรุ่งเรือง",
+        romanized:
+          "Suat Phāhung Mahākā kan hâi dai thúk bâan, suat hâi dai mâak mâak ja mī tæ khwām jarœ̄n rūng rʉ̄ang.",
+        eng: "Let every household recite the Phahung Mahākā. The more it is recited, the more prosperity will arise.",
+      },
+      {
+        thai: "สวดพาหุงมหากาก่อนแล้วจึงสวดชินบัญชร เพราะชินบัญชรนั้นเจ้าประคุณสมเด็จท่านใช้สวดบูชาพระอรหันต์ของท่าน",
+        romanized:
+          "Suat Phāhung Mahākā kòn læo jʉng suat Chinabanjorn, phro Chinabanjorn nán Chao Prakhun Somdet than chai suat būchā Phra Arahant khǒng than.",
+        eng: "Recite the Phahung Mahākā first, then the Jinapanjara. The Jinapanjara was used by Somdet to worship his revered arahants.",
+      },
+      {
+        thai: "ต้องสวดพาหุงมหากาก่อน แล้วจึงมาถึงชินบัญชร ให้จดจำกันเอาไว้นั่นแหละมงคลในชีวิต",
+        romanized:
+          "Tông suat Phāhung Mahākā kòn, læo jʉng mā thʉng Chinabanjorn. Hâi jòtjam kan ao wai nán læ mokkhon nai chīwit.",
+        eng: "You must chant Phahung Mahākā first, and only then proceed to Jinapanjara. Remember this well—for it is a true blessing in life.",
+      },
+      {
+        thai: "พระราชสุทธิญาณมงคล เจ้าอาวาสวัดอัมพวัน และเจ้าคณะอำเภอพรหมบุรี จังหวัดสิงห์บุรี",
+        romanized:
+          "Phra Rātchasutthiyānmongkhon, Chao Āwāt Wat Amphawan, læ Chao Khana Amphoe Phromburi, Changwat Singburi.",
+        eng: "Phra Ratchasuddhiyanmongkhon, Abbot of Wat Amphawan and Ecclesiastical District Chief of Phromburi District, Singburi Province.",
+      },
+    ],
+  },
+];
+
 export {
   characterTestADEPT15,
   testimonials,
@@ -822,4 +1276,5 @@ export {
   testEpigramData,
   testDeathNoteRules,
   testDataJapaneseZodiacSigns,
+  chantbookPhraPhutthakun,
 };

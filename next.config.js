@@ -6,11 +6,17 @@ const nextConfig = {
       use: 'raw-loader',
     });
 
-    // Fix for react-pdf canvas issue in client-side builds
+    // Fix for react-pdf canvas issue
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      canvas: false,
+    };
+
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         canvas: false,
+        fs: false,
       };
     }
 

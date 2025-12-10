@@ -1105,7 +1105,7 @@ const chantbookPhraPhutthakun = [
         thai: 'อาตมาเห็นว่าเป็นพระอาวุโสผู้รัตตัญญู จึงน้อมนมัสการท่าน ท่านหยุดยืนตรงหน้าอาตมา แล้วกล่าวกับอาตมาว่า "ฉันคือสมเด็จพระพนรัตน์ วัดป่าแก้วแห่งกรุงศรีอยุธยา ฉันต้องการให้เธอได้ไปที่วัดใหญ่ชัยมงคลเพื่อดูจารึกที่ฉันได้จารึกถวายพระเกียรติแก่สมเด็จพระนเรศวรมหาราชผู้เป็นเจ้า"',
         romanized:
           'Ātamā hen wā pen phra āwuso phū rattanyu, jeung nôm namatsakān than. Than yūt yūn trong nā ātamā læo glāw kap ātamā wā "Chan khue Somdet Phra Phonarat Wat Pa Kaew hæng Krung Si Ayutthaya. Chan tong kān hai thoe dai pai thī Wat Yai Chai Mongkhon phuea dū jārik thī chan dai jārik thawai phra kīat kæ Somdet Phra Naresuan Mahārāt phū pen chāo."',
-        eng: "I realized he was a senior monk with deep insight, so I respectfully greeted him. He stood directly in front of me and said, "I am Somdet Phra Phonarat of Wat Pa Kaew in Ayutthaya. I want you to go to Wat Yai Chai Mongkhon and look at the inscription I carved in honor of King Naresuan the Great."",
+        eng: 'I realized he was a senior monk with deep insight, so I respectfully greeted him. He stood directly in front of me and said, "I am Somdet Phra Phonarat of Wat Pa Kaew in Ayutthaya. I want you to go to Wat Yai Chai Mongkhon and look at the inscription I carved in honor of King Naresuan the Great."',
       },
       {
         thai: 'ประเทศไทยจากหงสาวดีเป็นครั้งแรก เธอไปดูไว้ แล้วจดจํามาเผยแพร่ออกไป ถึงเวลาที่เธอจะได้รับรู้แล้ว"',
@@ -1144,13 +1144,13 @@ const chantbookPhraPhutthakun = [
         eng: "Those who traveled with me were still walking around the upper platform, but I went straight down into the lower level with a flashlight. It was around 9:00 AM. Once I entered, I found the vision just as Somdet Phra Phonarat had told me.",
       },
       {
-        thai: "อาตมาจึงได้พบว่าแท้ที่จริงแล้ว สิ่งที่สมเด็จพระพนรัตน์ วัดป่าแก้วท่านได้จารึกถวายพระพร ก็คือบทสวดที่เรียกว่า "พาหุงมหาการุณิโก"",
+        thai: 'อาตมาจึงได้พบว่าแท้ที่จริงแล้ว สิ่งที่สมเด็จพระพนรัตน์ วัดป่าแก้วท่านได้จารึกถวายพระพร ก็คือบทสวดที่เรียกว่า "พาหุงมหาการุณิโก"',
         romanized:
           "Ātamā jʉng dai phop wā thæ thī jing læo, sing thī Somdet Phra Phonarat Wat Pa Kaew than dai jārik thawai phraporn, kō khue bot suat thī riak wā 'Phāhung Mahā Kārunikō'.",
         eng: "I then realized that what Somdet Phra Phonarat of Wat Pa Kaew had actually inscribed as a royal blessing was the chant known as 'Phahung Maha Karuniko'.",
       },
       {
-        thai: "ท้ายของนิมิตนั้นระบุว่า "เราสมเด็จพระพนรัตน์ วัดป่าแก้วศรีอโยธเยศ คือผู้จารึกนิมิต รจนาเอาไว้ถวายพระพรแด่มหาบพิตรเจ้าสมเด็จพระนเรศวรมหาราช"",
+        thai: 'ท้ายของนิมิตนั้นระบุว่า "เราสมเด็จพระพนรัตน์ วัดป่าแก้วศรีอโยธเยศ คือผู้จารึกนิมิต รจนาเอาไว้ถวายพระพรแด่มหาบพิตรเจ้าสมเด็จพระนเรศวรมหาราช"',
         romanized:
           "Thāi khong nimit nán rabū wā 'Rao Somdet Phra Phonarat Wat Pa Kaew Si Ayotthayēt khue phū jārik nimit rojana ao wai thawai phraporn dɛ̄ Mahābophit Chāo Somdet Phra Naresuan Mahārat.'",
         eng: "At the end of the vision, it stated: 'We, Somdet Phra Phonarat of Wat Pa Kaew Si Ayotthaya, are the ones who inscribed this vision and composed it as a royal blessing to His Majesty King Naresuan the Great.'",
@@ -1180,7 +1180,7 @@ const chantbookPhraPhutthakun = [
         eng: "Even when the enemy fired volleys of gunfire at His Majesty during the procession of the Crown Prince's remains—like rainstorms—it did not harm him. It was due to the power of the Phahung Mahākā, which he had regularly recited.",
       },
       {
-        thai: "อาตมาพบนิมิตแล้ว ก็ไต่ขึ้นมาด้วยความสบายใจถึงปากปล่องที่ลงไป ใช้เวลาเกือบสามชั่วโมง เนื้อตัวมีแต่หยากไย่ เดินลงมาแม่ชีเห็นเข้ายังร้องว่า "หลวงพ่อเข้าไปในโพรงนั้นมาหรือ" แต่อาตมาไม่ตอบ",
+        thai: 'อาตมาพบนิมิตแล้ว ก็ไต่ขึ้นมาด้วยความสบายใจถึงปากปล่องที่ลงไป ใช้เวลาเกือบสามชั่วโมง เนื้อตัวมีแต่หยากไย่ เดินลงมาแม่ชีเห็นเข้ายังร้องว่า "หลวงพ่อเข้าไปในโพรงนั้นมาหรือ" แต่อาตมาไม่ตอบ',
         romanized:
           "Ātamā phop nimit læo, kō tai khʉn mā dûai khwām sabāi jai thʉng pāk plòng thī long pai, chai wela kʉ̄ap sām chūamōng. Nʉ̄a tūa mī tæ yāk yai. Doen long mā, mæ chī hen khao yang rōng wā 'Luang Phō khao pai nai phrōng nán mā rʉ̄?' Tæ ātamā mai tōp.",
         eng: "After discovering the vision, I climbed back up calmly to the mouth of the shaft I had descended—having spent nearly three hours inside. My body was covered in cobwebs. As I came down, a nun saw me and exclaimed, 'Did you go into that hole, Venerable Father?' But I did not reply.",
@@ -1222,7 +1222,7 @@ const chantbookPhraPhutthakun = [
         eng: "It wasn't only King Naresuan the Great who experienced the marvel of the Phahung Mahākā chant; even King Taksin the Great did as well.",
       },
       {
-        thai: "โดยมีบันทึกโบราณบอกไว้ว่าดังนี้ "เมื่อพระเจ้าตากสินมหาราชตีเมืองจันทบุรีได้แล้ว ก็ทรงเห็นว่าสงครามกู้ชาติต่อจากนี้ไปจะต้องหนักหนาและยืดยาว"",
+        thai: 'โดยมีบันทึกโบราณบอกไว้ว่าดังนี้ "เมื่อพระเจ้าตากสินมหาราชตีเมืองจันทบุรีได้แล้ว ก็ทรงเห็นว่าสงครามกู้ชาติต่อจากนี้ไปจะต้องหนักหนาและยืดยาว"',
         romanized:
           "Dōi mī banthʉk bōrān bōk wai wā dang nī: 'Mʉ̄a Phra Chāo Taksin Mahārat tī Mʉ̄ang Chanthaburī dai læo, kō song hen wā songkhrām kū chāt tō chak nī pai ja tông nakh nā læ yʉ̄t yāo.'",
         eng: "An ancient record states: 'When King Taksin the Great conquered Chanthaburi, he foresaw that the war to reclaim the nation would become heavier and prolonged from that point on.'",

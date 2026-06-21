@@ -81,7 +81,7 @@ const AddPage = () => {
         <div className="max-w-screen-lg mx-auto">
           <div className="grid grid-cols-4 gap-2">
             <div className="col-span-4 lg:col-span-1">
-              <UserButton afterSignOutUrl={'/projects/epigram'} />
+              <UserButton />
               <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
                 Add Quote
               </h1>

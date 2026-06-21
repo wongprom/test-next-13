@@ -17,12 +17,16 @@ export async function generateStaticParams() {
   });
 }
 
-export type Certificate = {
+export type CertificateParams = {
   slug: string;
 };
 
-const CertificatePage = async ({ params }: { params: Certificate }) => {
-  const { slug } = params;
+const CertificatePage = async ({
+  params,
+}: {
+  params: Promise<CertificateParams>;
+}) => {
+  const { slug } = await params;
   const certificate = await getCertificate(slug);
 
   return (

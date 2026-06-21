@@ -12,7 +12,7 @@ const DeathNotePage = () => {
 
   return (
     <div className="text-gray-300 p-0 sm:p-8 bg-black">
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-(--breakpoint-lg) mx-auto">
         <h1 className="text-7xl text-center lg:text-8xl font-deathNote">
           Death Note
         </h1>
@@ -48,7 +48,7 @@ const DeathNotePage = () => {
             <Image
               src={testImage}
               alt="test image"
-              className="rounded-sm border-transparent ring-gray-500  shadow-sm opacity-20 lg:opacity-30"
+              className="rounded-sm border-transparent ring-gray-500  shadow-xs opacity-20 lg:opacity-30"
             />
           </div>
         </div>

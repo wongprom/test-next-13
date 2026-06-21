@@ -17,7 +17,7 @@ const EpiGramPage = async () => {
   const { userId } = await auth();
   return (
     <div className="text-white p-0 sm:p-8">
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-(--breakpoint-lg) mx-auto">
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">
             <h1 className="text-3xl text-center sm:text-left lg:text-2xl">

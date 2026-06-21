@@ -24,7 +24,7 @@ const ProjectCard = ({
       className={`
        relative rounded-xl p-6 transition-all hover:scale-105 hover:rotate-2`}
     >
-      <div className="absolute top-3 right-3 bg-white rounded-xl px-3 py-1 text-sm bg-opacity-10 text-white ">
+      <div className="absolute top-3 right-3 rounded-xl bg-white/10 px-3 py-1 text-sm text-white">
         2000
       </div>
       <div className="p-12 relative flex justify-center items-center">

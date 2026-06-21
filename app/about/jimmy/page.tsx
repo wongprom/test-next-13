@@ -7,7 +7,7 @@ const page = () => {
 
   return (
     <div className="text-white p-0 sm:p-8">
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-(--breakpoint-lg) mx-auto">
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">
             <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
@@ -22,7 +22,7 @@ const page = () => {
           <div className="px-6 py-10 mx-auto">
             <div className="lg:-mx-6 lg:flex lg:items-center">
               <Image
-                className="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
+                className="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-144"
                 src="/munk.jpeg"
                 alt="munk"
                 width={500}
@@ -171,7 +171,7 @@ const page = () => {
                   <p className="text-[#cccccc] text-center pt-4 text-2xl font-bold">
                     Medieinstitutet
                   </p>
-                  <hr className="border-none h-[1px] bg-gradient-to-r from-[#2A2A3B] from-10% via-gray-500 via-50% to-[#2A2A3B]to-90%"></hr>
+                  <hr className="border-none h-px bg-linear-to-r from-[#2A2A3B] from-10% via-gray-500 via-50% to-[#2A2A3B]to-90%"></hr>
                   <div className="text-[#bbbbbb] text-md flex justify-between px-4 my-2">
                     <span className="font-bold">
                       My Path to Graduation in 2019
@@ -210,7 +210,7 @@ const page = () => {
                 alt=""
               />
               <div
-                className="card__content rotate-180 w-full h-full absolute bg-[#222222]/90 shadow-[0_8px_32px_0_rgba(_31,38,135,0.37_)] border rounded-[10px] border-solid border-[rgba(_255,255,255,0.18_)]
+                className="card__content rotate-180 w-full h-full absolute bg-[#222222]/90 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border rounded-[10px] border-solid border-[rgba(255,255,255,0.18)]
               origin-top transition-all duration-&lsqb;0.6s&rsqb; ease-&lsqb;cubic-bezier(0.175,0.885,0.32,1.275)&rsqb; p-5 left-0 top-0 group-hover:rotate-0"
               >
                 <p className="card__title text-2xl text-[#cccccc] font-bold m-0">

@@ -1,9 +1,18 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  transpilePackages: ['next-sanity'],
+  transpilePackages: [
+    'next-sanity',
+    'sanity',
+    '@sanity/ui',
+    '@sanity/vision',
+    'react-refractor',
+    'unist-util-visit-parents',
+  ],
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.node/,
@@ -15,6 +24,10 @@ const nextConfig = {
       ...config.resolve.alias,
       canvas: false,
       'react-dom/server': require.resolve('react-dom/server.browser'),
+      'unist-util-visit-parents/do-not-use-color': path.join(
+        __dirname,
+        'node_modules/unist-util-visit-parents/lib/color.js'
+      ),
     };
 
     if (!isServer) {

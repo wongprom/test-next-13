@@ -15,6 +15,7 @@ next - `15.5.x` <sub>_(app/dir)_</sub><p>
 react - `19.x`<p>
 typescript - `5.9.x`<p>
 prisma - `6.x`<p>
+sanity - `4.x`<p>
 [package.json](https://github.com/wongprom/test-next-13/blob/main/package.json)
 
 ## Create issues from template

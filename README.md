@@ -12,7 +12,9 @@ Get ready to embark on a journey of web development like no other. Your curiosit
 
 node - `24.x` <sub>_(see `.nvmrc` and `package.json` engines)_</sub><p>
 next - `14.2.x` <sub>_(app/dir)_</sub><p>
-react - `18.2.0`<p>
+react - `18.3.x`<p>
+typescript - `5.9.x`<p>
+prisma - `6.x`<p>
 [package.json](https://github.com/wongprom/test-next-13/blob/main/package.json)
 
 ## Create issues from template

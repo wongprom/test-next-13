@@ -17,7 +17,7 @@ const TestimonialCard = ({
         <Image
           width={500}
           height={500}
-          className="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-[28rem] md:w-52 xl:h-[36rem] xl:w-[26rem] md:rounded-2xl"
+          className="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-112 md:w-52 xl:h-144 xl:w-104 md:rounded-2xl"
           src={image}
           alt="client photo"
         />

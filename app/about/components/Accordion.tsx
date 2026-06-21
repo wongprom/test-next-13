@@ -28,7 +28,7 @@ const Accordion = ({ data }: Props) => {
     >
       <AccordionItem
         value="item-1"
-        className="border border-white rounded-md bg-[#666666] text-white px-5 data-[state=open]:bg-white data-[state=open]:text-[#666666]"
+        className="border-0 border-b-0 rounded-md bg-[#666666] text-white px-5 data-[state=open]:bg-white data-[state=open]:text-[#666666]"
       >
         <AccordionTrigger className="py-5 text-left hover:no-underline data-[state=open]:font-extrabold data-[state=open]:text-2xl data-[state=open]:underline">
           {data.title}

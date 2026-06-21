@@ -12,6 +12,8 @@ const nextConfig = {
     '@sanity/vision',
     'react-refractor',
     'unist-util-visit-parents',
+    'react-pdf',
+    'pdfjs-dist',
   ],
   webpack: (config, { isServer }) => {
     config.module.rules.push({

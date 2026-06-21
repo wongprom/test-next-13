@@ -7,10 +7,11 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run copy-pdf-worker && next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "copy-pdf-worker": "cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/pdf.worker.min.mjs",
+    "postinstall": "prisma generate && npm run copy-pdf-worker"
   },
   "dependencies": {
     "@apollo/client": "^4.2.3",
@@ -49,7 +50,7 @@
     "react-dom": "^19.2.7",
     "react-hook-form": "^7.48.2",
     "react-pageflip": "^2.0.3",
-    "react-pdf": "^7.3.3",
+    "react-pdf": "^10.4.1",
     "react-tooltip": "^5.21.1",
     "rxjs": "^7.8.2",
     "sanity": "^4.22.0",

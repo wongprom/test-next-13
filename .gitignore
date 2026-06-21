@@ -19,6 +19,7 @@
 .DS_Store
 .cursor/
 *.pem
+public/pdf.worker.min.mjs
 
 # debug
 npm-debug.log*

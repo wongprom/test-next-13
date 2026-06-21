@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  compiler: {
+    styledComponents: true,
+  },
+  transpilePackages: ['next-sanity'],
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.node/,
@@ -10,6 +14,7 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       canvas: false,
+      'react-dom/server': require.resolve('react-dom/server.browser'),
     };
 
     if (!isServer) {

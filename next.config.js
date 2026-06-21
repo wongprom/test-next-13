@@ -2,6 +2,7 @@
 const path = require('path');
 
 const nextConfig = {
+  serverExternalPackages: ['@prisma/client', '@prisma/adapter-pg', 'pg'],
   compiler: {
     styledComponents: true,
   },

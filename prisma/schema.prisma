@@ -3,12 +3,15 @@
 // ! npx prisma db push
 
 generator client {
-  provider = "prisma-client-js"
+  provider               = "prisma-client"
+  output                 = "./generated/client"
+  moduleFormat           = "cjs"
+  importFileExtension    = "ts"
+  generatedFileExtension = "ts"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 // info Next.js 13, Apollo and GraphQL: Building a powerful and efficient API | Full time: 24:20 https://www.youtube.com/watch?v=ufKuYohCt0w

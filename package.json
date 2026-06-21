@@ -21,7 +21,8 @@
     "@heroicons/react": "^2.0.18",
     "@hookform/resolvers": "^3.3.2",
     "@portabletext/react": "^4.0.3",
-    "@prisma/client": "^6.19.3",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
@@ -44,6 +45,7 @@
     "lucide-react": "^0.292.0",
     "next": "^15.5.19",
     "next-sanity": "^11.6.13",
+    "pg": "^8.22.0",
     "postcss": "^8.4.30",
     "print-js": "^1.6.0",
     "react": "^19.2.7",
@@ -62,11 +64,13 @@
   },
   "devDependencies": {
     "@types/node": "^22.20.0",
+    "@types/pg": "^8.20.0",
     "@typescript-eslint/parser": "^8.61.1",
+    "dotenv": "^17.4.2",
     "encoding": "^0.1.13",
     "eslint": "^8.38.0",
     "prettier": "^3.8.4",
-    "prisma": "^6.19.3",
+    "prisma": "^7.8.0",
     "raw-loader": "^4.0.2",
     "typescript": "^5.9.3"
   }

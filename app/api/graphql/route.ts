@@ -1,8 +1,7 @@
 import { ApolloServer } from '@apollo/server';
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { NextRequest } from 'next/server';
-import { prisma } from '../../../prisma/db';
-import { PrismaClient } from '@prisma/client';
+import { prisma, type PrismaClient } from '../../../prisma/db';
 import { resolvers } from './resolvers';
 import { typeDefs } from './schema';
 

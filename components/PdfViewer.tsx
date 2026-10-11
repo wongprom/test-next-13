@@ -1,18 +1,13 @@
 'use client';
-import React from 'react';
+
+import { PrinterIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { PrinterIcon } from '@heroicons/react/24/outline';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
 const PdfViewer = () => {
-  const [numPages, setNumPages] = useState<number>();
-  const [pageNumber, setPageNumber] = useState<number>(1);
-
-  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-    setNumPages(numPages);
-  }
+  const [pageNumber] = useState<number>(1);
 
   const handlerPrint = async () => {
     const printJS = (await import('print-js')).default;
@@ -21,8 +16,7 @@ const PdfViewer = () => {
 
   return (
     <Document
-      file="cv.pdf"
-      onLoadSuccess={onDocumentLoadSuccess}
+      file="/cv.pdf"
       className="flex flex-col justify-center items-center"
     >
       <div className="mb-8">

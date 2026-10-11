@@ -19,6 +19,7 @@
 .DS_Store
 .cursor/
 *.pem
+public/pdf.worker.min.mjs
 
 # debug
 npm-debug.log*
@@ -35,6 +36,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+prisma/generated/
 
 
 # nvm and node things

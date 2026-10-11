@@ -20,7 +20,7 @@
   --font-deathNote: Death-note-font, sans-serif;
   --font-specialElite: Special-elite, sans-serif;
 
-  --background-image-death-note-cover: url('/images/deathNote/frontcover.png');
+  --background-image-death-note-cover: url('/images/deathNote/frontCover.png');
   --background-image-death-note-blank-page: url('/images/deathNote/blank.png');
   --background-image-death-note-blank-cracks: url('/images/deathNote/sprickor.png');
   --background-image-death-note-blank-wrinkled: url('/images/deathNote/wrinkled-page.png');

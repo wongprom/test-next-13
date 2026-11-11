@@ -17,18 +17,22 @@ export async function generateStaticParams() {
   });
 }
 
-export type Certificate = {
+export type CertificateParams = {
   slug: string;
 };
 
-const CertificatePage = async ({ params }: { params: Certificate }) => {
-  const { slug } = params;
+const CertificatePage = async ({
+  params,
+}: {
+  params: Promise<CertificateParams>;
+}) => {
+  const { slug } = await params;
   const certificate = await getCertificate(slug);
 
   return (
     <div className="relative flex flex-col items-center justify-center text-white bg-[#2A2A3B] p-0 sm:p-8 ">
       <BackArrow />
-      <div className="max-w-screen-lg">
+      <div className="max-w-(--breakpoint-lg)">
         {certificate?.image && (
           <div className="w-full flex items-center justify-center mb-8">
             <Image

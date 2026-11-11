@@ -24,9 +24,9 @@ const LinkSidebar = ({ linkText, url, Icon, numOfProjects }: Props) => {
           isCurrentRouteStartsWithURL && "bg-[#1c1d21]"
         }`}
       >
-        <div className="flex items-center flex-grow">
+        <div className="flex items-center grow">
           <Icon
-            className={`h-6 w-6 focus:outline-none ${
+            className={`h-6 w-6 focus:outline-hidden ${
               isCurrentRouteStartsWithURL && activeLinkStyle
             }`}
             aria-hidden="false"

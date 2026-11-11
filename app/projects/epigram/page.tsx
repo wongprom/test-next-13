@@ -1,4 +1,5 @@
-import { SignInButton, UserButton, auth } from '@clerk/nextjs';
+import { SignInButton, UserButton } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs/server';
 import React from 'react';
 import Quotes from '@/components/Quotes';
 import SectionHeading from '@/components/SectionHeading';
@@ -12,11 +13,11 @@ import {
 import { InfoIcon } from 'lucide-react';
 import ClientSideLink from '@/components/ClientSideLink';
 
-const EpiGramPage = () => {
-  const { userId }: { userId: string | null } = auth();
+const EpiGramPage = async () => {
+  const { userId } = await auth();
   return (
     <div className="text-white p-0 sm:p-8">
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-(--breakpoint-lg) mx-auto">
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">
             <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
@@ -29,7 +30,7 @@ const EpiGramPage = () => {
                 </button>
               </SignInButton> */}
               {userId === null ? (
-                <SignInButton mode="modal" redirectUrl="/projects/epigram/add">
+                <SignInButton mode="modal" forceRedirectUrl="/projects/epigram/add">
                   <button className="p-4 max-w-xs bg-[#23252a] cursor-pointer rounded-lg text-[#e5e6e9]">
                     Add epigram
                   </button>

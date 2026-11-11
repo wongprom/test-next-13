@@ -10,9 +10,12 @@ Get ready to embark on a journey of web development like no other. Your curiosit
 
 ## Environment
 
-node - `18.11.0`<p>
-next - `13.3.0` <sub>_(app/dir)_</sub><p>
-react - `18.2.0`<p>
+node - `24.x` <sub>_(see `.nvmrc` and `package.json` engines)_</sub><p>
+next - `15.5.x` <sub>_(app/dir)_</sub><p>
+react - `19.x`<p>
+typescript - `5.9.x`<p>
+prisma - `7.x`<p>
+sanity - `4.x`<p>
 [package.json](https://github.com/wongprom/test-next-13/blob/main/package.json)
 
 ## Create issues from template
@@ -172,6 +175,19 @@ Open [http://localhost:3000](http://localhost:3000).
 **Production check (after merge to `main`)**
 
 Visit the live site on [jimmybackstrom.com](https://jimmybackstrom.com) and confirm the same behaviour you saw on the preview.
+
+</details>
+
+<details><summary>Sanity Studio (/admin) on Vercel previews</summary>
+
+Embedded Studio lives at `/admin`. Production (`jimmybackstrom.com/admin`) and `localhost:3000` are already set up. **Each new Vercel preview host** must be allowed in Sanity before Studio can read/write content there.
+
+1. Open preview `/admin`. If prompted **Connect this studio**, choose **Add development host** (not “Register this studio” — that is for production).
+2. In the Sanity project dashboard → **API** → **CORS origins**, add the preview origin (full `https://…vercel.app`, no path/trailing slash).
+3. Enable **Allow credentials** (required when hosting Studio on that origin).
+4. Prefer the stable **branch** preview URL over per-commit deployment URLs.
+
+Agent-oriented detail: [`.cursor/skills/sanity-vercel-preview/SKILL.md`](.cursor/skills/sanity-vercel-preview/SKILL.md).
 
 </details>
 

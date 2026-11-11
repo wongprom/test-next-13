@@ -1,6 +1,6 @@
 'use client';
 import { GET_LIFE_LESSONS } from '@/app/api/graphql/queries';
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client/react";
 import React from 'react';
 import {
   Card,
@@ -26,7 +26,7 @@ import ClientSideLink from './ClientSideLink';
  */
 
 const LifeLessons = () => {
-  const { data } = useQuery(GET_LIFE_LESSONS);
+  const { data } = useQuery<{ lifeLessions: LifeLesson[] }>(GET_LIFE_LESSONS);
   if (!data) return <p>return SKELETON...</p>;
 
   return (

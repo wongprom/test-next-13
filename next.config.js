@@ -22,7 +22,7 @@ const nextConfig = {
       use: 'raw-loader',
     });
 
-    // Fix for react-pdf canvas issue
+    // react-pdf + Sanity need the browser build of react-dom/server under webpack.
     config.resolve.alias = {
       ...config.resolve.alias,
       canvas: false,

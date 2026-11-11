@@ -18,35 +18,8 @@ const getGraphqlUri = () => {
 
 export const Providers = ({ children }: { children: ReactNode }) => {
   const client = useMemo(() => {
-    const uri = getGraphqlUri();
-
-    // #region agent log
-    fetch('http://127.0.0.1:7656/ingest/fa45ef92-7957-4ded-a531-2e4d4d33568c', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Debug-Session-Id': 'eb5d69',
-      },
-      body: JSON.stringify({
-        sessionId: 'eb5d69',
-        runId: 'post-fix',
-        hypothesisId: 'A',
-        location: 'app/api/graphql/Providers.tsx:getGraphqlUri',
-        message: 'Apollo GraphQL URI resolved',
-        data: {
-          uri,
-          origin:
-            typeof window !== 'undefined' ? window.location.origin : 'ssr',
-          nodeEnv: process.env.NODE_ENV,
-          hasSupabaseUrl: Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL),
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
-
     return new ApolloClient({
-      link: new HttpLink({ uri }),
+      link: new HttpLink({ uri: getGraphqlUri() }),
       cache: new InMemoryCache(),
     });
   }, []);

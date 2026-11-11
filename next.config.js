@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
+const nextCompiledReactDomServerBrowser = path.join(
+  __dirname,
+  'node_modules/next/dist/compiled/react-dom/server.browser.js'
+);
+
 const nextConfig = {
-  // Keep Sanity off the server webpack graph so it can't mix with Next's
-  // vendored React canary (React error #527 → /admin 500).
+  // Keep Sanity off the server webpack graph.
   serverExternalPackages: [
     '@prisma/client',
     '@prisma/adapter-pg',
@@ -17,7 +21,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  // Sanity packages are in serverExternalPackages above — do not also transpile them.
+  // Sanity packages are in serverExternalPackages — do not also transpile them.
   transpilePackages: [
     'react-refractor',
     'unist-util-visit-parents',
@@ -30,11 +34,15 @@ const nextConfig = {
       use: 'raw-loader',
     });
 
-    // react-pdf (and Sanity client chunks) need the browser server build.
+    // Alias react-dom/server to Next's vendored browser build so it matches
+    // Next's canary `react` (avoids React version-mismatch #527 on /admin).
+    // Using the app's react-dom@19.2.7 server.browser caused:
+    //   react: 19.2.0-canary-…  vs  react-dom: 19.2.7
     config.resolve.alias = {
       ...config.resolve.alias,
       canvas: false,
-      'react-dom/server': require.resolve('react-dom/server.browser'),
+      'react-dom/server': nextCompiledReactDomServerBrowser,
+      'react-dom/server.browser': nextCompiledReactDomServerBrowser,
       'unist-util-visit-parents/do-not-use-color': path.join(
         __dirname,
         'node_modules/unist-util-visit-parents/lib/color.js'

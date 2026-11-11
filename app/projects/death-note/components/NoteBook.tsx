@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import HTMLFlipBook from "react-pageflip";
-import { useRef } from "react";
 import { testDeathNoteRules } from "../../../../data/data";
-import OwnerPage from "./OwnerPage";
 import RulePage from "./RulePage";
 
 const numOfRules = testDeathNoteRules.length;
@@ -42,58 +40,6 @@ const Cover = React.forwardRef((props: any, ref: any) => {
 Cover.displayName = "Cover";
 
 const NoteBook = (props: any) => {
-  useEffect(() => {
-    const coverUrl = "/images/deathNote/frontCover.png";
-    // #region agent log
-    fetch(coverUrl, { method: "HEAD" })
-      .then((res) => {
-        fetch("http://127.0.0.1:7656/ingest/fa45ef92-7957-4ded-a531-2e4d4d33568c", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Debug-Session-Id": "eb5d69",
-          },
-          body: JSON.stringify({
-            sessionId: "eb5d69",
-            runId: "post-fix",
-            hypothesisId: "B",
-            location: "app/projects/death-note/components/NoteBook.tsx:Cover",
-            message: "Death Note cover image HEAD check",
-            data: {
-              coverUrl,
-              status: res.status,
-              ok: res.ok,
-              origin: window.location.origin,
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      })
-      .catch((err) => {
-        fetch("http://127.0.0.1:7656/ingest/fa45ef92-7957-4ded-a531-2e4d4d33568c", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Debug-Session-Id": "eb5d69",
-          },
-          body: JSON.stringify({
-            sessionId: "eb5d69",
-            runId: "post-fix",
-            hypothesisId: "B",
-            location: "app/projects/death-note/components/NoteBook.tsx:Cover",
-            message: "Death Note cover image HEAD failed",
-            data: {
-              coverUrl,
-              error: String(err),
-              origin: window.location.origin,
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-      });
-    // #endregion
-  }, []);
-
   const onFlip = useCallback((e: any) => {
     console.log("Current page: " + e.data);
   }, []);

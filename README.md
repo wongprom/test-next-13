@@ -178,6 +178,19 @@ Visit the live site on [jimmybackstrom.com](https://jimmybackstrom.com) and conf
 
 </details>
 
+<details><summary>Sanity Studio (/admin) on Vercel previews</summary>
+
+Embedded Studio lives at `/admin`. Production (`jimmybackstrom.com/admin`) and `localhost:3000` are already set up. **Each new Vercel preview host** must be allowed in Sanity before Studio can read/write content there.
+
+1. Open preview `/admin`. If prompted **Connect this studio**, choose **Add development host** (not “Register this studio” — that is for production).
+2. In the Sanity project dashboard → **API** → **CORS origins**, add the preview origin (full `https://…vercel.app`, no path/trailing slash).
+3. Enable **Allow credentials** (required when hosting Studio on that origin).
+4. Prefer the stable **branch** preview URL over per-commit deployment URLs.
+
+Agent-oriented detail: [`.cursor/skills/sanity-vercel-preview/SKILL.md`](.cursor/skills/sanity-vercel-preview/SKILL.md).
+
+</details>
+
 <details><summary>Example: accordion refactor (PR #56)</summary>
 
 Branch: `refactor-adept-accordion-shadcn`

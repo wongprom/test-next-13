@@ -17,7 +17,10 @@
 
 # misc
 .DS_Store
-.cursor/
+# Ignore Cursor local state, but keep project skills in git
+.cursor/*
+!.cursor/skills/
+!.cursor/skills/**
 *.pem
 public/pdf.worker.min.mjs
 

@@ -2,15 +2,23 @@
 const path = require('path');
 
 const nextConfig = {
-  serverExternalPackages: ['@prisma/client', '@prisma/adapter-pg', 'pg'],
+  // Keep Sanity off the server webpack graph so it can't mix with Next's
+  // vendored React canary (React error #527 → /admin 500).
+  serverExternalPackages: [
+    '@prisma/client',
+    '@prisma/adapter-pg',
+    'pg',
+    'sanity',
+    'next-sanity',
+    '@sanity/vision',
+    '@sanity/ui',
+    'styled-components',
+  ],
   compiler: {
     styledComponents: true,
   },
+  // Sanity packages are in serverExternalPackages above — do not also transpile them.
   transpilePackages: [
-    'next-sanity',
-    'sanity',
-    '@sanity/ui',
-    '@sanity/vision',
     'react-refractor',
     'unist-util-visit-parents',
     'react-pdf',
@@ -22,7 +30,7 @@ const nextConfig = {
       use: 'raw-loader',
     });
 
-    // react-pdf + Sanity need the browser build of react-dom/server under webpack.
+    // react-pdf (and Sanity client chunks) need the browser server build.
     config.resolve.alias = {
       ...config.resolve.alias,
       canvas: false,

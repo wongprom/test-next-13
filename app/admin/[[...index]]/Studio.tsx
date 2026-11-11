@@ -1,14 +1,25 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import config from '@/sanity.config';
 
-// Client-only: avoids SSR hydration crashes from Sanity + react-dom/server aliasing.
-const NextStudio = dynamic(
-  () => import('next-sanity/studio').then((mod) => mod.NextStudio),
-  { ssr: false }
-);
+// Separate file so Sanity never enters the server webpack graph.
+const StudioClient = dynamic(() => import('./StudioClient'), {
+  ssr: false,
+  loading: () => (
+    <div
+      style={{
+        display: 'grid',
+        placeItems: 'center',
+        height: '100%',
+        fontFamily: 'system-ui, sans-serif',
+        color: '#111',
+      }}
+    >
+      Loading Studio…
+    </div>
+  ),
+});
 
 export default function Studio() {
-  return <NextStudio config={config} />;
+  return <StudioClient />;
 }

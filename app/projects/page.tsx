@@ -42,6 +42,13 @@ const ProjectsPage = () => {
                 }
                 href={"/projects/death-note"}
               />
+              <AboutCard
+                title={"Kakeibo"}
+                text={
+                  "Household budgeting the Japanese way: plan the month, log spending as it happens, then review — so the next month gets clearer."
+                }
+                href={"/projects/kakeibo"}
+              />
             </div>
           </div>
         </section>

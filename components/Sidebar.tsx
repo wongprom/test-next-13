@@ -29,7 +29,7 @@ const Sidebar = () => {
             linkText="Projects"
             url="/projects"
             Icon={FolderIcon}
-            numOfProjects="2"
+            numOfProjects="3"
           />
           <LinkSidebar
             linkText="Photography"

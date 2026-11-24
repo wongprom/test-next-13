@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import HTMLFlipBook from "react-pageflip";
-import { useRef } from "react";
 import { testDeathNoteRules } from "../../../../data/data";
-import OwnerPage from "./OwnerPage";
 import RulePage from "./RulePage";
 
 const numOfRules = testDeathNoteRules.length;

@@ -1,4 +1,4 @@
-import PdfViewer from '../../components/PdfViewer';
+import CvPdfViewer from '../../components/CvPdfViewer';
 
 const CvPage = () => {
   return (
@@ -16,7 +16,7 @@ const CvPage = () => {
         </p>
       </div>
       <div className="mt-16">
-        <PdfViewer />
+        <CvPdfViewer />
       </div>
     </div>
   );

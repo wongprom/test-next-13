@@ -1,5 +1,7 @@
+'use client';
+
 import { defineConfig } from 'sanity';
-import { deskTool } from 'sanity/desk';
+import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
 import schemas from './sanity/schemas';
 
@@ -9,7 +11,8 @@ const config = defineConfig({
   title: 'testing-1',
   apiVersion: '2023-09-13',
   basePath: '/admin',
-  plugins: [deskTool(), visionTool()],
+  plugins: [structureTool(), visionTool()],
   schema: { types: schemas },
 });
+
 export default config;

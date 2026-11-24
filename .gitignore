@@ -17,8 +17,12 @@
 
 # misc
 .DS_Store
-.cursor/
+# Ignore Cursor local state, but keep project skills in git
+.cursor/*
+!.cursor/skills/
+!.cursor/skills/**
 *.pem
+public/pdf.worker.min.mjs
 
 # debug
 npm-debug.log*
@@ -35,6 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+prisma/generated/
 
 
 # nvm and node things

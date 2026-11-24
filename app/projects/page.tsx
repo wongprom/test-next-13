@@ -4,7 +4,7 @@ import React from "react";
 const ProjectsPage = () => {
   return (
     <div className="text-white p-0 sm:p-8">
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-(--breakpoint-lg) mx-auto">
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">
             <h1 className="text-3xl text-center sm:text-left lg:text-2xl">
@@ -41,6 +41,13 @@ const ProjectsPage = () => {
                   "The 'Death Note' itself, a black notebook with instructions (known as 'Rules of the Death Note') written on the inside. When used correctly, it allows anyone to commit a murder, knowing only the victim's name and face."
                 }
                 href={"/projects/death-note"}
+              />
+              <AboutCard
+                title={"Kakeibo"}
+                text={
+                  "Household budgeting the Japanese way: plan the month, log spending as it happens, then review — so the next month gets clearer."
+                }
+                href={"/projects/kakeibo"}
               />
             </div>
           </div>

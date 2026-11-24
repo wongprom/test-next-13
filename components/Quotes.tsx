@@ -1,6 +1,6 @@
 'use client';
 import { GET_QUOTES } from '@/app/api/graphql/queries';
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client/react";
 import React from 'react';
 import {
   Card,
@@ -18,7 +18,7 @@ import { Author, Quote } from '@/types/types';
  */
 
 const Quotes = () => {
-  const { data } = useQuery(GET_QUOTES);
+  const { data } = useQuery<{ quotes: Quote[] }>(GET_QUOTES);
   if (!data) return <p>return SKELETON...</p>;
 
   return (
